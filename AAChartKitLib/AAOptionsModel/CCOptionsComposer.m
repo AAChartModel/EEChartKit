@@ -41,17 +41,20 @@
 //
     
     NSDictionary *title = @{
-                            @"text": chartModel.titleText ? chartModel.titleText:@""
+                            @"text": chartModel.titleText ? chartModel.titleText:@"",
+                            @"subtext":chartModel.titleSubtext ?chartModel.titleSubtext:@"",
                             };
     
     NSDictionary *tooltip = @{
-                              @"trigger": chartModel.tooltipTrigger ? chartModel.tooltipTrigger:@"",
-                              @"formatter":chartModel.tooltipFormatter ? chartModel.tooltipFormatter:[NSNull null]
+                              @"trigger": chartModel.tooltipTrigger ? chartModel.tooltipTrigger:@"axis",
+                              @"formatter":chartModel.tooltipFormatter ? chartModel.tooltipFormatter:[NSNull null],
+                              @"backgroundColor":@"#000000"
                               };
     
 
     NSDictionary *legend = @{
                              @"data":chartModel.legendData ? chartModel.legendData:[NSNull null],
+                             @"bottom":@0
                              };
     
    
@@ -68,8 +71,8 @@
     NSArray *yAxis = @[
                        @{
                            @"type" : @"value",
-                           @"scale":@true
-
+                           @"scale":@true,
+                           @"data" : chartModel.xAxisData ? chartModel.xAxisData:@"",
                            }
                        ];
 //    NSArray *dataZoom = @[ @{
@@ -109,11 +112,61 @@
             options.yAxis = yAxis;
     }
     
+//    [chartModel.series enumerateObjectsUsingBlock:^(CCSeriesElement * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//       CCSeriesElement *seriesElement = chartModel.series[idx];
+//        NSInteger animationEasingType = (NSInteger)seriesElement.animationEasing;
+//        NSString *animationEasingTypeStr = [self configureTheChartAnimationEasingWithEasingType:animationEasingType];
+//        seriesElement.animationEasing = animationEasingTypeStr;
+//    }];
+    
     if (legendDic.allKeys.count != 0) {
         options.legend = legend;
     }
     
+ 
+    
     return options;
+}
+
+
+
++ (NSString *)configureTheChartAnimationEasingWithEasingType:(CCAnimationEasingType)animationEasing {
+ 
+    NSArray *animationEasingTypesArr = @[
+                                         @"Linear ",
+                                         @"Swing",
+                                         @"EaseInQuad",
+                                         @"EaseOutQuad",
+                                         @"EaseInOutQuad",
+                                         @"EaseInCubic",
+                                         @"EaseOutCubic",
+                                         @"EaseInOutCubic",
+                                         @"EaseInQuart",
+                                         @"EaseOutQuart",
+                                         @"EaseInOutQuart",
+                                         @"EaseInQuint",
+                                         @"EaseOutQuint",
+                                         @"EaseInOutQuint",
+                                         @"EaseInExpo",
+                                         @"EaseOutExpo",
+                                         @"EaseInOutExpo",
+                                         @"EaseInSine",
+                                         @"EaseOutSine",
+                                         @"EaseInOutSine",
+                                         @"EaseInCirc",
+                                         @"EaseOutCirc",
+                                         @"EaseInOutCirc",
+                                         @"EaseInElastic",
+                                         @"EaseOutElastic",
+                                         @"EaseInOutElastic",
+                                         @"EaseInBack",
+                                         @"EaseOutBack",
+                                         @"EaseInOutBack",
+                                         @"EaseInBounce",
+                                         @"EaseOutBounce",
+                                         @"EaseInOutBounce",];
+    NSString *EasingTypeStr = animationEasingTypesArr[animationEasing];
+    return EasingTypeStr;
 }
 
 @end

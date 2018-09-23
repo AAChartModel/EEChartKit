@@ -49,6 +49,7 @@ COCOA_CHARTS_EXTERN CCChartType const CCChartTypeCustom;
 AAPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, backgroundColor);
 AAPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, color);
 AAPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, titleText);
+AAPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, titleSubtext);
 AAPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, tooltipTrigger);
 AAPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, tooltipFormatter);
 AAPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, legendData);

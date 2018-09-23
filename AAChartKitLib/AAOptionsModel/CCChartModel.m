@@ -33,9 +33,18 @@ CCChartType const CCChartTypeCustom = @"custom";
 
 @implementation CCChartModel
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _color = @[@"#8A2BE2",@"#fe117c",@"#ffc069",@"#06caf4",@"#7dffc0",];
+    }
+    return self;
+}
+
 AAPropSetFuncImplementation(CCChartModel, NSString *, backgroundColor);
 AAPropSetFuncImplementation(CCChartModel, NSArray  *, color);
 AAPropSetFuncImplementation(CCChartModel, NSString *, titleText);
+AAPropSetFuncImplementation(CCChartModel, NSString *, titleSubtext)
 AAPropSetFuncImplementation(CCChartModel, NSString *, tooltipTrigger);
 AAPropSetFuncImplementation(CCChartModel, NSString *, tooltipFormatter);
 AAPropSetFuncImplementation(CCChartModel, NSArray  *, legendData);

@@ -42,6 +42,9 @@
 @property (nonatomic, strong) AAChartView  *chartView;
 @property (nonatomic, strong) NSArray      *animationTypeArr;
 
+@property (nonatomic, strong) CCChartModel *ccChartModel;
+
+
 @end
 
 @implementation ChartAnimationTypeVC
@@ -89,6 +92,30 @@
     .categoriesSet(@[@"Java",@"Swift",@"Python",@"Ruby", @"PHP",@"Go",@"C",@"C#",@"C++",@"Perl",@"R",@"MATLAB",@"SQL"])
     .yAxisTitleSet(@"")
     ;
+    
+    
+    CCChartModel *chartModel = CCChartModel.new
+    .titleTextSet(@"堆叠区域图")
+    .tooltipTriggerSet(@"axis")
+    .legendDataSet(@[@"邮件营销",@"联盟广告",])
+    .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+    .seriesSet(@[
+                 CCSeriesElement.new
+                 .nameSet(@"邮件营销")
+                 .typeSet(CCChartTypeBar)
+                 .animationEasingSet(@"bounceOut")
+                 .stackSet(@"总量")
+                 .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
+                 
+                 CCSeriesElement.new
+                 .nameSet(@"联盟广告")
+                 .typeSet(CCChartTypeBar)
+                 .animationEasingSet(@"bounceOut")
+                 .stackSet(@"总量")
+                 .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
+                 ]);
+    
+    self.ccChartModel = chartModel;
 
     if (self.chartType == ChartAnimationTypeVCChartTypeStepArea
         || self.chartType == ChartAnimationTypeVCChartTypeStepLine) {
@@ -224,7 +251,7 @@
                      ]);
     }
     
-    [self.chartView aa_drawChartWithChartModel:self.chartModel];
+    [self.chartView aa_drawChartWithChartModel:chartModel];
 }
 
 - (void)configureTheAnimationTypeTableView {
@@ -254,54 +281,66 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    AAChartAnimation animationType = indexPath.row;
+    NSString *animationType =self.animationTypeArr[indexPath.row];
     [self animationTypeTableViewClicked:animationType];
 }
 
-- (void)animationTypeTableViewClicked:(AAChartAnimation)chartAnimationType {
-    self.chartModel.animationType = chartAnimationType;
-    [self.chartView aa_refreshChartWithChartModel:self.chartModel];//刷新图表数据
+- (void)animationTypeTableViewClicked:(NSString *)chartAnimationType {
+//        [self.ccChartModel.series enumerateObjectsUsingBlock:^(CCSeriesElement * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//           CCSeriesElement *seriesElement = self.ccChartModel.series[idx];
+//            seriesElement.animationEasing = chartAnimationType;
+//        }];
+    
+    NSArray *seriesArr =  @[
+                            CCSeriesElement.new
+                            .nameSet(@"邮件营销")
+                            .typeSet(CCChartTypeBar)
+                            .animationEasingSet(chartAnimationType)
+                            .stackSet(@"总量")
+                            .dataSet(@[@(arc4random()%1000),@(arc4random()%1000),@(arc4random()%1000),@(arc4random()%1000),@(arc4random()%1000),@(arc4random()%1000),@(arc4random()%1000),]),
+                            
+                            CCSeriesElement.new
+                            .nameSet(@"联盟广告")
+                            .typeSet(CCChartTypeBar)
+                            .animationEasingSet(chartAnimationType)
+                            .stackSet(@"总量")
+                            .dataSet((@[@(arc4random()%1000),@(arc4random()%1000),@(arc4random()%1000),@(arc4random()%1000),@(arc4random()%1000),@(arc4random()%1000),@(arc4random()%1000),])),
+                            ];
+    self.ccChartModel.series = seriesArr;
+    [self.chartView aa_refreshChartWithChartModel:self.ccChartModel];//刷新图表数据
 }
 
 - (NSArray *)animationTypeArr {
     if (!_animationTypeArr) {
         _animationTypeArr = @[
                               @"linear",
-                              @"easeInQuad",
-                              @"easeOutQuad",
-                              @"easeInOutQuad",
-                              @"easeInCubic",
-                              @"easeOutCubic",
-                              @"easeInOutCubic",
-                              @"easeInQuart",
-                              @"easeOutQuart",
-                              @"easeInOutQuart",
-                              @"easeInQuint",
-                              @"easeOutQuint",
-                              @"easeInOutQuint",
-                              @"easeInSine",
-                              @"easeOutSine",
-                              @"easeInOutSine",
-                              @"easeInExpo",
-                              @"easeOutExpo",
-                              @"easeInOutExpo",
-                              @"easeInCirc",
-                              @"easeOutCirc",
-                              @"easeInOutCirc",
-                              @"easeOutBounce",
-                              @"easeInBack",
-                              @"easeOutBack",
-                              @"easeInOutBack",
-                              @"elastic",
-                              @"swingFromTo",
-                              @"swingFrom",
-                              @"swingTo",
-                              @"bounce",
-                              @"bouncePast",
-                              @"easeFromTo",
-                              @"easeFrom",
-                              @"easeTo",
-                              ];
+                              @"quadraticIn",
+                              @"quadraticOut",
+                              @"quadraticInOut",
+                              @"cubicIn",
+                              @"cubicOut",
+                              @"cubicInOut",
+                              @"quarticIn",
+                              @"quarticOut",
+                              @"quarticInOut",
+                              @"quinticIn",
+                              @"quinticOut",
+                              @"quinticInOut",
+                              @"sinusoidalIn",
+                              @"sinusoidalOut",
+                              @"sinusoidalInOut",
+                              @"exponentialIn",
+                              @"exponentialOut",
+                              @"exponentialInOut",
+                              @"circularIn",
+                              @"circularOut",
+                              @"circularInOut",
+                              @"elasticIn",
+                              @"elasticOut",
+                              @"elasticInOut",
+                              @"backIn",
+                              @"backOut",
+                              @"backInOut", ];
     }
     return _animationTypeArr;
 }

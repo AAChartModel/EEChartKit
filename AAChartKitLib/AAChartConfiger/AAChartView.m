@@ -164,7 +164,7 @@
 }
 
 - (void)aa_refreshChartWithChartModel:(AAChartModel *)chartModel {
-    AAOptions *options = [AAOptionsConstructor configureChartOptionsWithAAChartModel:chartModel];
+    CCOptions *options = [CCOptionsComposer configureTheChartOptionsWithChartModel:chartModel];
     [self aa_refreshChartWithOptions:options];
 }
 

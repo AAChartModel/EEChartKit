@@ -12,6 +12,7 @@
 
 AAPropSetFuncImplementation(CCSeriesElement, NSString *, name);
 AAPropSetFuncImplementation(CCSeriesElement, NSString *, type);
+AAPropSetFuncImplementation(CCSeriesElement, id, animationEasing);
 AAPropSetFuncImplementation(CCSeriesElement, BOOL, smooth);
 AAPropSetFuncImplementation(CCSeriesElement, NSString *, step);
 AAPropSetFuncImplementation(CCSeriesElement, NSString *, symbol);
