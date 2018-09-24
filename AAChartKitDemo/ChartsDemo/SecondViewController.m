@@ -211,35 +211,35 @@
             .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
             .xAxisTypeSet(@"category")
             .yAxisTypeSet(@"value")
-            .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+            .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日",@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日",@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"邮件营销")
                          .typeSet(CCChartTypeLine)
                          .areaStyleSet(@{})
                          .smoothSet(YES)
-                         .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
+                         .dataSet(@[@0.45, @0.43, @0.50, @0.55, @0.58, @0.62, @0.83, @0.39, @0.56, @0.67, @0.50, @0.34, @0.50, @0.67, @0.58, @0.29, @0.46, @0.23, @0.47, @0.46, @0.38, @0.56, @0.48, @0.36]),
                          
                          CCSeriesElement.new
                          .nameSet(@"联盟广告")
                          .typeSet(CCChartTypeLine)
                          .areaStyleSet(@{})
                          .smoothSet(YES)
-                         .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
+                         .dataSet(@[@0.38, @0.31, @0.32, @0.32, @0.64, @0.66, @0.86, @0.47, @0.52, @0.75, @0.52, @0.56, @0.54, @0.60, @0.46, @0.63, @0.54, @0.51, @0.58, @0.64, @0.60, @0.45, @0.36, @0.67]),
                          
                          CCSeriesElement.new
                          .nameSet(@"视频广告")
                          .typeSet(CCChartTypeLine)
                          .areaStyleSet(@{})
                          .smoothSet(YES)
-                         .dataSet(@[@150, @232, @201, @154, @190, @330, @410]),
+                         .dataSet(@[@0.46, @0.32, @0.53, @0.58, @0.86, @0.68, @0.85, @0.73, @0.69, @0.71, @0.91, @0.74, @0.60, @0.50, @0.39, @0.67, @0.55, @0.49, @0.65, @0.45, @0.64, @0.47, @0.63, @0.64]),
                          
                          CCSeriesElement.new
                          .nameSet(@"直接访问")
                          .typeSet(CCChartTypeLine)
                          .areaStyleSet(@{})
                          .smoothSet(YES)
-                         .dataSet(@[@320, @332, @301, @334, @390, @330, @320]),
+                         .dataSet(@[@0.60, @0.51, @0.52, @0.53, @0.64, @0.84, @0.65, @0.68, @0.63, @0.47, @0.72, @0.60, @0.65, @0.74, @0.66, @0.65, @0.71, @0.59, @0.65, @0.77, @0.52, @0.53, @0.58, @0.53]),
                          
                          ]);
             
@@ -247,45 +247,33 @@
             break;
             
         case 4: {
-           ccChartModel = CCChartModel.new
+            ccChartModel = CCChartModel.new
             .titleTextSet(@"堆叠区域图")
-            .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
+            .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",])
             .xAxisTypeSet(@"category")
             .yAxisTypeSet(@"value")
-            .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+            .xAxisDataSet(@[@"一月", @"二月", @"三月", @"四月", @"五月", @"六月", @"七月", @"八月", @"九月", @"十月", @"十一月", @"十二月"])
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"邮件营销")
                          .typeSet(CCChartTypeLine)
                          .areaStyleSet(@{})
-                         .smoothSet(YES)
                          .stepSet(@"middle")
-                         .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
+                         .dataSet(@[@149.9, @171.5, @106.4, @129.2, @144.0, @176.0, @135.6, @188.5, @276.4, @214.1, @95.6, @54.4]),
                          
                          CCSeriesElement.new
                          .nameSet(@"联盟广告")
                          .typeSet(CCChartTypeLine)
                          .areaStyleSet(@{})
-                         .smoothSet(YES)
                          .stepSet(@"middle")
-                         .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
+                         .dataSet(@[@83.6, @78.8, @188.5, @93.4, @106.0, @84.5, @105.0, @104.3, @131.2, @153.5, @226.6, @192.3]),
                          
                          CCSeriesElement.new
                          .nameSet(@"视频广告")
                          .typeSet(CCChartTypeLine)
                          .areaStyleSet(@{})
-                         .smoothSet(YES)
                          .stepSet(@"middle")
-                         .dataSet(@[@150, @232, @201, @154, @190, @330, @410]),
-                         
-                         CCSeriesElement.new
-                         .nameSet(@"直接访问")
-                         .typeSet(CCChartTypeLine)
-                         .areaStyleSet(@{})
-                         .smoothSet(YES)
-                         .stepSet(@"middle")
-                         .dataSet(@[@320, @332, @301, @334, @390, @330, @320]),
-                         
+                         .dataSet(@[@48.9, @38.8, @19.3, @41.4, @47.0, @28.3, @59.0, @69.6, @52.4, @65.2, @53.3, @72.2]),
                          ]);
             
         }
@@ -330,31 +318,31 @@
             .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
             .xAxisTypeSet(@"category")
             .yAxisTypeSet(@"value")
-            .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+            .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日",@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日",@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"邮件营销")
                          .typeSet(CCChartTypeLine)
                          .smoothSet(YES)
-                         .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
+                         .dataSet(@[@0.45, @0.43, @0.50, @0.55, @0.58, @0.62, @0.83, @0.39, @0.56, @0.67, @0.50, @0.34, @0.50, @0.67, @0.58, @0.29, @0.46, @0.23, @0.47, @0.46, @0.38, @0.56, @0.48, @0.36]),
                          
                          CCSeriesElement.new
                          .nameSet(@"联盟广告")
                          .typeSet(CCChartTypeLine)
                          .smoothSet(YES)
-                         .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
+                         .dataSet(@[@0.38, @0.31, @0.32, @0.32, @0.64, @0.66, @0.86, @0.47, @0.52, @0.75, @0.52, @0.56, @0.54, @0.60, @0.46, @0.63, @0.54, @0.51, @0.58, @0.64, @0.60, @0.45, @0.36, @0.67]),
                          
                          CCSeriesElement.new
                          .nameSet(@"视频广告")
                          .typeSet(CCChartTypeLine)
                          .smoothSet(YES)
-                         .dataSet(@[@150, @232, @201, @154, @190, @330, @410]),
+                         .dataSet(@[@0.46, @0.32, @0.53, @0.58, @0.86, @0.68, @0.85, @0.73, @0.69, @0.71, @0.91, @0.74, @0.60, @0.50, @0.39, @0.67, @0.55, @0.49, @0.65, @0.45, @0.64, @0.47, @0.63, @0.64]),
                          
                          CCSeriesElement.new
                          .nameSet(@"直接访问")
                          .typeSet(CCChartTypeLine)
                          .smoothSet(YES)
-                         .dataSet(@[@320, @332, @301, @334, @390, @330, @320]),
+                         .dataSet(@[@0.60, @0.51, @0.52, @0.53, @0.64, @0.84, @0.65, @0.68, @0.63, @0.47, @0.72, @0.60, @0.65, @0.74, @0.66, @0.65, @0.71, @0.59, @0.65, @0.77, @0.52, @0.53, @0.58, @0.53]),
                          
                          ]);
             
@@ -362,37 +350,31 @@
             break;
             
         case 7: {
+            
           ccChartModel = CCChartModel.new
             .titleTextSet(@"堆叠区域图")
-            .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
+            .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",])
             .xAxisTypeSet(@"category")
             .yAxisTypeSet(@"value")
-            .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+            .xAxisDataSet(@[@"一月", @"二月", @"三月", @"四月", @"五月", @"六月", @"七月", @"八月", @"九月", @"十月", @"十一月", @"十二月"])
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"邮件营销")
                          .typeSet(CCChartTypeLine)
                          .stepSet(@"middle")
-                         .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
+                         .dataSet(@[@149.9, @171.5, @106.4, @129.2, @144.0, @176.0, @135.6, @188.5, @276.4, @214.1, @95.6, @54.4]),
                          
                          CCSeriesElement.new
                          .nameSet(@"联盟广告")
                          .typeSet(CCChartTypeLine)
                          .stepSet(@"middle")
-                         .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
+                         .dataSet(@[@83.6, @78.8, @188.5, @93.4, @106.0, @84.5, @105.0, @104.3, @131.2, @153.5, @226.6, @192.3]),
                          
                          CCSeriesElement.new
                          .nameSet(@"视频广告")
                          .typeSet(CCChartTypeLine)
                          .stepSet(@"middle")
-                         .dataSet(@[@150, @232, @201, @154, @190, @330, @410]),
-                         
-                         CCSeriesElement.new
-                         .nameSet(@"直接访问")
-                         .typeSet(CCChartTypeLine)
-                         .stepSet(@"middle")
-                         .dataSet(@[@320, @332, @301, @334, @390, @330, @320]),
-                         
+                         .dataSet(@[@48.9, @38.8, @19.3, @41.4, @47.0, @28.3, @59.0, @69.6, @52.4, @65.2, @53.3, @72.2]),
                          ]);
             
         }
