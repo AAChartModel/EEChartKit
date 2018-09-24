@@ -174,7 +174,7 @@
             .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
             .xAxisTypeSet(@"category")
             .yAxisTypeSet(@"value")
-            .yAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+            .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"邮件营销")
@@ -211,7 +211,7 @@
             .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
             .xAxisTypeSet(@"category")
             .yAxisTypeSet(@"value")
-            .yAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+            .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"邮件营销")
@@ -252,7 +252,7 @@
             .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
             .xAxisTypeSet(@"category")
             .yAxisTypeSet(@"value")
-            .yAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+            .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"邮件营销")
@@ -297,7 +297,7 @@
             .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
             .xAxisTypeSet(@"category")
             .yAxisTypeSet(@"value")
-            .yAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+            .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"邮件营销")
@@ -330,7 +330,7 @@
             .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
             .xAxisTypeSet(@"category")
             .yAxisTypeSet(@"value")
-            .yAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+            .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"邮件营销")
@@ -367,7 +367,7 @@
             .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
             .xAxisTypeSet(@"category")
             .yAxisTypeSet(@"value")
-            .yAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+            .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"邮件营销")
@@ -404,7 +404,7 @@
             .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
             .xAxisTypeSet(@"category")
             .yAxisTypeSet(@"value")
-            .yAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+            .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"邮件营销")
