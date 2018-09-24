@@ -61,18 +61,18 @@
     
     NSArray *xAxis = @[
                        @{
-                           @"type" : @"category",
-                           @"boundaryGap" : @false,
-                           @"data" : chartModel.xAxisData ? chartModel.xAxisData:@"",
-                           @"scale":@true
+                           @"type" : chartModel.xAxisType ? chartModel.xAxisType:@"",
+//                           @"boundaryGap" : @false,
+//                           @"data" : chartModel.xAxisData ? chartModel.xAxisData:@"",
+//                           @"scale":@true
                            }
                        ];
     
     NSArray *yAxis = @[
                        @{
-                           @"type" : @"value",
-                           @"scale":@true,
-                           @"data" : chartModel.xAxisData ? chartModel.xAxisData:@"",
+                           @"type" : chartModel.yAxisType ? chartModel.yAxisType:@"",
+//                           @"scale": @true,
+                           @"data" : chartModel.yAxisData ? chartModel.yAxisData:@"",
                            }
                        ];
 //    NSArray *dataZoom = @[ @{

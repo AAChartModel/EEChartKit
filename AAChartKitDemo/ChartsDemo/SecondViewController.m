@@ -98,87 +98,347 @@
     [self.view addSubview:self.aaChartView];
     
     
-    //设置 AAChartView 的背景色是否为透明
-    self.aaChartView.isClearBackgroundColor = YES;
-    
+//    //设置 AAChartView 的背景色是否为透明
+//    self.aaChartView.isClearBackgroundColor = YES;
+//
 
     [self configureTheStyleForDifferentTypeChart];//为不同类型图表设置样式
+
+   CCChartModel *ccChartModel = [self configrueTheChartModel];
     
-    /*配置 Y 轴标注线,解开注释,即可查看添加标注线之后的图表效果(NOTE:必须设置 Y 轴可见)*/
-    //    [self configureTheYAxisPlotLineForAAChartView];
-    
-    NSDictionary *areaStyle;
-    
+    [self.aaChartView aa_drawChartWithChartModel:ccChartModel];
+}
+
+- (CCChartModel *)configrueTheChartModel {
+    CCChartModel *ccChartModel;
     switch (self.chartType) {
-        case 2:
-        case 3:
-        case 4:
-            areaStyle = @{};
+        case 0: {
+            ccChartModel = CCChartModel.new
+            .titleTextSet(@"世界人口总量")
+            .titleSubtextSet(@"数据来自于网络")
+            .tooltipTriggerSet(@"axis")
+            .legendDataSet(@[@"2010年",@"2012年"])
+            .xAxisTypeSet(@"value")
+            .yAxisTypeSet(@"category")
+            .yAxisDataSet(@[@"巴西🇧🇷",@"印尼🇮🇩",@"美国🇺🇸",@"印度🇮🇳",@"中国🇨🇳",@"世界🌍人口(万)",])
+            .seriesSet(@[
+                         CCSeriesElement.new
+                         .nameSet(@"2011年")
+                         .typeSet(CCChartTypeBar)
+                         .dataSet(@[@18203, @23489, @29034, @104970, @131744, @630230]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"2012年")
+                         .typeSet(CCChartTypeBar)
+                         .dataSet(@[@19325, @23438, @31000, @121594, @134141, @681807]),
+                         ]);
+            }
             break;
-        case 5:
-        case 6:
-        case 7:
-            areaStyle = (id)[NSNull null];
+            
+        case 1: {
+            ccChartModel = CCChartModel.new
+            .titleTextSet(@"堆叠区域图")
+            .tooltipTriggerSet(@"axis")
+            .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
+            .xAxisTypeSet(@"category")
+            .yAxisTypeSet(@"value")
+            .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+            .seriesSet(@[
+                         CCSeriesElement.new
+                         .nameSet(@"邮件营销")
+                         .typeSet(CCChartTypeBar)
+                         .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"联盟广告")
+                         .typeSet(CCChartTypeBar)
+                         .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"视频广告")
+                         .typeSet(CCChartTypeBar)
+                         .dataSet(@[@150, @232, @201, @154, @190, @330, @410]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"直接访问")
+                         .typeSet(CCChartTypeBar)
+                         .dataSet(@[@320, @332, @301, @334, @390, @330, @320]),
+                         
+                         ]);
+        }
             break;
+            
+        case 2: {
+            ccChartModel = CCChartModel.new
+            .titleTextSet(@"堆叠区域图")
+            .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
+            .xAxisTypeSet(@"category")
+            .yAxisTypeSet(@"value")
+            .yAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+            .seriesSet(@[
+                         CCSeriesElement.new
+                         .nameSet(@"邮件营销")
+                         .typeSet(CCChartTypeLine)
+                         .areaStyleSet(@{})
+                         .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"联盟广告")
+                         .typeSet(CCChartTypeLine)
+                         .areaStyleSet(@{})
+                         .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"视频广告")
+                         .typeSet(CCChartTypeLine)
+                         .areaStyleSet(@{})
+                         .dataSet(@[@150, @232, @201, @154, @190, @330, @410]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"直接访问")
+                         .typeSet(CCChartTypeLine)
+                         .areaStyleSet(@{})
+                         .dataSet(@[@320, @332, @301, @334, @390, @330, @320]),
+                         
+                         ]);
+            
+        }
+            break;
+            
+        case 3: {
+            ccChartModel = CCChartModel.new
+            .titleTextSet(@"堆叠区域图")
+            .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
+            .xAxisTypeSet(@"category")
+            .yAxisTypeSet(@"value")
+            .yAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+            .seriesSet(@[
+                         CCSeriesElement.new
+                         .nameSet(@"邮件营销")
+                         .typeSet(CCChartTypeLine)
+                         .areaStyleSet(@{})
+                         .smoothSet(YES)
+                         .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"联盟广告")
+                         .typeSet(CCChartTypeLine)
+                         .areaStyleSet(@{})
+                         .smoothSet(YES)
+                         .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"视频广告")
+                         .typeSet(CCChartTypeLine)
+                         .areaStyleSet(@{})
+                         .smoothSet(YES)
+                         .dataSet(@[@150, @232, @201, @154, @190, @330, @410]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"直接访问")
+                         .typeSet(CCChartTypeLine)
+                         .areaStyleSet(@{})
+                         .smoothSet(YES)
+                         .dataSet(@[@320, @332, @301, @334, @390, @330, @320]),
+                         
+                         ]);
+            
+        }
+            break;
+            
+        case 4: {
+           ccChartModel = CCChartModel.new
+            .titleTextSet(@"堆叠区域图")
+            .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
+            .xAxisTypeSet(@"category")
+            .yAxisTypeSet(@"value")
+            .yAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+            .seriesSet(@[
+                         CCSeriesElement.new
+                         .nameSet(@"邮件营销")
+                         .typeSet(CCChartTypeLine)
+                         .areaStyleSet(@{})
+                         .smoothSet(YES)
+                         .stepSet(@"middle")
+                         .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"联盟广告")
+                         .typeSet(CCChartTypeLine)
+                         .areaStyleSet(@{})
+                         .smoothSet(YES)
+                         .stepSet(@"middle")
+                         .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"视频广告")
+                         .typeSet(CCChartTypeLine)
+                         .areaStyleSet(@{})
+                         .smoothSet(YES)
+                         .stepSet(@"middle")
+                         .dataSet(@[@150, @232, @201, @154, @190, @330, @410]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"直接访问")
+                         .typeSet(CCChartTypeLine)
+                         .areaStyleSet(@{})
+                         .smoothSet(YES)
+                         .stepSet(@"middle")
+                         .dataSet(@[@320, @332, @301, @334, @390, @330, @320]),
+                         
+                         ]);
+            
+        }
+            break;
+            
+        case 5: {
+            ccChartModel = CCChartModel.new
+            .titleTextSet(@"堆叠区域图")
+            .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
+            .xAxisTypeSet(@"category")
+            .yAxisTypeSet(@"value")
+            .yAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+            .seriesSet(@[
+                         CCSeriesElement.new
+                         .nameSet(@"邮件营销")
+                         .typeSet(CCChartTypeLine)
+                         .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"联盟广告")
+                         .typeSet(CCChartTypeLine)
+                         .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"视频广告")
+                         .typeSet(CCChartTypeLine)
+                         .dataSet(@[@150, @232, @201, @154, @190, @330, @410]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"直接访问")
+                         .typeSet(CCChartTypeLine)
+                         .dataSet(@[@320, @332, @301, @334, @390, @330, @320]),
+                         
+                         ]);
+            
+        }
+            break;
+            
+        case 6: {
+            ccChartModel = CCChartModel.new
+            .titleTextSet(@"堆叠区域图")
+            .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
+            .xAxisTypeSet(@"category")
+            .yAxisTypeSet(@"value")
+            .yAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+            .seriesSet(@[
+                         CCSeriesElement.new
+                         .nameSet(@"邮件营销")
+                         .typeSet(CCChartTypeLine)
+                         .smoothSet(YES)
+                         .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"联盟广告")
+                         .typeSet(CCChartTypeLine)
+                         .smoothSet(YES)
+                         .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"视频广告")
+                         .typeSet(CCChartTypeLine)
+                         .smoothSet(YES)
+                         .dataSet(@[@150, @232, @201, @154, @190, @330, @410]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"直接访问")
+                         .typeSet(CCChartTypeLine)
+                         .smoothSet(YES)
+                         .dataSet(@[@320, @332, @301, @334, @390, @330, @320]),
+                         
+                         ]);
+            
+        }
+            break;
+            
+        case 7: {
+          ccChartModel = CCChartModel.new
+            .titleTextSet(@"堆叠区域图")
+            .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
+            .xAxisTypeSet(@"category")
+            .yAxisTypeSet(@"value")
+            .yAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+            .seriesSet(@[
+                         CCSeriesElement.new
+                         .nameSet(@"邮件营销")
+                         .typeSet(CCChartTypeLine)
+                         .stepSet(@"middle")
+                         .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"联盟广告")
+                         .typeSet(CCChartTypeLine)
+                         .stepSet(@"middle")
+                         .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"视频广告")
+                         .typeSet(CCChartTypeLine)
+                         .stepSet(@"middle")
+                         .dataSet(@[@150, @232, @201, @154, @190, @330, @410]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"直接访问")
+                         .typeSet(CCChartTypeLine)
+                         .stepSet(@"middle")
+                         .dataSet(@[@320, @332, @301, @334, @390, @330, @320]),
+                         
+                         ]);
+            
+        }
+            break;
+            
+        case 8: {
+           ccChartModel = CCChartModel.new
+            .titleTextSet(@"堆叠区域图")
+            .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
+            .xAxisTypeSet(@"category")
+            .yAxisTypeSet(@"value")
+            .yAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+            .seriesSet(@[
+                         CCSeriesElement.new
+                         .nameSet(@"邮件营销")
+                         .typeSet(CCChartTypeScatter)
+                         .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"联盟广告")
+                         .typeSet(CCChartTypeScatter)
+                         .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"视频广告")
+                         .typeSet(CCChartTypeScatter)
+                         .dataSet(@[@150, @232, @201, @154, @190, @330, @410]),
+                         
+                         CCSeriesElement.new
+                         .nameSet(@"直接访问")
+                         .typeSet(CCChartTypeScatter)
+                         .dataSet(@[@320, @332, @301, @334, @390, @330, @320]),
+                         
+                         ]);
+            
+        }
+            break;
+
+
+
+
             
         default:
             break;
     }
-    
-    NSString *step;
-    if (self.chartType == 4 || self.chartType == 7) {
-        step = @"middle";
-    }
-    
-    BOOL smooth = NO;
-    if (self.chartType == 3 || self.chartType == 6) {
-        smooth = YES;
-    }
-    
-    CCChartModel *ccChartModel = CCChartModel.new
-    .titleTextSet(@"堆叠区域图")
-    .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",@"搜索引擎"])
-    .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
-    .seriesSet(@[
-                 CCSeriesElement.new
-                 .nameSet(@"邮件营销")
-                 .typeSet(chartType)
-                 .stackSet(@"总量")
-                 .areaStyleSet(areaStyle)
-                 .smoothSet(smooth)
-                 .stepSet(step)
-                 .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
-                 
-                 CCSeriesElement.new
-                 .nameSet(@"联盟广告")
-                 .typeSet(chartType)
-                 .stackSet(@"总量")
-                 .areaStyleSet(areaStyle)
-                 .smoothSet(smooth)
-                 .stepSet(step)
-                 .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
-                 
-                 CCSeriesElement.new
-                 .nameSet(@"视频广告")
-                 .typeSet(chartType)
-                 .stackSet(@"总量")
-                 .areaStyleSet(areaStyle)
-                 .smoothSet(smooth)
-                 .stepSet(step)
-                 .dataSet(@[@150, @232, @201, @154, @190, @330, @410]),
-                 
-                 CCSeriesElement.new
-                 .nameSet(@"直接访问")
-                 .typeSet(chartType)
-                 .stackSet(@"总量")
-                 .areaStyleSet(areaStyle)
-                 .smoothSet(smooth)
-                 .stepSet(step)
-                 .dataSet(@[@320, @332, @301, @334, @390, @330, @320]),
-                 
-                 ]);
-    
-    [self.aaChartView aa_drawChartWithChartModel:ccChartModel];
+    return ccChartModel;
 }
 
 
@@ -266,18 +526,6 @@
                                  ,
                                  ];
     }
-}
-
-- (NSArray *)configureTheRandomColorArray {
-    NSMutableArray *colorStringArr = [[NSMutableArray alloc]init];
-    for (int i=0; i<5; i++) {
-        int R = (arc4random() % 256) ;
-        int G = (arc4random() % 256) ;
-        int B = (arc4random() % 256) ;
-        NSString *colorStr = [NSString stringWithFormat:@"rgba(%d,%d,%d,0.9)",R,G,B];
-        [colorStringArr addObject:colorStr];
-    }
-    return colorStringArr;
 }
 
 #pragma mark -- AAChartView delegate

@@ -31,12 +31,25 @@ CCChartType const CCChartTypePictorialBar = @"pictorialBar";
 CCChartType const CCChartTypeThemeRiver = @"ThemeRiver";
 CCChartType const CCChartTypeCustom = @"custom";
 
+CCChartSymbolType const CCChartSymbolTypeCircle = @"circle";
+CCChartSymbolType const CCChartSymbolTypeRect = @"rect";
+CCChartSymbolType const CCChartSymbolTypeRoundRect = @"roundRect";
+CCChartSymbolType const CCChartSymbolTypeTriangle = @"triangle";
+CCChartSymbolType const CCChartSymbolTypeDiamond = @"diamond";
+CCChartSymbolType const CCChartSymbolTypePin = @"pin";
+CCChartSymbolType const CCChartSymbolTypeArrow = @"arrow";
+CCChartSymbolType const CCChartSymbolTypeNone = @"none";
+
 @implementation CCChartModel
 
 - (instancetype)init {
     self = [super init];
     if (self) {
         _color = @[@"#8A2BE2",@"#fe117c",@"#ffc069",@"#06caf4",@"#7dffc0",];
+//        .xAxisTypeSet(@"category")
+//        .yAxisTypeSet(@"value")
+        _xAxisType = @"category";
+        _yAxisType = @"value";
     }
     return self;
 }
@@ -48,7 +61,10 @@ AAPropSetFuncImplementation(CCChartModel, NSString *, titleSubtext)
 AAPropSetFuncImplementation(CCChartModel, NSString *, tooltipTrigger);
 AAPropSetFuncImplementation(CCChartModel, NSString *, tooltipFormatter);
 AAPropSetFuncImplementation(CCChartModel, NSArray  *, legendData);
+AAPropSetFuncImplementation(CCChartModel, NSString *, xAxisType)
 AAPropSetFuncImplementation(CCChartModel, NSArray  *, xAxisData);
+AAPropSetFuncImplementation(CCChartModel, NSString *, yAxisType)
+AAPropSetFuncImplementation(CCChartModel, NSArray  *, yAxisData);
 AAPropSetFuncImplementation(CCChartModel, NSArray <CCSeriesElement *>*, series);
 
 @end

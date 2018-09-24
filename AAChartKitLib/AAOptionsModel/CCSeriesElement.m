@@ -17,11 +17,15 @@ AAPropSetFuncImplementation(CCSeriesElement, BOOL, smooth);
 AAPropSetFuncImplementation(CCSeriesElement, NSString *, step);
 AAPropSetFuncImplementation(CCSeriesElement, NSString *, symbol);
 AAPropSetFuncImplementation(CCSeriesElement, NSString *, stack);
+AAPropSetFuncImplementation(CCSeriesElement, NSDictionary *, lineStyle);
 AAPropSetFuncImplementation(CCSeriesElement, NSDictionary *, areaStyle);
 AAPropSetFuncImplementation(CCSeriesElement, NSArray *, data);
 AAPropSetFuncImplementation(CCSeriesElement, NSDictionary *, label);
 AAPropSetFuncImplementation(CCSeriesElement, NSString *, radius);
 AAPropSetFuncImplementation(CCSeriesElement, NSArray *, center);
 AAPropSetFuncImplementation(CCSeriesElement, NSString *, roseType);
+AAPropSetFuncImplementation(CCSeriesElement, NSDictionary *, markPoint);
+AAPropSetFuncImplementation(CCSeriesElement, NSDictionary *, markLine);
+
 
 @end

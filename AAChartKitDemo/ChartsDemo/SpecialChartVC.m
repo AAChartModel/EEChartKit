@@ -144,20 +144,7 @@
 
 - (CCChartModel *)configureTheChartModel:(NSString *)chartType {
     if ([chartType isEqualToString:@"colorfulColumnChart"]) {
-        AAChartModel *aaChartModel = AAObject(AAChartModel)
-        .chartTypeSet(AAChartTypeColumn)
-        .titleSet(@"Colorful Column Chart")
-        .subtitleSet(@"single data array colorful column chart")
-        .colorsThemeSet([self configureTheRandomColorArrayWithColorNumber:14])
-        .gradientColorEnabledSet(true)
-        .borderRadiusSet(@5)
-        .seriesSet(@[AAObject(AASeriesElement)
-                     .nameSet(@"ElementOne")
-                     .dataSet(@[@211,@183,@157,@133,@111,@91,@73,@57,@43,@31,@21,@13,@7,@3])
-                     .colorByPointSet((id)@(true)),//When using automatic point colors pulled from the options.colors collection, this option determines whether the chart should receive one color per series or one color per point. Default Value：false.
-                     ]
-                   );
-        return aaChartModel;
+        
     } else if ([chartType isEqualToString:@"gradientColorBar"]) {
         NSDictionary *gradientColorDic1 =
         @{
@@ -199,45 +186,79 @@
                      CCSeriesElement.new
                      .nameSet(@"邮件营销")
                      .typeSet(CCChartTypeBar)
-                     .stackSet(@"总量")
                      .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
                      
                      CCSeriesElement.new
                      .nameSet(@"联盟广告")
                      .typeSet(CCChartTypeBar)
-                     .stackSet(@"总量")
                      .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
                      ]);
-        
-        
         
         return chartModel;
     } else if ([chartType isEqualToString:AAChartTypeLine]) {
         
-        AAChartModel *aaChartModel = AAObject(AAChartModel)
-        //.connectNullsSet(true)//设置折线是否断点重连
-        .chartTypeSet(chartType)
-        .titleSet(@"编程语言热度")
-        .subtitleSet(@"虚拟数据")
-        .categoriesSet(@[@"Java",@"Swift",@"Python",@"Ruby", @"PHP",@"Go",@"C",@"C#",@"C++",@"Perl",@"R",@"MATLAB",@"SQL"])
-        .yAxisTitleSet(@"摄氏度")
+        CCChartModel *ccChartModel = CCChartModel.new
+        .titleTextSet(@"STEP LINE CHART")
+        .titleSubtextSet(@"2020/08/08")
+        .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",])
+        .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
         .seriesSet(@[
-                     @{  @"name":@"本专业",
-                         @"data": @[@45,@88,@49,@43,@65,@56,@47,@28,@49,@44,@89,@55],
-                         @"zoneAxis":@"x",
-                         @"gridLineWidth":@0,
-                         @"zones":@[
-                                 @{@"value": @8},
-                                 @{@"dashStyle": AALineDashSyleTypeDash}
-                                 ]
-                         },
-                     @{  @"name":@"所有专业",
-                         @"gridLineWidth":@0,
-                         @"data":@[@"",@"",@100,@109,@89,@"",@"",@120,@"",@"",@"",@""],
-                         },
+                     CCSeriesElement.new
+                     .nameSet(@"邮件营销")
+                     .typeSet(CCChartTypeLine)
+                     .smoothSet(YES)
+                     .lineStyleSet(@{@"type":@"solid"})
+                     .stackSet(@"总量")
+                     .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
+                     
+                     CCSeriesElement.new
+                     .nameSet(@"联盟广告")
+                     .typeSet(CCChartTypeLine)
+                     .smoothSet(YES)
+                     .lineStyleSet(@{@"type":@"dashed"})
+                     .stackSet(@"总量")
+                     .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
+                     
+                     CCSeriesElement.new
+                     .nameSet(@"视频广告")
+                     .typeSet(CCChartTypeLine)
+                     .smoothSet(YES)
+                     .lineStyleSet(@{@"type":@"dotted"})
+                     .stackSet(@"总量")
+                     .dataSet(@[@450, @432, @401, @454, @590, @530, @510]),
+                     
+                     ]);
+        return ccChartModel;
+        
+    }  else if ([chartType isEqualToString:AAChartTypeArea]) {
+        
+        CCChartModel *chartModel = CCChartModel.new
+        .titleTextSet(@"黄昏别馆年均降水量")
+        .tooltipTriggerSet(@"axis")
+        .legendDataSet(@[@"降水量"])
+        .xAxisDataSet(@[@"一月", @"二月", @"三月", @"四月", @"五月", @"六月", @"七月", @"八月", @"九月", @"十月", @"十一月", @"十二月"])
+        .seriesSet(@[
+                     CCSeriesElement.new
+                     .nameSet(@"2020")
+                     .typeSet(CCChartTypeBar)
+                     .dataSet(@[@2.6, @5.9, @9.0, @26.4, @28.7, @70.7, @175.6, @182.2, @48.7, @18.8, @6.0, @2.3])
+                     .markPointSet(@{
+                                     @"data" :@[
+                                             @{@"name" : @"年最高", @"value" : @182.2, @"xAxis": @7, @"yAxis": @183},
+                                             @{@"name" : @"年最低", @"value" : @2.3, @"xAxis": @11, @"yAxis": @3}
+                                             ]
+                                     })
+                     .markLineSet(@{
+                                    @"data" : @[
+                                            @{@"type" :@"average", @"name" : @"平均值"}
+                                            ]
+                                    })
+                     ,
+                     
+                     
                      ]);
         
-        return aaChartModel;
+        return chartModel;
         
     } else if ([chartType isEqualToString:AAChartTypeAreaspline]) {
         
@@ -282,55 +303,7 @@
         
         return ccChartModel;
    
-    } else if ([chartType isEqualToString:AAChartTypeArea]) {
-        
-        AAChartModel *aaChartModel = AAObject(AAChartModel)
-        .chartTypeSet(chartType)
-        .symbolSet(AAChartSymbolTypeCircle)
-        .titleSet(@"带有数据阈值标志线的区域填充图")
-        .markerRadiusSet(@6)//设置折线连接点宽度为0,即是隐藏连接点
-        .subtitleSet(@"横屏查看效果更佳")
-        .yAxisGridLineWidthSet(@0.5)
-        .yAxisTitleSet(@"")
-        .symbolStyleSet(AAChartSymbolStyleTypeInnerBlank)
-        .dataLabelEnabledSet(true)
-        .seriesSet(@[AAObject(AASeriesElement)
-                     .nameSet(@"2017")
-                     .dataSet(@[@7.0, @6.9, @9.5, @14.5, @18.2, @21.5, @25.2, @26.5, @23.3, @18.3, @13.9, @9.6])
-                     .lineWidthSet(@5)
-                     .fillColorSet((id)@{
-                                     @"linearGradient": @{
-                                             @"x1": @0,
-                                             @"y1": @1,
-                                             @"x2": @0,
-                                             @"y2": @0
-                                             },
-                                     @"stops": @[@[@0,@"rgba(220,20,60,0.1)"],
-                                                 @[@1,@"rgba(220,20,60,1)"]]//颜色字符串设置支持十六进制类型和 rgba 类型
-                                     }),]
-                   )
-        .yAxisPlotLinesSet(@[
-                             AAObject(AAPlotLinesElement)
-                             .colorSet(@"#F05353")//颜色值(16进制)
-                             .dashStyleSet(AALineDashSyleTypeLongDashDotDot)//样式：Dash,Dot,Solid等,默认Solid
-                             .widthSet(@(1)) //标示线粗细
-                             .valueSet(@(10)) //所在位置
-                             .zIndexSet(@(1)) //层叠,标示线在图表中显示的层叠级别，值越大，显示越向前
-                             .labelSet(@{@"text":@"标示线1",@"x":@(0),@"style":@{@"color":@"#33bdfd"}})/*这里其实也可以像AAPlotLinesElement这样定义个对象来赋值（偷点懒直接用了字典，最会终转为js代码，可参考https://www.hcharts.cn/docs/basic-plotLines来写字典）*/
-                             ,
-                             AAObject(AAPlotLinesElement)
-                             .colorSet(@"#33BDFD")
-                             .dashStyleSet(AALineDashSyleTypeLongDashDotDot)
-                             .widthSet(@(1))
-                             .valueSet(@(20))
-                             .labelSet(@{@"text":@"标示线2",@"x":@(0),@"style":@{@"color":@"#33bdfd"}})
-                             ]
-                           )
-        ;
-        
-        return aaChartModel;
-        
-    } else if ([chartType isEqualToString:AAChartTypePie]) {
+    }  else if ([chartType isEqualToString:AAChartTypePie]) {
         CCChartModel *chartModel = CCChartModel.new
         .titleTextSet(@"Customized Pie")
         .tooltipTriggerSet(@"item")
@@ -552,6 +525,34 @@
         
     } else if ([chartType isEqualToString:@"stepLine"]) {
         
+        CCChartModel *ccChartModel = CCChartModel.new
+        .titleTextSet(@"STEP LINE CHART")
+        .titleSubtextSet(@"2020/08/08")
+        .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",])
+        .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+        .seriesSet(@[
+                     CCSeriesElement.new
+                     .nameSet(@"邮件营销")
+                     .typeSet(CCChartTypeLine)
+                     .stepSet(@"left")//折线连接点靠左边👈
+                     .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
+                     
+                     CCSeriesElement.new
+                     .nameSet(@"联盟广告")
+                     .typeSet(CCChartTypeLine)
+                     .stepSet(@"middle")//折线连接点居中
+                     .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
+                     
+                     CCSeriesElement.new
+                     .nameSet(@"视频广告")
+                     .typeSet(CCChartTypeLine)
+                     .stepSet(@"right")//折线连接点靠右👉
+                     .dataSet(@[@450, @432, @401, @454, @590, @530, @510]),
+           
+                     ]);
+        
+        return ccChartModel;
+        
         AAChartModel *aaChartModel = AAObject(AAChartModel)
         .chartTypeSet(AAChartTypeLine)//图形类型
         .animationTypeSet(AAChartAnimationBounce)//图形渲染动画类型为"bounce"
@@ -580,6 +581,39 @@
         return aaChartModel;
         
     } else if ([chartType isEqualToString:@"stepArea"]) {
+        
+        CCChartModel *ccChartModel = CCChartModel.new
+        .titleTextSet(@"STEP LINE CHART")
+        .titleSubtextSet(@"2020/08/08")
+        .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",])
+        .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+        .seriesSet(@[
+                     CCSeriesElement.new
+                     .nameSet(@"邮件营销")
+                     .typeSet(CCChartTypeLine)
+                     .areaStyleSet(@{})
+                     .stackSet(@"总量")
+                     .stepSet(@"left")//折线连接点靠左边👈
+                     .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
+                     
+                     CCSeriesElement.new
+                     .nameSet(@"联盟广告")
+                     .typeSet(CCChartTypeLine)
+                     .areaStyleSet(@{})
+                     .stackSet(@"总量")
+                     .stepSet(@"left")//折线连接点靠左边👈
+                     .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
+                     
+                     CCSeriesElement.new
+                     .nameSet(@"视频广告")
+                     .typeSet(CCChartTypeLine)
+                     .areaStyleSet(@{})
+                     .stackSet(@"总量")
+                     .stepSet(@"left")//折线连接点靠左边👈
+                     .dataSet(@[@450, @432, @401, @454, @590, @530, @510]),
+                     
+                     ]);
+        return ccChartModel;
         
         AAChartModel *aaChartModel = AAObject(AAChartModel)
         .chartTypeSet(AAChartTypeArea)//图形类型

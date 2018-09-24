@@ -43,6 +43,14 @@ COCOA_CHARTS_EXTERN CCChartType const CCChartTypePictorialBar;
 COCOA_CHARTS_EXTERN CCChartType const CCChartTypeThemeRiver;
 COCOA_CHARTS_EXTERN CCChartType const CCChartTypeCustom;
 
+COCOA_CHARTS_EXTERN CCChartSymbolType const CCChartSymbolTypeCirrle;
+COCOA_CHARTS_EXTERN CCChartSymbolType const CCChartSymbolTypeRect;
+COCOA_CHARTS_EXTERN CCChartSymbolType const CCChartSymbolTypeRoundRect;
+COCOA_CHARTS_EXTERN CCChartSymbolType const CCChartSymbolTypeTriangle;
+COCOA_CHARTS_EXTERN CCChartSymbolType const CCChartSymbolTypeDiamond;
+COCOA_CHARTS_EXTERN CCChartSymbolType const CCChartSymbolTypePin;
+COCOA_CHARTS_EXTERN CCChartSymbolType const CCChartSymbolTypeArrow;
+COCOA_CHARTS_EXTERN CCChartSymbolType const CCChartSymbolTypeNone;
 
 @interface CCChartModel : NSObject
 
@@ -53,7 +61,10 @@ AAPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, titleSu
 AAPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, tooltipTrigger);
 AAPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, tooltipFormatter);
 AAPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, legendData);
+AAPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, xAxisType);
 AAPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, xAxisData);
+AAPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, yAxisType);
+AAPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, yAxisData);
 AAPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray <CCSeriesElement *>*, series);
 
 @end
