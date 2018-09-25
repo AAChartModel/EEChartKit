@@ -42,13 +42,13 @@
     return self;
 }
 
-AAPropSetFuncImplementation(AAColumn, BOOL,           grouping);
-AAPropSetFuncImplementation(AAColumn, NSNumber *,     pointPadding);
-AAPropSetFuncImplementation(AAColumn, NSNumber *,     groupPadding);
-AAPropSetFuncImplementation(AAColumn, NSNumber *,     borderWidth);
-AAPropSetFuncImplementation(AAColumn, BOOL ,          colorByPoint);
-AAPropSetFuncImplementation(AAColumn, AADataLabels *, dataLabels);
-AAPropSetFuncImplementation(AAColumn, NSString *,     stacking);
-AAPropSetFuncImplementation(AAColumn, NSNumber *,     borderRadius);
+CCPropSetFuncImplementation(AAColumn, BOOL,           grouping);
+CCPropSetFuncImplementation(AAColumn, NSNumber *,     pointPadding);
+CCPropSetFuncImplementation(AAColumn, NSNumber *,     groupPadding);
+CCPropSetFuncImplementation(AAColumn, NSNumber *,     borderWidth);
+CCPropSetFuncImplementation(AAColumn, BOOL ,          colorByPoint);
+CCPropSetFuncImplementation(AAColumn, AADataLabels *, dataLabels);
+CCPropSetFuncImplementation(AAColumn, NSString *,     stacking);
+CCPropSetFuncImplementation(AAColumn, NSNumber *,     borderRadius);
 
 @end

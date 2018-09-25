@@ -10,22 +10,22 @@
 
 @implementation CCSeriesElement
 
-AAPropSetFuncImplementation(CCSeriesElement, NSString *, name);
-AAPropSetFuncImplementation(CCSeriesElement, NSString *, type);
-AAPropSetFuncImplementation(CCSeriesElement, id, animationEasing);
-AAPropSetFuncImplementation(CCSeriesElement, BOOL, smooth);
-AAPropSetFuncImplementation(CCSeriesElement, NSString *, step);
-AAPropSetFuncImplementation(CCSeriesElement, NSString *, symbol);
-AAPropSetFuncImplementation(CCSeriesElement, NSString *, stack);
-AAPropSetFuncImplementation(CCSeriesElement, NSDictionary *, lineStyle);
-AAPropSetFuncImplementation(CCSeriesElement, NSDictionary *, areaStyle);
-AAPropSetFuncImplementation(CCSeriesElement, NSArray *, data);
-AAPropSetFuncImplementation(CCSeriesElement, NSDictionary *, label);
-AAPropSetFuncImplementation(CCSeriesElement, NSString *, radius);
-AAPropSetFuncImplementation(CCSeriesElement, NSArray *, center);
-AAPropSetFuncImplementation(CCSeriesElement, NSString *, roseType);
-AAPropSetFuncImplementation(CCSeriesElement, NSDictionary *, markPoint);
-AAPropSetFuncImplementation(CCSeriesElement, NSDictionary *, markLine);
+CCPropSetFuncImplementation(CCSeriesElement, NSString *, name);
+CCPropSetFuncImplementation(CCSeriesElement, NSString *, type);
+CCPropSetFuncImplementation(CCSeriesElement, id, animationEasing);
+CCPropSetFuncImplementation(CCSeriesElement, BOOL, smooth);
+CCPropSetFuncImplementation(CCSeriesElement, NSString *, step);
+CCPropSetFuncImplementation(CCSeriesElement, NSString *, symbol);
+CCPropSetFuncImplementation(CCSeriesElement, NSString *, stack);
+CCPropSetFuncImplementation(CCSeriesElement, NSDictionary *, lineStyle);
+CCPropSetFuncImplementation(CCSeriesElement, NSDictionary *, areaStyle);
+CCPropSetFuncImplementation(CCSeriesElement, NSArray *, data);
+CCPropSetFuncImplementation(CCSeriesElement, NSDictionary *, label);
+CCPropSetFuncImplementation(CCSeriesElement, NSString *, radius);
+CCPropSetFuncImplementation(CCSeriesElement, NSArray *, center);
+CCPropSetFuncImplementation(CCSeriesElement, NSString *, roseType);
+CCPropSetFuncImplementation(CCSeriesElement, NSDictionary *, markPoint);
+CCPropSetFuncImplementation(CCSeriesElement, NSDictionary *, markLine);
 
 
 @end

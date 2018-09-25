@@ -34,6 +34,6 @@
 
 @implementation AAAreaspline
 
-AAPropSetFuncImplementation(AAAreaspline, AADataLabels *, dataLabels);
+CCPropSetFuncImplementation(AAAreaspline, AADataLabels *, dataLabels);
 
 @end

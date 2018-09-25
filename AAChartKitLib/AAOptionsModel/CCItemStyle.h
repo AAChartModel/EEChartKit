@@ -13,15 +13,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CCItemStyle : NSObject
 
-AAPropStatementAndPropSetFuncStatement(copy, CCItemStyle, NSString *, color);
-AAPropStatementAndPropSetFuncStatement(copy, CCItemStyle, NSString *, borderColor);
-AAPropStatementAndPropSetFuncStatement(strong, CCItemStyle, NSNumber *, borderWidth);
-AAPropStatementAndPropSetFuncStatement(copy, CCItemStyle, NSString *, borderType);
-AAPropStatementAndPropSetFuncStatement(strong, CCItemStyle, NSNumber *, shadowBlur);
-AAPropStatementAndPropSetFuncStatement(copy, CCItemStyle, NSString *, shadowColor);
-AAPropStatementAndPropSetFuncStatement(strong, CCItemStyle, NSNumber *, shadowOffsetX);
-AAPropStatementAndPropSetFuncStatement(strong, CCItemStyle, NSNumber *, shadowOffsetY);
-AAPropStatementAndPropSetFuncStatement(strong, CCItemStyle, NSNumber *, opacity);
+CCPropStatementAndPropSetFuncStatement(copy, CCItemStyle, NSString *, color);
+CCPropStatementAndPropSetFuncStatement(copy, CCItemStyle, NSString *, borderColor);
+CCPropStatementAndPropSetFuncStatement(strong, CCItemStyle, NSNumber *, borderWidth);
+CCPropStatementAndPropSetFuncStatement(copy, CCItemStyle, NSString *, borderType);
+CCPropStatementAndPropSetFuncStatement(strong, CCItemStyle, NSNumber *, shadowBlur);
+CCPropStatementAndPropSetFuncStatement(copy, CCItemStyle, NSString *, shadowColor);
+CCPropStatementAndPropSetFuncStatement(strong, CCItemStyle, NSNumber *, shadowOffsetX);
+CCPropStatementAndPropSetFuncStatement(strong, CCItemStyle, NSNumber *, shadowOffsetY);
+CCPropStatementAndPropSetFuncStatement(strong, CCItemStyle, NSNumber *, opacity);
 
 
 

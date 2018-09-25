@@ -36,13 +36,13 @@
 
 @interface AAPie : NSObject
 
-AAPropStatementAndPropSetFuncStatement(strong, AAPie, NSNumber     *, size);
-AAPropStatementAndPropSetFuncStatement(assign, AAPie, BOOL,           allowPointSelect);
-AAPropStatementAndPropSetFuncStatement(copy,   AAPie, NSString     *, cursor);
-AAPropStatementAndPropSetFuncStatement(strong, AAPie, AADataLabels *, dataLabels);
-AAPropStatementAndPropSetFuncStatement(assign, AAPie, BOOL,           showInLegend);
-AAPropStatementAndPropSetFuncStatement(strong, AAPie, NSNumber     *, startAngle);
-AAPropStatementAndPropSetFuncStatement(strong, AAPie, NSNumber     *, endAngle);
-AAPropStatementAndPropSetFuncStatement(strong, AAPie, NSNumber     *, depth);
+CCPropStatementAndPropSetFuncStatement(strong, AAPie, NSNumber     *, size);
+CCPropStatementAndPropSetFuncStatement(assign, AAPie, BOOL,           allowPointSelect);
+CCPropStatementAndPropSetFuncStatement(copy,   AAPie, NSString     *, cursor);
+CCPropStatementAndPropSetFuncStatement(strong, AAPie, AADataLabels *, dataLabels);
+CCPropStatementAndPropSetFuncStatement(assign, AAPie, BOOL,           showInLegend);
+CCPropStatementAndPropSetFuncStatement(strong, AAPie, NSNumber     *, startAngle);
+CCPropStatementAndPropSetFuncStatement(strong, AAPie, NSNumber     *, endAngle);
+CCPropStatementAndPropSetFuncStatement(strong, AAPie, NSNumber     *, depth);
 
 @end

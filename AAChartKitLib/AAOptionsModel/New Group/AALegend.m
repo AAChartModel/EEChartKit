@@ -35,15 +35,15 @@
 
 @implementation AALegend
 
-AAPropSetFuncImplementation(AALegend, AALegendLayoutType,        layout);
-AAPropSetFuncImplementation(AALegend, AALegendAlignType,         align);
-AAPropSetFuncImplementation(AALegend, AALegendVerticalAlignType, verticalAlign);
-AAPropSetFuncImplementation(AALegend, BOOL,          enabled);
-AAPropSetFuncImplementation(AALegend, NSString    *, borderColor);
-AAPropSetFuncImplementation(AALegend, NSNumber    *, borderWidth);
-AAPropSetFuncImplementation(AALegend, NSNumber    *, itemMarginTop);
-AAPropSetFuncImplementation(AALegend, AAItemStyle *, itemStyle);
-AAPropSetFuncImplementation(AALegend, NSNumber    *, x);
-AAPropSetFuncImplementation(AALegend, NSNumber    *, y);
+CCPropSetFuncImplementation(AALegend, AALegendLayoutType,        layout);
+CCPropSetFuncImplementation(AALegend, AALegendAlignType,         align);
+CCPropSetFuncImplementation(AALegend, AALegendVerticalAlignType, verticalAlign);
+CCPropSetFuncImplementation(AALegend, BOOL,          enabled);
+CCPropSetFuncImplementation(AALegend, NSString    *, borderColor);
+CCPropSetFuncImplementation(AALegend, NSNumber    *, borderWidth);
+CCPropSetFuncImplementation(AALegend, NSNumber    *, itemMarginTop);
+CCPropSetFuncImplementation(AALegend, AAItemStyle *, itemStyle);
+CCPropSetFuncImplementation(AALegend, NSNumber    *, x);
+CCPropSetFuncImplementation(AALegend, NSNumber    *, y);
 
 @end

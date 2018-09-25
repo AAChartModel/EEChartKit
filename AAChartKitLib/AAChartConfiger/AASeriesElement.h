@@ -36,32 +36,32 @@
 
 @interface AASeriesElement : NSObject
 
-AAPropStatementAndPropSetFuncStatement(copy,   AASeriesElement, NSString *, type);
-AAPropStatementAndPropSetFuncStatement(assign, AASeriesElement, BOOL      , allowPointSelect);//是否允许在点击数据点标记（markers）、柱子（柱形图）、扇区（饼图）时选中该点，选中的点可以通过 Chart.getSelectedPoints 来获取。 默认是：false.
-AAPropStatementAndPropSetFuncStatement(copy,   AASeriesElement, NSString *, name);
-AAPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSArray  *, data);
-AAPropStatementAndPropSetFuncStatement(copy,   AASeriesElement, NSString *, color);
-AAPropStatementAndPropSetFuncStatement(assign, AASeriesElement, BOOL      , colorByPoint);//When using automatic point colors pulled from the options.colors collection, this option determines whether the chart should receive one color per series or one color per point. 默认是：false.
-AAPropStatementAndPropSetFuncStatement(strong, AASeriesElement, AAMarker *, marker);
-AAPropStatementAndPropSetFuncStatement(copy,   AASeriesElement, NSString *, stacking);
-AAPropStatementAndPropSetFuncStatement(copy,   AASeriesElement, NSString *, dashStyle);
-AAPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSNumber *, threshold);
-AAPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSNumber *, lineWidth);//折线图、曲线图、直方折线图、折线填充图、曲线填充图、直方折线填充图的线条宽度
-AAPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSNumber *, borderWidth)//柱形图、条形图、扇形图等图形的描边宽度
-AAPropStatementAndPropSetFuncStatement(copy,   AASeriesElement, NSString *, borderColor);//柱形图、条形图、扇形图顿号等图形的描边颜色
-AAPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSNumber *, fillColor);//折线填充图、曲线填充图、直方折线填充图等填充图类型的填充颜色
-AAPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSNumber *, fillOpacity);//折线填充图、曲线填充图、直方折线填充图等填充图类型的填充颜色透明度
-AAPropStatementAndPropSetFuncStatement(copy,   AASeriesElement, NSString *, negativeColor); // The color for the parts of the graph or points that are below the threshold
-AAPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSNumber *, borderRadius);
-AAPropStatementAndPropSetFuncStatement(copy,   AASeriesElement, NSString *, innerSize);
-AAPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSNumber *, size);
-AAPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSArray  *, keys);
-AAPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSNumber *, yAxis);
-AAPropStatementAndPropSetFuncStatement(strong, AASeriesElement, AADataLabels*, dataLabels);
-AAPropStatementAndPropSetFuncStatement(strong, AASeriesElement, id        , step);//是否转变为直方折线图
-AAPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSDictionary *, states);
-AAPropStatementAndPropSetFuncStatement(assign, AASeriesElement, BOOL        , showInLegend);//Whether to display this particular series or series type in the legend. The default value is true for standalone series, false for linked series. 默认是：true.
-AAPropStatementAndPropSetFuncStatement(assign, AASeriesElement, BOOL        , visible);//数据列是否显示的状态,可以通过 series.show()、series.hide()、series.setVisible 来改变这个属性
+CCPropStatementAndPropSetFuncStatement(copy,   AASeriesElement, NSString *, type);
+CCPropStatementAndPropSetFuncStatement(assign, AASeriesElement, BOOL      , allowPointSelect);//是否允许在点击数据点标记（markers）、柱子（柱形图）、扇区（饼图）时选中该点，选中的点可以通过 Chart.getSelectedPoints 来获取。 默认是：false.
+CCPropStatementAndPropSetFuncStatement(copy,   AASeriesElement, NSString *, name);
+CCPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSArray  *, data);
+CCPropStatementAndPropSetFuncStatement(copy,   AASeriesElement, NSString *, color);
+CCPropStatementAndPropSetFuncStatement(assign, AASeriesElement, BOOL      , colorByPoint);//When using automatic point colors pulled from the options.colors collection, this option determines whether the chart should receive one color per series or one color per point. 默认是：false.
+CCPropStatementAndPropSetFuncStatement(strong, AASeriesElement, AAMarker *, marker);
+CCPropStatementAndPropSetFuncStatement(copy,   AASeriesElement, NSString *, stacking);
+CCPropStatementAndPropSetFuncStatement(copy,   AASeriesElement, NSString *, dashStyle);
+CCPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSNumber *, threshold);
+CCPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSNumber *, lineWidth);//折线图、曲线图、直方折线图、折线填充图、曲线填充图、直方折线填充图的线条宽度
+CCPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSNumber *, borderWidth)//柱形图、条形图、扇形图等图形的描边宽度
+CCPropStatementAndPropSetFuncStatement(copy,   AASeriesElement, NSString *, borderColor);//柱形图、条形图、扇形图顿号等图形的描边颜色
+CCPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSNumber *, fillColor);//折线填充图、曲线填充图、直方折线填充图等填充图类型的填充颜色
+CCPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSNumber *, fillOpacity);//折线填充图、曲线填充图、直方折线填充图等填充图类型的填充颜色透明度
+CCPropStatementAndPropSetFuncStatement(copy,   AASeriesElement, NSString *, negativeColor); // The color for the parts of the graph or points that are below the threshold
+CCPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSNumber *, borderRadius);
+CCPropStatementAndPropSetFuncStatement(copy,   AASeriesElement, NSString *, innerSize);
+CCPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSNumber *, size);
+CCPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSArray  *, keys);
+CCPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSNumber *, yAxis);
+CCPropStatementAndPropSetFuncStatement(strong, AASeriesElement, AADataLabels*, dataLabels);
+CCPropStatementAndPropSetFuncStatement(strong, AASeriesElement, id        , step);//是否转变为直方折线图
+CCPropStatementAndPropSetFuncStatement(strong, AASeriesElement, NSDictionary *, states);
+CCPropStatementAndPropSetFuncStatement(assign, AASeriesElement, BOOL        , showInLegend);//Whether to display this particular series or series type in the legend. The default value is true for standalone series, false for linked series. 默认是：true.
+CCPropStatementAndPropSetFuncStatement(assign, AASeriesElement, BOOL        , visible);//数据列是否显示的状态,可以通过 series.show()、series.hide()、series.setVisible 来改变这个属性
 
 @end
 

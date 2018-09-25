@@ -34,8 +34,8 @@
 
 @implementation AASubtitle
 
-AAPropSetFuncImplementation(AASubtitle, NSString *, text);
-AAPropSetFuncImplementation(AASubtitle, NSString *, align);
-AAPropSetFuncImplementation(AASubtitle, AAStyle  *, style);
+CCPropSetFuncImplementation(AASubtitle, NSString *, text);
+CCPropSetFuncImplementation(AASubtitle, NSString *, align);
+CCPropSetFuncImplementation(AASubtitle, AAStyle  *, style);
 
 @end

@@ -51,15 +51,15 @@ static AALegendVerticalAlignType const AALegendVerticalAlignTypeBottom = @"botto
 
 @interface AALegend : NSObject
 
-AAPropStatementAndPropSetFuncStatement(copy,   AALegend, AALegendLayoutType,        layout);//图例数据项的布局。布局类型： "horizontal" 或 "vertical" 即水平布局和垂直布局 默认是：horizontal.
-AAPropStatementAndPropSetFuncStatement(copy,   AALegend, AALegendAlignType,         align);//设定图例在图表区中的水平对齐方式，合法值有left，center 和 right。
-AAPropStatementAndPropSetFuncStatement(copy,   AALegend, AALegendVerticalAlignType, verticalAlign);//设定图例在图表区中的垂直对齐方式，合法值有 top，middle 和 bottom。垂直位置可以通过 y 选项做进一步设定。
-AAPropStatementAndPropSetFuncStatement(assign, AALegend, BOOL,          enabled);
-AAPropStatementAndPropSetFuncStatement(copy,   AALegend, NSString    *, borderColor);
-AAPropStatementAndPropSetFuncStatement(strong, AALegend, NSNumber    *, borderWidth);
-AAPropStatementAndPropSetFuncStatement(strong, AALegend, NSNumber    *, itemMarginTop);//图例的每一项的顶部外边距，单位px。 默认是：0.
-AAPropStatementAndPropSetFuncStatement(strong, AALegend, AAItemStyle *, itemStyle);
-AAPropStatementAndPropSetFuncStatement(strong, AALegend, NSNumber    *, x);
-AAPropStatementAndPropSetFuncStatement(strong, AALegend, NSNumber    *, y);
+CCPropStatementAndPropSetFuncStatement(copy,   AALegend, AALegendLayoutType,        layout);//图例数据项的布局。布局类型： "horizontal" 或 "vertical" 即水平布局和垂直布局 默认是：horizontal.
+CCPropStatementAndPropSetFuncStatement(copy,   AALegend, AALegendAlignType,         align);//设定图例在图表区中的水平对齐方式，合法值有left，center 和 right。
+CCPropStatementAndPropSetFuncStatement(copy,   AALegend, AALegendVerticalAlignType, verticalAlign);//设定图例在图表区中的垂直对齐方式，合法值有 top，middle 和 bottom。垂直位置可以通过 y 选项做进一步设定。
+CCPropStatementAndPropSetFuncStatement(assign, AALegend, BOOL,          enabled);
+CCPropStatementAndPropSetFuncStatement(copy,   AALegend, NSString    *, borderColor);
+CCPropStatementAndPropSetFuncStatement(strong, AALegend, NSNumber    *, borderWidth);
+CCPropStatementAndPropSetFuncStatement(strong, AALegend, NSNumber    *, itemMarginTop);//图例的每一项的顶部外边距，单位px。 默认是：0.
+CCPropStatementAndPropSetFuncStatement(strong, AALegend, AAItemStyle *, itemStyle);
+CCPropStatementAndPropSetFuncStatement(strong, AALegend, NSNumber    *, x);
+CCPropStatementAndPropSetFuncStatement(strong, AALegend, NSNumber    *, y);
 
 @end

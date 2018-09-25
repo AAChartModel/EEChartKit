@@ -34,6 +34,6 @@
 
 @implementation AAArea
 
-AAPropSetFuncImplementation(AAArea, AADataLabels *, dataLabels);
+CCPropSetFuncImplementation(AAArea, AADataLabels *, dataLabels);
 
 @end

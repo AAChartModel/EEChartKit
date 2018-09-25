@@ -37,11 +37,11 @@
 #define AAObject(objectName) [[objectName alloc]init]
 
 
-#define AAPropStatementAndPropSetFuncStatement(propertyModifier,className, propertyPointerType, propertyName)           \
+#define CCPropStatementAndPropSetFuncStatement(propertyModifier,className, propertyPointerType, propertyName)           \
 @property(nonatomic,propertyModifier)propertyPointerType  propertyName;                                                 \
 - (className * (^) (propertyPointerType propertyName)) propertyName##Set;
 
-#define AAPropSetFuncImplementation(className, propertyPointerType, propertyName)                                       \
+#define CCPropSetFuncImplementation(className, propertyPointerType, propertyName)                                       \
 - (className * (^) (propertyPointerType propertyName))propertyName##Set{                                                \
 return ^(propertyPointerType propertyName) {                                                                            \
 _##propertyName = propertyName;                                                                                         \

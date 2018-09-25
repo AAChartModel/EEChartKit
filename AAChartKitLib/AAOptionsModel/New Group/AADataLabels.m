@@ -47,14 +47,14 @@
 //    return self;
 //}
 
-AAPropSetFuncImplementation(AADataLabels, BOOL      , enabled);
-AAPropSetFuncImplementation(AADataLabels, AAStyle  *, style);
-AAPropSetFuncImplementation(AADataLabels, NSString *, format);
-AAPropSetFuncImplementation(AADataLabels, NSNumber *, rotation);
-AAPropSetFuncImplementation(AADataLabels, BOOL      , allowOverlap);
-AAPropSetFuncImplementation(AADataLabels, BOOL      , useHTML);
-AAPropSetFuncImplementation(AADataLabels, NSNumber*, distance);
-AAPropSetFuncImplementation(AADataLabels, NSNumber *, x);
-AAPropSetFuncImplementation(AADataLabels, NSNumber *, y);
+CCPropSetFuncImplementation(AADataLabels, BOOL      , enabled);
+CCPropSetFuncImplementation(AADataLabels, AAStyle  *, style);
+CCPropSetFuncImplementation(AADataLabels, NSString *, format);
+CCPropSetFuncImplementation(AADataLabels, NSNumber *, rotation);
+CCPropSetFuncImplementation(AADataLabels, BOOL      , allowOverlap);
+CCPropSetFuncImplementation(AADataLabels, BOOL      , useHTML);
+CCPropSetFuncImplementation(AADataLabels, NSNumber*, distance);
+CCPropSetFuncImplementation(AADataLabels, NSNumber *, x);
+CCPropSetFuncImplementation(AADataLabels, NSNumber *, y);
 
 @end

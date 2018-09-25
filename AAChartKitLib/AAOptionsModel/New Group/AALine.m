@@ -44,9 +44,9 @@
     return self;
 }
 
-AAPropSetFuncImplementation(AALine, NSNumber     *, lineWidth);
-AAPropSetFuncImplementation(AALine, AADataLabels *, dataLabels);
-//AAPropSetFuncImplementation(AALine, BOOL , enableMouseTracking);
-//AAPropSetFuncImplementation(AALine, NSString *, dashStyle);
+CCPropSetFuncImplementation(AALine, NSNumber     *, lineWidth);
+CCPropSetFuncImplementation(AALine, AADataLabels *, dataLabels);
+//CCPropSetFuncImplementation(AALine, BOOL , enableMouseTracking);
+//CCPropSetFuncImplementation(AALine, NSString *, dashStyle);
 
 @end

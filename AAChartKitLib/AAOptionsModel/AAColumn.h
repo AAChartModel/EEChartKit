@@ -36,13 +36,13 @@
 
 @interface AAColumn : NSObject
 
-AAPropStatementAndPropSetFuncStatement(assign, AAColumn, BOOL,           grouping);//Whether to group non-stacked columns or to let them render independent of each other. Non-grouped columns will be laid out individually and overlap each other. 默认是：true.
-AAPropStatementAndPropSetFuncStatement(strong, AAColumn, NSNumber *,     pointPadding);
-AAPropStatementAndPropSetFuncStatement(strong, AAColumn, NSNumber *,     groupPadding);
-AAPropStatementAndPropSetFuncStatement(strong, AAColumn, NSNumber *,     borderWidth);
-AAPropStatementAndPropSetFuncStatement(assign, AAColumn, BOOL,           colorByPoint);//对每个不同的点设置颜色(当图表类型为 AAColumn 时,设置为 AAColumn 对象的属性,当图表类型为 bar 时,应该设置为 bar 对象的属性才有效)
-AAPropStatementAndPropSetFuncStatement(strong, AAColumn, AADataLabels *, dataLabels);
-AAPropStatementAndPropSetFuncStatement(copy,   AAColumn, NSString *,     stacking);
-AAPropStatementAndPropSetFuncStatement(strong, AAColumn, NSNumber *,     borderRadius);
+CCPropStatementAndPropSetFuncStatement(assign, AAColumn, BOOL,           grouping);//Whether to group non-stacked columns or to let them render independent of each other. Non-grouped columns will be laid out individually and overlap each other. 默认是：true.
+CCPropStatementAndPropSetFuncStatement(strong, AAColumn, NSNumber *,     pointPadding);
+CCPropStatementAndPropSetFuncStatement(strong, AAColumn, NSNumber *,     groupPadding);
+CCPropStatementAndPropSetFuncStatement(strong, AAColumn, NSNumber *,     borderWidth);
+CCPropStatementAndPropSetFuncStatement(assign, AAColumn, BOOL,           colorByPoint);//对每个不同的点设置颜色(当图表类型为 AAColumn 时,设置为 AAColumn 对象的属性,当图表类型为 bar 时,应该设置为 bar 对象的属性才有效)
+CCPropStatementAndPropSetFuncStatement(strong, AAColumn, AADataLabels *, dataLabels);
+CCPropStatementAndPropSetFuncStatement(copy,   AAColumn, NSString *,     stacking);
+CCPropStatementAndPropSetFuncStatement(strong, AAColumn, NSNumber *,     borderRadius);
 
 @end

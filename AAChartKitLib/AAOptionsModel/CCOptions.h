@@ -12,15 +12,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CCOptions : NSObject
 
-AAPropStatementAndPropSetFuncStatement(copy,   CCOptions, NSString *, backgroundColor);
-AAPropStatementAndPropSetFuncStatement(strong, CCOptions, NSArray *, color);
-AAPropStatementAndPropSetFuncStatement(strong, CCOptions, NSDictionary *, title);
-AAPropStatementAndPropSetFuncStatement(strong, CCOptions, NSDictionary *, tooltip);
-AAPropStatementAndPropSetFuncStatement(strong, CCOptions, NSDictionary *, legend);
-AAPropStatementAndPropSetFuncStatement(strong, CCOptions, NSArray *, xAxis);
-AAPropStatementAndPropSetFuncStatement(strong, CCOptions, NSArray *, yAxis);
-AAPropStatementAndPropSetFuncStatement(strong, CCOptions, NSArray *, dataZoom);
-AAPropStatementAndPropSetFuncStatement(strong, CCOptions, NSArray *, series);
+CCPropStatementAndPropSetFuncStatement(copy,   CCOptions, NSString *, backgroundColor);
+CCPropStatementAndPropSetFuncStatement(strong, CCOptions, NSArray *, color);
+CCPropStatementAndPropSetFuncStatement(strong, CCOptions, NSDictionary *, title);
+CCPropStatementAndPropSetFuncStatement(strong, CCOptions, NSDictionary *, tooltip);
+CCPropStatementAndPropSetFuncStatement(strong, CCOptions, NSDictionary *, legend);
+CCPropStatementAndPropSetFuncStatement(strong, CCOptions, NSArray *, xAxis);
+CCPropStatementAndPropSetFuncStatement(strong, CCOptions, NSArray *, yAxis);
+CCPropStatementAndPropSetFuncStatement(strong, CCOptions, NSArray *, dataZoom);
+CCPropStatementAndPropSetFuncStatement(strong, CCOptions, NSArray *, series);
 
 @end
 

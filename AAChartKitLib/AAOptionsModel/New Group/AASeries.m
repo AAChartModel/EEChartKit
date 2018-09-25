@@ -35,13 +35,13 @@
 
 @implementation AASeries
 
-AAPropSetFuncImplementation(AASeries, NSNumber     *, borderRadius);
-AAPropSetFuncImplementation(AASeries, AAMarker     *, marker);
-AAPropSetFuncImplementation(AASeries, NSString     *, stacking);
-AAPropSetFuncImplementation(AASeries, AAAnimation  *, animation);
-AAPropSetFuncImplementation(AASeries, NSArray      *, keys);
-//AAPropSetFuncImplementation(AASeries, BOOL , colorByPoint);//设置为 true 则是给每个点分配颜色。
-AAPropSetFuncImplementation(AASeries, BOOL ,          connectNulls);
-AAPropSetFuncImplementation(AASeries, NSDictionary *, events);
+CCPropSetFuncImplementation(AASeries, NSNumber     *, borderRadius);
+CCPropSetFuncImplementation(AASeries, AAMarker     *, marker);
+CCPropSetFuncImplementation(AASeries, NSString     *, stacking);
+CCPropSetFuncImplementation(AASeries, AAAnimation  *, animation);
+CCPropSetFuncImplementation(AASeries, NSArray      *, keys);
+//CCPropSetFuncImplementation(AASeries, BOOL , colorByPoint);//设置为 true 则是给每个点分配颜色。
+CCPropSetFuncImplementation(AASeries, BOOL ,          connectNulls);
+CCPropSetFuncImplementation(AASeries, NSDictionary *, events);
 
 @end

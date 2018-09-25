@@ -34,7 +34,7 @@
 
 @implementation AAAnimation
 
-AAPropSetFuncImplementation(AAAnimation, NSNumber *, duration);
-AAPropSetFuncImplementation(AAAnimation, NSInteger , easing);
+CCPropSetFuncImplementation(AAAnimation, NSNumber *, duration);
+CCPropSetFuncImplementation(AAAnimation, NSInteger , easing);
 
 @end

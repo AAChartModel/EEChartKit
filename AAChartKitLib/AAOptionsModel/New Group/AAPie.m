@@ -34,14 +34,14 @@
 
 @implementation AAPie
 
-AAPropSetFuncImplementation(AAPie, NSNumber     *, size);
-AAPropSetFuncImplementation(AAPie, BOOL,           allowPointSelect);
-AAPropSetFuncImplementation(AAPie, NSString     *, cursor);
-AAPropSetFuncImplementation(AAPie, AADataLabels *, dataLabels);
-AAPropSetFuncImplementation(AAPie, BOOL,           showInLegend);
-AAPropSetFuncImplementation(AAPie, NSNumber     *, startAngle);
-AAPropSetFuncImplementation(AAPie, NSNumber     *, endAngle);
-AAPropSetFuncImplementation(AAPie, NSNumber     *, depth);
+CCPropSetFuncImplementation(AAPie, NSNumber     *, size);
+CCPropSetFuncImplementation(AAPie, BOOL,           allowPointSelect);
+CCPropSetFuncImplementation(AAPie, NSString     *, cursor);
+CCPropSetFuncImplementation(AAPie, AADataLabels *, dataLabels);
+CCPropSetFuncImplementation(AAPie, BOOL,           showInLegend);
+CCPropSetFuncImplementation(AAPie, NSNumber     *, startAngle);
+CCPropSetFuncImplementation(AAPie, NSNumber     *, endAngle);
+CCPropSetFuncImplementation(AAPie, NSNumber     *, depth);
 
 
 @end

@@ -35,12 +35,12 @@
 @class AAStyle;
 @interface AALabels : NSObject
 
-AAPropStatementAndPropSetFuncStatement(assign, AALabels, BOOL, enabled);
-AAPropStatementAndPropSetFuncStatement(copy  , AALabels, NSString *, fontSize);
-AAPropStatementAndPropSetFuncStatement(copy  , AALabels, NSString *, fontColor);
-AAPropStatementAndPropSetFuncStatement(copy  , AALabels, NSString *, fontWeight);
-AAPropStatementAndPropSetFuncStatement(strong, AALabels, AAStyle  *, style);
-AAPropStatementAndPropSetFuncStatement(copy  , AALabels, NSString *, format);
+CCPropStatementAndPropSetFuncStatement(assign, AALabels, BOOL, enabled);
+CCPropStatementAndPropSetFuncStatement(copy  , AALabels, NSString *, fontSize);
+CCPropStatementAndPropSetFuncStatement(copy  , AALabels, NSString *, fontColor);
+CCPropStatementAndPropSetFuncStatement(copy  , AALabels, NSString *, fontWeight);
+CCPropStatementAndPropSetFuncStatement(strong, AALabels, AAStyle  *, style);
+CCPropStatementAndPropSetFuncStatement(copy  , AALabels, NSString *, format);
 
 
 @end

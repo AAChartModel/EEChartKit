@@ -36,9 +36,9 @@
 
 @interface AALine : NSObject
 
-AAPropStatementAndPropSetFuncStatement(strong, AALine, NSNumber     *, lineWidth);//设置折线的宽度
-AAPropStatementAndPropSetFuncStatement(strong, AALine, AADataLabels *, dataLabels);
-//AAPropStatementAndPropSetFuncStatement(assign, AALine, BOOL, enableMouseTracking);
-//AAPropStatementAndPropSetFuncStatement(copy,   AALine, NSString *, dashStyle);//折线的样式类型(字符串枚举)
+CCPropStatementAndPropSetFuncStatement(strong, AALine, NSNumber     *, lineWidth);//设置折线的宽度
+CCPropStatementAndPropSetFuncStatement(strong, AALine, AADataLabels *, dataLabels);
+//CCPropStatementAndPropSetFuncStatement(assign, AALine, BOOL, enableMouseTracking);
+//CCPropStatementAndPropSetFuncStatement(copy,   AALine, NSString *, dashStyle);//折线的样式类型(字符串枚举)
 
 @end

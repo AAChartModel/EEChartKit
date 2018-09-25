@@ -34,18 +34,18 @@
 
 @implementation AAOptions
 
-AAPropSetFuncImplementation(AAOptions, AAChart       *, chart);
-AAPropSetFuncImplementation(AAOptions, AATitle       *, title);
-AAPropSetFuncImplementation(AAOptions, AASubtitle    *, subtitle);
-AAPropSetFuncImplementation(AAOptions, AAXAxis       *, xAxis);
-AAPropSetFuncImplementation(AAOptions, AAYAxis       *, yAxis);
-AAPropSetFuncImplementation(AAOptions, AATooltip     *, tooltip);
-AAPropSetFuncImplementation(AAOptions, AAPlotOptions *, plotOptions);
-AAPropSetFuncImplementation(AAOptions, NSArray       *, series);
-AAPropSetFuncImplementation(AAOptions, AALegend      *, legend);
-AAPropSetFuncImplementation(AAOptions, NSArray       *, colors);
-AAPropSetFuncImplementation(AAOptions, BOOL,            gradientColorEnabled);
-AAPropSetFuncImplementation(AAOptions, NSString      *, zoomResetButtonText); //String to display in 'zoom reset button"
+CCPropSetFuncImplementation(AAOptions, AAChart       *, chart);
+CCPropSetFuncImplementation(AAOptions, AATitle       *, title);
+CCPropSetFuncImplementation(AAOptions, AASubtitle    *, subtitle);
+CCPropSetFuncImplementation(AAOptions, AAXAxis       *, xAxis);
+CCPropSetFuncImplementation(AAOptions, AAYAxis       *, yAxis);
+CCPropSetFuncImplementation(AAOptions, AATooltip     *, tooltip);
+CCPropSetFuncImplementation(AAOptions, AAPlotOptions *, plotOptions);
+CCPropSetFuncImplementation(AAOptions, NSArray       *, series);
+CCPropSetFuncImplementation(AAOptions, AALegend      *, legend);
+CCPropSetFuncImplementation(AAOptions, NSArray       *, colors);
+CCPropSetFuncImplementation(AAOptions, BOOL,            gradientColorEnabled);
+CCPropSetFuncImplementation(AAOptions, NSString      *, zoomResetButtonText); //String to display in 'zoom reset button"
 
 @end
 

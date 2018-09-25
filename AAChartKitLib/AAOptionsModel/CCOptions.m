@@ -10,14 +10,14 @@
 
 @implementation CCOptions
 
-AAPropSetFuncImplementation(CCOptions, NSString *, backgroundColor);
-AAPropSetFuncImplementation(CCOptions, NSArray *, color);
-AAPropSetFuncImplementation(CCOptions, NSDictionary *, title);
-AAPropSetFuncImplementation(CCOptions, NSDictionary *, tooltip);
-AAPropSetFuncImplementation(CCOptions, NSDictionary *, legend);
-AAPropSetFuncImplementation(CCOptions, NSArray *, xAxis);
-AAPropSetFuncImplementation(CCOptions, NSArray *, yAxis);
-AAPropSetFuncImplementation(CCOptions, NSArray *, dataZoom);
-AAPropSetFuncImplementation(CCOptions, NSArray *, series);
+CCPropSetFuncImplementation(CCOptions, NSString *, backgroundColor);
+CCPropSetFuncImplementation(CCOptions, NSArray *, color);
+CCPropSetFuncImplementation(CCOptions, NSDictionary *, title);
+CCPropSetFuncImplementation(CCOptions, NSDictionary *, tooltip);
+CCPropSetFuncImplementation(CCOptions, NSDictionary *, legend);
+CCPropSetFuncImplementation(CCOptions, NSArray *, xAxis);
+CCPropSetFuncImplementation(CCOptions, NSArray *, yAxis);
+CCPropSetFuncImplementation(CCOptions, NSArray *, dataZoom);
+CCPropSetFuncImplementation(CCOptions, NSArray *, series);
 
 @end

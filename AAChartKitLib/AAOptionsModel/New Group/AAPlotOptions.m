@@ -34,15 +34,15 @@
 
 @implementation AAPlotOptions
 
-AAPropSetFuncImplementation(AAPlotOptions, AAColumn     *, column);
-AAPropSetFuncImplementation(AAPlotOptions, AALine       *, line);
-AAPropSetFuncImplementation(AAPlotOptions, AAPie        *, pie);
-AAPropSetFuncImplementation(AAPlotOptions, AABar        *, bar);
-AAPropSetFuncImplementation(AAPlotOptions, AASpline     *, spline);
-AAPropSetFuncImplementation(AAPlotOptions, AASeries     *, series);
-AAPropSetFuncImplementation(AAPlotOptions, AAArea       *, area);
-AAPropSetFuncImplementation(AAPlotOptions, AAAreaspline *, areaspline);
-AAPropSetFuncImplementation(AAPlotOptions, NSObject     *, columnrange);
-AAPropSetFuncImplementation(AAPlotOptions, NSObject     *, arearange);
+CCPropSetFuncImplementation(AAPlotOptions, AAColumn     *, column);
+CCPropSetFuncImplementation(AAPlotOptions, AALine       *, line);
+CCPropSetFuncImplementation(AAPlotOptions, AAPie        *, pie);
+CCPropSetFuncImplementation(AAPlotOptions, AABar        *, bar);
+CCPropSetFuncImplementation(AAPlotOptions, AASpline     *, spline);
+CCPropSetFuncImplementation(AAPlotOptions, AASeries     *, series);
+CCPropSetFuncImplementation(AAPlotOptions, AAArea       *, area);
+CCPropSetFuncImplementation(AAPlotOptions, AAAreaspline *, areaspline);
+CCPropSetFuncImplementation(AAPlotOptions, NSObject     *, columnrange);
+CCPropSetFuncImplementation(AAPlotOptions, NSObject     *, arearange);
 
 @end

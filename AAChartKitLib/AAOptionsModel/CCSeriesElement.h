@@ -46,22 +46,22 @@ typedef NS_ENUM(NSInteger,CCAnimationEasingType) {
 
 @interface CCSeriesElement : NSObject
 
-AAPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, NSString *, name);
-AAPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, NSString *, type);
-AAPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, id, animationEasing);
-AAPropStatementAndPropSetFuncStatement(assign, CCSeriesElement, BOOL, smooth);
-AAPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, NSString *, step);
-AAPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, NSString *, symbol);
-AAPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, NSString *, stack);
-AAPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSDictionary *, lineStyle);
-AAPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSDictionary *, areaStyle);
-AAPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSArray *, data);
-AAPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSDictionary *, label);
-AAPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, NSString *, radius);
-AAPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSArray *, center);
-AAPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, NSString *, roseType);
-AAPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSDictionary *, markPoint);
-AAPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSDictionary *, markLine);
+CCPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, NSString *, name);
+CCPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, NSString *, type);
+CCPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, id, animationEasing);
+CCPropStatementAndPropSetFuncStatement(assign, CCSeriesElement, BOOL, smooth);
+CCPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, NSString *, step);
+CCPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, NSString *, symbol);
+CCPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, NSString *, stack);
+CCPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSDictionary *, lineStyle);
+CCPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSDictionary *, areaStyle);
+CCPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSArray *, data);
+CCPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSDictionary *, label);
+CCPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, NSString *, radius);
+CCPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSArray *, center);
+CCPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, NSString *, roseType);
+CCPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSDictionary *, markPoint);
+CCPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSDictionary *, markLine);
 
 
 

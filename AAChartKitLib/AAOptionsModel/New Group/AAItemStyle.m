@@ -34,10 +34,10 @@
 
 @implementation AAItemStyle
 
-AAPropSetFuncImplementation(AAItemStyle, NSString *, color);
-AAPropSetFuncImplementation(AAItemStyle, NSString *, cursor);
-AAPropSetFuncImplementation(AAItemStyle, NSString *, pointer);
-AAPropSetFuncImplementation(AAItemStyle, NSString *, fontSize);
-AAPropSetFuncImplementation(AAItemStyle, NSString *, fontWeight);
+CCPropSetFuncImplementation(AAItemStyle, NSString *, color);
+CCPropSetFuncImplementation(AAItemStyle, NSString *, cursor);
+CCPropSetFuncImplementation(AAItemStyle, NSString *, pointer);
+CCPropSetFuncImplementation(AAItemStyle, NSString *, fontSize);
+CCPropSetFuncImplementation(AAItemStyle, NSString *, fontWeight);
 
 @end

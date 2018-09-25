@@ -34,11 +34,11 @@
 
 @implementation AABar
 
-AAPropSetFuncImplementation(AABar, NSNumber *,     pointPadding);
-AAPropSetFuncImplementation(AABar, NSNumber *,     groupPadding);
-AAPropSetFuncImplementation(AABar, NSNumber *,     borderWidth);
-AAPropSetFuncImplementation(AABar, BOOL ,          colorByPoint);
-AAPropSetFuncImplementation(AABar, AADataLabels *, dataLabels);
-AAPropSetFuncImplementation(AABar, NSNumber *,     borderRadius);
+CCPropSetFuncImplementation(AABar, NSNumber *,     pointPadding);
+CCPropSetFuncImplementation(AABar, NSNumber *,     groupPadding);
+CCPropSetFuncImplementation(AABar, NSNumber *,     borderWidth);
+CCPropSetFuncImplementation(AABar, BOOL ,          colorByPoint);
+CCPropSetFuncImplementation(AABar, AADataLabels *, dataLabels);
+CCPropSetFuncImplementation(AABar, NSNumber *,     borderRadius);
 
 @end

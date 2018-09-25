@@ -54,17 +54,17 @@ CCChartSymbolType const CCChartSymbolTypeNone = @"none";
     return self;
 }
 
-AAPropSetFuncImplementation(CCChartModel, NSString *, backgroundColor);
-AAPropSetFuncImplementation(CCChartModel, NSArray  *, color);
-AAPropSetFuncImplementation(CCChartModel, NSString *, titleText);
-AAPropSetFuncImplementation(CCChartModel, NSString *, titleSubtext)
-AAPropSetFuncImplementation(CCChartModel, NSString *, tooltipTrigger);
-AAPropSetFuncImplementation(CCChartModel, NSString *, tooltipFormatter);
-AAPropSetFuncImplementation(CCChartModel, NSArray  *, legendData);
-AAPropSetFuncImplementation(CCChartModel, NSString *, xAxisType)
-AAPropSetFuncImplementation(CCChartModel, NSArray  *, xAxisData);
-AAPropSetFuncImplementation(CCChartModel, NSString *, yAxisType)
-AAPropSetFuncImplementation(CCChartModel, NSArray  *, yAxisData);
-AAPropSetFuncImplementation(CCChartModel, NSArray <CCSeriesElement *>*, series);
+CCPropSetFuncImplementation(CCChartModel, NSString *, backgroundColor);
+CCPropSetFuncImplementation(CCChartModel, NSArray  *, color);
+CCPropSetFuncImplementation(CCChartModel, NSString *, titleText);
+CCPropSetFuncImplementation(CCChartModel, NSString *, titleSubtext)
+CCPropSetFuncImplementation(CCChartModel, NSString *, tooltipTrigger);
+CCPropSetFuncImplementation(CCChartModel, NSString *, tooltipFormatter);
+CCPropSetFuncImplementation(CCChartModel, NSArray  *, legendData);
+CCPropSetFuncImplementation(CCChartModel, NSString *, xAxisType)
+CCPropSetFuncImplementation(CCChartModel, NSArray  *, xAxisData);
+CCPropSetFuncImplementation(CCChartModel, NSString *, yAxisType)
+CCPropSetFuncImplementation(CCChartModel, NSArray  *, yAxisData);
+CCPropSetFuncImplementation(CCChartModel, NSArray <CCSeriesElement *>*, series);
 
 @end

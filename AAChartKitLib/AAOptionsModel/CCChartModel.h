@@ -54,17 +54,17 @@ COCOA_CHARTS_EXTERN CCChartSymbolType const CCChartSymbolTypeNone;
 
 @interface CCChartModel : NSObject
 
-AAPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, backgroundColor);
-AAPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, color);
-AAPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, titleText);
-AAPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, titleSubtext);
-AAPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, tooltipTrigger);
-AAPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, tooltipFormatter);
-AAPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, legendData);
-AAPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, xAxisType);
-AAPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, xAxisData);
-AAPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, yAxisType);
-AAPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, yAxisData);
-AAPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray <CCSeriesElement *>*, series);
+CCPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, backgroundColor);
+CCPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, color);
+CCPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, titleText);
+CCPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, titleSubtext);
+CCPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, tooltipTrigger);
+CCPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, tooltipFormatter);
+CCPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, legendData);
+CCPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, xAxisType);
+CCPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, xAxisData);
+CCPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, yAxisType);
+CCPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, yAxisData);
+CCPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray <CCSeriesElement *>*, series);
 
 @end

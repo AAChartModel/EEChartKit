@@ -34,8 +34,8 @@
 
 @interface AAOptions3d : NSObject
 
-AAPropStatementAndPropSetFuncStatement(assign, AAOptions3d, BOOL,       enabled);
-AAPropStatementAndPropSetFuncStatement(strong, AAOptions3d, NSNumber *, alpha);
-AAPropStatementAndPropSetFuncStatement(strong, AAOptions3d, NSNumber *, beta);
+CCPropStatementAndPropSetFuncStatement(assign, AAOptions3d, BOOL,       enabled);
+CCPropStatementAndPropSetFuncStatement(strong, AAOptions3d, NSNumber *, alpha);
+CCPropStatementAndPropSetFuncStatement(strong, AAOptions3d, NSNumber *, beta);
 
 @end
