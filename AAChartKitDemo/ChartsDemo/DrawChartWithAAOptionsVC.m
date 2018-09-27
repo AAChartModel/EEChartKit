@@ -33,6 +33,7 @@
 #import "DrawChartWithAAOptionsVC.h"
 #import "AAChartKit.h"
 
+
 #import "AADateUTCTool.h"
 @interface DrawChartWithAAOptionsVC ()
 
@@ -78,256 +79,131 @@
     return nil;
 }
 
-- (AAOptions *)configureTheAAOptionsOfAreaChart {
-/****************************************************参照原生 JavaScript 代码仿写构建生成 AAOptions 实例对象(方法1)****************************************************/
-    NSDictionary *chart = @{@"type":@"area"};
-    
-    //标题
-    NSDictionary *title = @{@"text":@"AAChartKit"};
-    
-    //副标题
-    NSDictionary *subtitle = @{@"subtitle":@"Source: https://github.com/AAChartModel/AAChartKit"};
-    
-    //X轴
-    NSDictionary *xAxis = @{
-                           @"categories": @[@"Jan", @"Feb", @"Mar", @"Apr", @"May", @"Jun",
-                                            @"Jul", @"Aug", @"Sep", @"Oct", @"Nov", @"Dec"]
-                           };
-    
-    //Y轴
-    NSDictionary *yAxis = @{
-                           @"title":@{
-                                   @"text":@"Temperature (xB0C)"
-                                   },
-                           @"plotLines":@[@{
-                                              @"value":@0,
-                                              @"width":@1,
-                                              @"color":@"#808080"
-                                              }]
-                           
-                           };
-    
-    //浮动提示框
-    NSDictionary *tooltip = @{
-                              @"valueSuffix": @"xB0C"
-                              };
-    
-    //图例
-    NSDictionary *legend = @{
-                             @"layout": @"vertical",
-                             @"align": @"right",
-                             @"verticalAlign": @"top",
-                             @"borderWidth": @0
-                             };
-    
-    //数据源
+- (CCOptions *)configureTheAAOptionsOfAreaChart {
+    NSDictionary *title = @{
+                            @"text": @"极坐标系下的堆叠柱状图",
+                            };
+    NSDictionary *angleAxis = @{
+                                @"type": @"category",
+                                @"data": @[@"周一",@"周二",@"周三",@"周四",],
+                                @"z": @10
+                                };
+    NSDictionary *radiusAxis = @{};
+    NSDictionary *polar = @{};
     NSArray *series = @[
-                        @{
-                            @"name": @"Tokyo",
-                            @"data": @[@7.0, @6.9, @9.5, @14.5, @18.2, @21.5, @25.2,
-                                       @26.5, @23.3, @18.3, @13.9, @9.6]
-                            },
-                        @{
-                            @"name": @"New York",
-                            @"data": @[@-0.2, @0.8, @5.7, @11.3, @17.0, @22.0, @24.8,
-                                         @24.1, @20.1, @14.1, @8.6, @2.5]
-                            },
-                        @{
-                            @"name": @"London",
-                            @"data": @[@3.9, @4.2, @5.7, @8.5, @11.9, @15.2, @17.0,
-                                       @16.6, @14.2, @10.3, @6.6, @4.8]
-                            }
+                        CCSeriesElement.new
+                        .typeSet(CCChartTypeBar)
+                        .dataSet(@[@1,@2,@3,@4])
+                        .coordinateSystemSet(@"polar")
+                        .nameSet(@"A")
+                        .stackSet(@"a"),
+                        CCSeriesElement.new
+                        .typeSet(CCChartTypeBar)
+                        .dataSet(@[@2,@4,@6,@8])
+                        .coordinateSystemSet(@"polar")
+                        .nameSet(@"B")
+                        .stackSet(@"a"),
+                        CCSeriesElement.new
+                        .typeSet(CCChartTypeBar)
+                        .dataSet(@[@1,@2,@3,@4])
+                        .coordinateSystemSet(@"polar")
+                        .nameSet(@"C")
+                        .stackSet(@"a"),
                         ];
-
     
-    NSArray *colors = @[@"#b5282a",@"#e7a701",@"#50c18d",@"#fd4800",@"#f1c6c5"];
-    
-    //第一种写法
-    AAOptions *options = AAObject(AAOptions);
-    options.chart = (id)chart;
-    options.title = (id)title;
-    options.subtitle = (id)subtitle;
-    options.xAxis = (id)xAxis;
-    options.yAxis = (id)yAxis;
-    options.tooltip = (id)tooltip;
-    options.legend = (id)legend;
-    options.series = (id)series;
-    options.colors = colors;
-    
+    CCOptions *options = CCOptions.new;
+    options.title = title;
+    options.angleAxis = angleAxis;
+    options.radiusAxis = radiusAxis;
+    options.polar = polar;
+    options.series = series;
+    options.color = @[@"#8A2BE2",@"#fe117c",@"#ffc069",@"#06caf4",@"#7dffc0",];
     return options;
-    
-    
-    //另一种写法
-    AAOptions *chartOptions = AAObject(AAOptions)
-    .chartSet((id)chart)
-    .titleSet((id)title)
-    .subtitleSet((id)subtitle)
-    .xAxisSet((id)xAxis)
-    .yAxisSet((id)yAxis)
-    .tooltipSet((id)tooltip)
-    .legendSet((id)legend)
-    .seriesSet((id)series)
-    .colorsSet(colors);
-    
-    return chartOptions;
-    
-
-
-/****************************************************参照原生 JavaScript 代码仿写构建生成 AAOptions 实例对象(方法1)****************************************************/
- 
-
 }
 
-- (AAOptions *)configureTheAAOptionsOfPieChart {
+- (CCOptions *)configureTheAAOptionsOfPieChart {
+    NSDictionary *title = @{
+                            @"text": @"极坐标系下的堆叠柱状图",
+                            };
+    NSDictionary *angleAxis = @{};
+    NSDictionary *radiusAxis = @{
+                                 @"type": @"category",
+                                 @"data": @[@"周一",@"周二",@"周三",@"周四",],
+                                 @"z": @10
+                                 };
+    NSDictionary *polar = @{};
+    NSArray *series = @[
+                        CCSeriesElement.new
+                        .typeSet(CCChartTypeBar)
+                        .dataSet(@[@1,@2,@3,@4])
+                        .coordinateSystemSet(@"polar")
+                        .nameSet(@"A")
+                        .stackSet(@"a"),
+                        CCSeriesElement.new
+                        .typeSet(CCChartTypeBar)
+                        .dataSet(@[@2,@4,@6,@8])
+                        .coordinateSystemSet(@"polar")
+                        .nameSet(@"B")
+                        .stackSet(@"a"),
+                        CCSeriesElement.new
+                        .typeSet(CCChartTypeBar)
+                        .dataSet(@[@1,@2,@3,@4])
+                        .coordinateSystemSet(@"polar")
+                        .nameSet(@"C")
+                        .stackSet(@"a"),
+                        ];
     
-    //第一种写法
-    AAOptions *aaOptions = AAObject(AAOptions)
-    .chartSet(AAObject(AAChart)
-              .typeSet(AAChartTypePie))
-    .titleSet(AAObject(AATitle)
-              .textSet(@"渠道销售额<br>占比")//标题文本内容
-              .alignSet(AAChartTitleAlignTypeCenter)//标题水平居中
-              .verticalAlignSet(AAChartTitleVerticalAlignTypeMiddle)//标题垂直居中
-              .styleSet(AAObject(AAStyle)
-                        .colorSet(@"#000000")//Title font color
-                        .fontSizeSet(@"14 px")//Title font size
-                        .fontWeightSet(@"bold")//Title font weight
-                        )
-              )
-    .plotOptionsSet(AAObject(AAPlotOptions)
-                    .seriesSet(AAObject(AASeries)
-                               .animationSet(AAObject(AAAnimation)
-                                             .easingSet(AAChartAnimationBounce)
-                                             .durationSet(@1000)
-                                             )
-                               )
-                    .pieSet(AAObject(AAPie)
-                            .showInLegendSet(true)
-                            .dataLabelsSet(AAObject(AADataLabels)
-                                           .enabledSet(false)
-                                           //.formatSet(@"{point.percentage:.1f}%")
-                                           )
-                            )
-                    )
-    .legendSet(AAObject(AALegend)
-               .enabledSet(true)
-               .verticalAlignSet(AALegendVerticalAlignTypeTop)
-               .layoutSet(AALegendLayoutTypeVertical)
-               .alignSet(AALegendAlignTypeCenter)
-               )
-    .seriesSet(@[
-                 AAObject(AASeriesElement)
-                 .nameSet(@"语言热度值")
-                 //                 .sizeSet(@300)//环形图的半径大小
-                 .innerSizeSet(@"60%")//内部圆环半径大小占比
-                 .allowPointSelectSet(false)//是否允许在点击数据点标记(扇形图点击选中的块发生位移)
-                 .dataSet(
-                          @[
-                            @[@"Firefox",   @3336.2],
-                            @[@"IE",        @26.8],
-                            @[@"Safari",    @88.5],
-                            @[@"Opera",     @46.0],
-                            @[@"Others",    @223]
-                            ]
-                          ),
-                 ])
-    .colorsSet(@[@"#1E90FF",@"#e7a701",@"#50c18d",@"#fd4800",@"#F4A460"]);//设置颜色主题
-    
-    return aaOptions;
-    
-    
-    //下面是另一种更清晰的写法
-    AAChart *aaChart = AAObject(AAChart)
-    .typeSet(AAChartTypePie);
-    
-    //标题
-    AATitle *aaTitle = AAObject(AATitle)
-    .textSet(@"渠道销售额<br>占比")//标题文本内容
-    .alignSet(AAChartTitleAlignTypeCenter)//标题水平居中
-    .verticalAlignSet(AAChartTitleVerticalAlignTypeMiddle)//标题垂直居中
-    .styleSet(AAObject(AAStyle)
-              .colorSet(@"#000000")//Title font color
-              .fontSizeSet(@"14 px")//Title font size
-              .fontWeightSet(@"bold")//Title font weight
-              );
-    
-    AAPlotOptions *aaPlotOptions = (AAObject(AAPlotOptions)
-                                    .seriesSet(AAObject(AASeries)
-                                               .animationSet(AAObject(AAAnimation)
-                                                             .easingSet(AAChartAnimationBounce)
-                                                             .durationSet(@1000)
-                                                             )
-                                               )
-                                    .pieSet(AAObject(AAPie)
-                                            .showInLegendSet(true)
-                                            .dataLabelsSet(AAObject(AADataLabels)
-                                                           .enabledSet(true)
-                                                           .formatSet(@"{point.percentage:.1f}%"))
-                                            )
-                                    );
-    
-    //数据源
-    NSArray *aaSeries = @[
-                          AAObject(AASeriesElement)
-                          .nameSet(@"语言热度值")
-                          .innerSizeSet(@"80%")//内部圆环半径大小占比
-                          .allowPointSelectSet(false)//是否允许在点击数据点标记(扇形图点击选中的块发生位移)
-                          .dataSet(
-                                   @[
-                                     @[@"Firefox",   @3336.2],
-                                     @[@"IE",        @26.8],
-                                     @[@"Safari",    @88.5],
-                                     @[@"Opera",     @46.0],
-                                     @[@"Others",    @223]
-                                     ]
-                                   ),
-                          ];
-    
-    NSArray *aaColors = @[@"#b5282a",@"#e7a701",@"#50c18d",@"#fd4800",@"#f1c6c5"];
-    
-    AAOptions *chartOptions = AAObject(AAOptions);
-    chartOptions.chart = aaChart;
-    chartOptions.title = aaTitle;
-    chartOptions.plotOptions = aaPlotOptions;
-    chartOptions.series = aaSeries;
-    chartOptions.colors = aaColors;
-    
-    return chartOptions;
+    CCOptions *options = CCOptions.new;
+    options.title = title;
+    options.angleAxis = angleAxis;
+    options.radiusAxis = radiusAxis;
+    options.polar = polar;
+    options.series = series;
+    options.color = @[@"#8A2BE2",@"#fe117c",@"#ffc069",@"#06caf4",@"#7dffc0",];
+    return options;
 }
 
 - (AAOptions *)adjustPieChartTitleAndDataLabelFontStyle {
-    AAOptions *aaOptions = AAObject(AAOptions)
-    .chartSet(AAObject(AAChart)
-              .typeSet(AAChartTypePie))
-    .titleSet(AAObject(AATitle)
-              .useHTMLSet(true)
-              .textSet(@"<span style=""color:#1E90FF;font-weight:thin;font-size:13px""> &nbsp&nbsp&nbsp近七天 </span>  <br> <span style=""color:#A9A9A9;font-weight:thin;font-size:10px""> 运行状态占比 </span>")//标题文本内容
-              .alignSet(AAChartTitleAlignTypeCenter)//标题水平居中
-              .verticalAlignSet(AAChartTitleVerticalAlignTypeMiddle)//标题垂直居中
-              .ySet(@0)//标题相对于垂直对齐的偏移量，取值范围：图表的上边距（chart.spacingTop ）到图表的下边距（chart.spacingBottom），可以是负值，单位是px。默认值和字体大小有关。
-              )
-    .colorsSet(@[@"#1E90FF",@"#87CEFA",@"#A9A9A9",@"#fd4800",@"#F4A460"])//设置颜色主题
-    .seriesSet(@[
-                 AAObject(AASeriesElement)
-                 .sizeSet(@200)//环形图的半径大小
-                 .innerSizeSet(@"60%")//内部圆环半径大小占比
-                 .allowPointSelectSet(false)//是否允许在点击数据点标记(扇形图点击选中的块发生位移)
-                 .dataLabelsSet(AAObject(AADataLabels)
-                                .enabledSet(true)
-                                .useHTMLSet(true)
-                                .distanceSet(@10)
-                                .formatSet(@"<span style=""color:#A9A9A9;font-weight:thin;font-size:10px"">{point.name}</span> <span style=""color:#1E90FF;font-weight:bold;font-size:15px"">{point.percentage:.1f}</span><span style=""color:#1E90FF;font-weight:thin;font-size:10px"">%</span>")
-                                )
-                 .dataSet(
-                          @[
-                            @[@"Firefox",   @150],
-                            @[@"Opera",      @15],
-                            @[@"Others",    @35]
-                            ]
-                          ),
-                 ]);
-    
-    return aaOptions;
+//    NSDictionary *title = @{
+//                            @"text": @"基础雷达图",
+//                            };
+//    NSDictionary *angleAxis = @{
+//                                @"type": @"category",
+//                                @"data": @[@"周一",@"周二",@"周三",@"周四",],
+//                                @"z": @10
+//                                };
+//    NSDictionary *radiusAxis = @{};
+//    NSDictionary *polar = @{};
+//    NSArray *series = @[
+//                        CCSeriesElement.new
+//                        .typeSet(CCChartTypeBar)
+//                        .dataSet(@[@1,@2,@3,@4])
+//                        .coordinateSystemSet(@"polar")
+//                        .nameSet(@"A")
+//                        .stackSet(@"a"),
+//                        CCSeriesElement.new
+//                        .typeSet(CCChartTypeBar)
+//                        .dataSet(@[@2,@4,@6,@8])
+//                        .coordinateSystemSet(@"polar")
+//                        .nameSet(@"B")
+//                        .stackSet(@"a"),
+//                        CCSeriesElement.new
+//                        .typeSet(CCChartTypeBar)
+//                        .dataSet(@[@1,@2,@3,@4])
+//                        .coordinateSystemSet(@"polar")
+//                        .nameSet(@"C")
+//                        .stackSet(@"a"),
+//                        ];
+//
+//    CCOptions *options = CCOptions.new;
+//    options.title = title;
+//    options.angleAxis = angleAxis;
+//    options.radiusAxis = radiusAxis;
+//    options.polar = polar;
+//    options.series = series;
+//    options.color = @[@"#8A2BE2",@"#fe117c",@"#ffc069",@"#06caf4",@"#7dffc0",];
+//    return options;
+    return nil;
 }
 
 - (AAOptions *)configureTheAAOptionsOfSpecialNestedColumnChart {

@@ -55,7 +55,9 @@ CCPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, NSString *, symb
 CCPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, NSString *, stack);
 CCPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSDictionary *, lineStyle);
 CCPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSDictionary *, areaStyle);
+CCPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSDictionary *, itemStyle);
 CCPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSArray *, data);
+CCPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, NSString *, coordinateSystem);
 CCPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSDictionary *, label);
 CCPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, NSString *, radius);
 CCPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSArray *, center);

@@ -54,7 +54,8 @@
 
     NSDictionary *legend = @{
                              @"data":chartModel.legendData ? chartModel.legendData:[NSNull null],
-                             @"bottom":@0
+                             @"bottom":@0,
+                             @"selectedMode":chartModel.legendSelectedMode?chartModel.legendSelectedMode:@""
                              };
     
    
@@ -75,6 +76,9 @@
                            @"data" : chartModel.yAxisData ? chartModel.yAxisData:@"",
                            }
                        ];
+//    @{@"indicator":chartModel.radarIndicator}
+    NSMutableDictionary *radar = [NSMutableDictionary dictionary];
+    [radar setValue:chartModel.radarIndicator forKey:@"indicator"];
 //    NSArray *dataZoom = @[ @{
 //                               @"start": @0,
 //                               @"end": @10,
@@ -107,8 +111,8 @@
     
     CCSeriesElement *seriesElement = chartModel.series[0];
     NSString *chartType = seriesElement.type;
-    if (![chartType isEqualToString:@"pie"]) {
-            options.xAxis = xAxis;
+    if (![chartType isEqualToString:CCChartTypePie] && ![chartType isEqualToString:CCChartTypeRadar]) {
+            options.xAxis = xAxis; //为雷达图的时候,设置了 xAxis和 YAxis 就有问题, echart报错
             options.yAxis = yAxis;
     }
     
@@ -123,7 +127,9 @@
         options.legend = legend;
     }
     
- 
+    if (radar.allKeys.count != 0) {
+        options.radar = radar;
+    }
     
     return options;
 }

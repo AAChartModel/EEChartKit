@@ -61,10 +61,12 @@ CCPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, titleSu
 CCPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, tooltipTrigger);
 CCPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, tooltipFormatter);
 CCPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, legendData);
+CCPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, legendSelectedMode);
 CCPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, xAxisType);
 CCPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, xAxisData);
 CCPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, yAxisType);
 CCPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, yAxisData);
 CCPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray <CCSeriesElement *>*, series);
+CCPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, radarIndicator);
 
 @end

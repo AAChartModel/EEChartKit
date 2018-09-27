@@ -61,10 +61,12 @@ CCPropSetFuncImplementation(CCChartModel, NSString *, titleSubtext)
 CCPropSetFuncImplementation(CCChartModel, NSString *, tooltipTrigger);
 CCPropSetFuncImplementation(CCChartModel, NSString *, tooltipFormatter);
 CCPropSetFuncImplementation(CCChartModel, NSArray  *, legendData);
+CCPropSetFuncImplementation(CCChartModel, NSString *, legendSelectedMode);
 CCPropSetFuncImplementation(CCChartModel, NSString *, xAxisType)
 CCPropSetFuncImplementation(CCChartModel, NSArray  *, xAxisData);
 CCPropSetFuncImplementation(CCChartModel, NSString *, yAxisType)
 CCPropSetFuncImplementation(CCChartModel, NSArray  *, yAxisData);
 CCPropSetFuncImplementation(CCChartModel, NSArray <CCSeriesElement *>*, series);
+CCPropSetFuncImplementation(CCChartModel, NSArray  *, radarIndicator);
 
 @end

@@ -19,5 +19,10 @@ CCPropSetFuncImplementation(CCOptions, NSArray *, xAxis);
 CCPropSetFuncImplementation(CCOptions, NSArray *, yAxis);
 CCPropSetFuncImplementation(CCOptions, NSArray *, dataZoom);
 CCPropSetFuncImplementation(CCOptions, NSArray *, series);
+CCPropSetFuncImplementation(CCOptions, NSDictionary *, angleAxis);
+CCPropSetFuncImplementation(CCOptions, NSDictionary *, radiusAxis);
+CCPropSetFuncImplementation(CCOptions, NSDictionary *, polar);
+CCPropSetFuncImplementation(CCOptions, NSDictionary *, radar);
+
 
 @end
