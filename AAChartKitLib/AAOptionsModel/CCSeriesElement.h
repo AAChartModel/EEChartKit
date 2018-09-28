@@ -7,42 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-typedef NS_ENUM(NSInteger,CCAnimationEasingType) {
-    CCAnimationEasingTypeLinear = 0,
-    CCAnimationEasingTypeSwing,
-    CCAnimationEasingTypeEaseInQuad,
-    CCAnimationEasingTypeEaseOutQuad,
-    CCAnimationEasingTypeEaseInOutQuad,
-    CCAnimationEasingTypeEaseInCubic,
-    CCAnimationEasingTypeEaseOutCubic,
-    CCAnimationEasingTypeEaseInOutCubic,
-    CCAnimationEasingTypeEaseInQuart,
-    CCAnimationEasingTypeEaseOutQuart,
-    CCAnimationEasingTypeEaseInOutQuart,
-    CCAnimationEasingTypeEaseInQuint,
-    CCAnimationEasingTypeEaseOutQuint,
-    CCAnimationEasingTypeEaseInOutQuint,
-    CCAnimationEasingTypeEaseInExpo,
-    CCAnimationEasingTypeEaseOutExpo,
-    CCAnimationEasingTypeEaseInOutExpo,
-    CCAnimationEasingTypeEaseInSine,
-    CCAnimationEasingTypeEaseOutSine,
-    CCAnimationEasingTypeEaseInOutSine,
-    CCAnimationEasingTypeEaseInCirc,
-    CCAnimationEasingTypeEaseOutCirc,
-    CCAnimationEasingTypeEaseInOutCirc,
-    CCAnimationEasingTypeEaseInElastic,
-    CCAnimationEasingTypeEaseOutElastic,
-    CCAnimationEasingTypeEaseInOutElastic,
-    CCAnimationEasingTypeEaseInBack,
-    CCAnimationEasingTypeEaseOutBack,
-    CCAnimationEasingTypeEaseInOutBack,
-    CCAnimationEasingTypeEaseInBounce,
-    CCAnimationEasingTypeEaseOutBounce,
-    CCAnimationEasingTypeEaseInOutBounce,
-};
-
+#import "CCAnimationEasingType.h"
 
 @interface CCSeriesElement : NSObject
 

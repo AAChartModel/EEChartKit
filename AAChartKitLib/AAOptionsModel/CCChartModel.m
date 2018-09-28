@@ -8,38 +8,6 @@
 
 #import "CCChartModel.h"
 
-CCChartType const CCChartTypeLine = @"line";
-CCChartType const CCChartTypeBar = @"bar";
-CCChartType const CCChartTypePie = @"pie";
-CCChartType const CCChartTypeScatter = @"scatter";
-CCChartType const CCChartTypeEffectScatter  = @"effectScatter";
-CCChartType const CCChartTypeRadar = @"radar";
-CCChartType const CCChartTypeTree = @"tree";
-CCChartType const CCChartTypeTreemap = @"treemap";
-CCChartType const CCChartTypeSunburst = @"sunburst";
-CCChartType const CCChartTypeBoxplot = @"boxplot";
-CCChartType const CCChartTypeCandlestick = @"candlestick";
-CCChartType const CCChartTypeHeatmap = @"heatmap";
-CCChartType const CCChartTypeMap = @"map";
-CCChartType const CCChartTypeParallel = @"parallel";
-CCChartType const CCChartTypeLines = @"Lines";
-CCChartType const CCChartTypeGraph = @"graph";
-CCChartType const CCChartTypeSankey = @"sankey";
-CCChartType const CCChartTypeFunnel = @"funnel";
-CCChartType const CCChartTypeGauge = @"gauge";
-CCChartType const CCChartTypePictorialBar = @"pictorialBar";
-CCChartType const CCChartTypeThemeRiver = @"ThemeRiver";
-CCChartType const CCChartTypeCustom = @"custom";
-
-CCChartSymbolType const CCChartSymbolTypeCircle = @"circle";
-CCChartSymbolType const CCChartSymbolTypeRect = @"rect";
-CCChartSymbolType const CCChartSymbolTypeRoundRect = @"roundRect";
-CCChartSymbolType const CCChartSymbolTypeTriangle = @"triangle";
-CCChartSymbolType const CCChartSymbolTypeDiamond = @"diamond";
-CCChartSymbolType const CCChartSymbolTypePin = @"pin";
-CCChartSymbolType const CCChartSymbolTypeArrow = @"arrow";
-CCChartSymbolType const CCChartSymbolTypeNone = @"none";
-
 @implementation CCChartModel
 
 - (instancetype)init {

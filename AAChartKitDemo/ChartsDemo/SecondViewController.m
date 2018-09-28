@@ -60,7 +60,7 @@
     switch (self.chartType) {
         case 0:
         case 1:
-            chartType = CCChartTypeBar;
+            chartType = CCChartType.bar;
             break;
         case 2:
         case 3:
@@ -68,10 +68,10 @@
         case 5:
         case 6:
         case 7:
-            chartType = CCChartTypeLine;
+            chartType = CCChartType.line;
             break;
         case 8:
-            chartType = CCChartTypeScatter;
+            chartType = CCChartType.scatter;
             break;
         default:
             break;
@@ -124,12 +124,12 @@
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"2011年")
-                         .typeSet(CCChartTypeBar)
+                         .typeSet(CCChartType.bar)
                          .dataSet(@[@18203, @23489, @29034, @104970, @131744, @630230]),
                          
                          CCSeriesElement.new
                          .nameSet(@"2012年")
-                         .typeSet(CCChartTypeBar)
+                         .typeSet(CCChartType.bar)
                          .dataSet(@[@19325, @23438, @31000, @121594, @134141, @681807]),
                          ]);
             }
@@ -146,22 +146,22 @@
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"邮件营销")
-                         .typeSet(CCChartTypeBar)
+                         .typeSet(CCChartType.bar)
                          .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
                          
                          CCSeriesElement.new
                          .nameSet(@"联盟广告")
-                         .typeSet(CCChartTypeBar)
+                         .typeSet(CCChartType.bar)
                          .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
                          
                          CCSeriesElement.new
                          .nameSet(@"视频广告")
-                         .typeSet(CCChartTypeBar)
+                         .typeSet(CCChartType.bar)
                          .dataSet(@[@150, @232, @201, @154, @190, @330, @410]),
                          
                          CCSeriesElement.new
                          .nameSet(@"直接访问")
-                         .typeSet(CCChartTypeBar)
+                         .typeSet(CCChartType.bar)
                          .dataSet(@[@320, @332, @301, @334, @390, @330, @320]),
                          
                          ]);
@@ -178,25 +178,25 @@
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"邮件营销")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .areaStyleSet(@{})
                          .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
                          
                          CCSeriesElement.new
                          .nameSet(@"联盟广告")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .areaStyleSet(@{})
                          .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
                          
                          CCSeriesElement.new
                          .nameSet(@"视频广告")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .areaStyleSet(@{})
                          .dataSet(@[@150, @232, @201, @154, @190, @330, @410]),
                          
                          CCSeriesElement.new
                          .nameSet(@"直接访问")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .areaStyleSet(@{})
                          .dataSet(@[@320, @332, @301, @334, @390, @330, @320]),
                          
@@ -215,28 +215,28 @@
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"邮件营销")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .areaStyleSet(@{})
                          .smoothSet(YES)
                          .dataSet(@[@0.45, @0.43, @0.50, @0.55, @0.58, @0.62, @0.83, @0.39, @0.56, @0.67, @0.50, @0.34, @0.50, @0.67, @0.58, @0.29, @0.46, @0.23, @0.47, @0.46, @0.38, @0.56, @0.48, @0.36]),
                          
                          CCSeriesElement.new
                          .nameSet(@"联盟广告")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .areaStyleSet(@{})
                          .smoothSet(YES)
                          .dataSet(@[@0.38, @0.31, @0.32, @0.32, @0.64, @0.66, @0.86, @0.47, @0.52, @0.75, @0.52, @0.56, @0.54, @0.60, @0.46, @0.63, @0.54, @0.51, @0.58, @0.64, @0.60, @0.45, @0.36, @0.67]),
                          
                          CCSeriesElement.new
                          .nameSet(@"视频广告")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .areaStyleSet(@{})
                          .smoothSet(YES)
                          .dataSet(@[@0.46, @0.32, @0.53, @0.58, @0.86, @0.68, @0.85, @0.73, @0.69, @0.71, @0.91, @0.74, @0.60, @0.50, @0.39, @0.67, @0.55, @0.49, @0.65, @0.45, @0.64, @0.47, @0.63, @0.64]),
                          
                          CCSeriesElement.new
                          .nameSet(@"直接访问")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .areaStyleSet(@{})
                          .smoothSet(YES)
                          .dataSet(@[@0.60, @0.51, @0.52, @0.53, @0.64, @0.84, @0.65, @0.68, @0.63, @0.47, @0.72, @0.60, @0.65, @0.74, @0.66, @0.65, @0.71, @0.59, @0.65, @0.77, @0.52, @0.53, @0.58, @0.53]),
@@ -256,21 +256,21 @@
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"邮件营销")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .areaStyleSet(@{})
                          .stepSet(@"middle")
                          .dataSet(@[@149.9, @171.5, @106.4, @129.2, @144.0, @176.0, @135.6, @188.5, @276.4, @214.1, @95.6, @54.4]),
                          
                          CCSeriesElement.new
                          .nameSet(@"联盟广告")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .areaStyleSet(@{})
                          .stepSet(@"middle")
                          .dataSet(@[@83.6, @78.8, @188.5, @93.4, @106.0, @84.5, @105.0, @104.3, @131.2, @153.5, @226.6, @192.3]),
                          
                          CCSeriesElement.new
                          .nameSet(@"视频广告")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .areaStyleSet(@{})
                          .stepSet(@"middle")
                          .dataSet(@[@48.9, @38.8, @19.3, @41.4, @47.0, @28.3, @59.0, @69.6, @52.4, @65.2, @53.3, @72.2]),
@@ -289,22 +289,22 @@
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"邮件营销")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
                          
                          CCSeriesElement.new
                          .nameSet(@"联盟广告")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
                          
                          CCSeriesElement.new
                          .nameSet(@"视频广告")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .dataSet(@[@150, @232, @201, @154, @190, @330, @410]),
                          
                          CCSeriesElement.new
                          .nameSet(@"直接访问")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .dataSet(@[@320, @332, @301, @334, @390, @330, @320]),
                          
                          ]);
@@ -322,25 +322,25 @@
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"邮件营销")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .smoothSet(YES)
                          .dataSet(@[@0.45, @0.43, @0.50, @0.55, @0.58, @0.62, @0.83, @0.39, @0.56, @0.67, @0.50, @0.34, @0.50, @0.67, @0.58, @0.29, @0.46, @0.23, @0.47, @0.46, @0.38, @0.56, @0.48, @0.36]),
                          
                          CCSeriesElement.new
                          .nameSet(@"联盟广告")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .smoothSet(YES)
                          .dataSet(@[@0.38, @0.31, @0.32, @0.32, @0.64, @0.66, @0.86, @0.47, @0.52, @0.75, @0.52, @0.56, @0.54, @0.60, @0.46, @0.63, @0.54, @0.51, @0.58, @0.64, @0.60, @0.45, @0.36, @0.67]),
                          
                          CCSeriesElement.new
                          .nameSet(@"视频广告")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .smoothSet(YES)
                          .dataSet(@[@0.46, @0.32, @0.53, @0.58, @0.86, @0.68, @0.85, @0.73, @0.69, @0.71, @0.91, @0.74, @0.60, @0.50, @0.39, @0.67, @0.55, @0.49, @0.65, @0.45, @0.64, @0.47, @0.63, @0.64]),
                          
                          CCSeriesElement.new
                          .nameSet(@"直接访问")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .smoothSet(YES)
                          .dataSet(@[@0.60, @0.51, @0.52, @0.53, @0.64, @0.84, @0.65, @0.68, @0.63, @0.47, @0.72, @0.60, @0.65, @0.74, @0.66, @0.65, @0.71, @0.59, @0.65, @0.77, @0.52, @0.53, @0.58, @0.53]),
                          
@@ -360,19 +360,19 @@
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"邮件营销")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .stepSet(@"middle")
                          .dataSet(@[@149.9, @171.5, @106.4, @129.2, @144.0, @176.0, @135.6, @188.5, @276.4, @214.1, @95.6, @54.4]),
                          
                          CCSeriesElement.new
                          .nameSet(@"联盟广告")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .stepSet(@"middle")
                          .dataSet(@[@83.6, @78.8, @188.5, @93.4, @106.0, @84.5, @105.0, @104.3, @131.2, @153.5, @226.6, @192.3]),
                          
                          CCSeriesElement.new
                          .nameSet(@"视频广告")
-                         .typeSet(CCChartTypeLine)
+                         .typeSet(CCChartType.line)
                          .stepSet(@"middle")
                          .dataSet(@[@48.9, @38.8, @19.3, @41.4, @47.0, @28.3, @59.0, @69.6, @52.4, @65.2, @53.3, @72.2]),
                          ]);
@@ -390,22 +390,22 @@
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"邮件营销")
-                         .typeSet(CCChartTypeScatter)
+                         .typeSet(CCChartType.scatter)
                          .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
                          
                          CCSeriesElement.new
                          .nameSet(@"联盟广告")
-                         .typeSet(CCChartTypeScatter)
+                         .typeSet(CCChartType.scatter)
                          .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
                          
                          CCSeriesElement.new
                          .nameSet(@"视频广告")
-                         .typeSet(CCChartTypeScatter)
+                         .typeSet(CCChartType.scatter)
                          .dataSet(@[@150, @232, @201, @154, @190, @330, @410]),
                          
                          CCSeriesElement.new
                          .nameSet(@"直接访问")
-                         .typeSet(CCChartTypeScatter)
+                         .typeSet(CCChartType.scatter)
                          .dataSet(@[@320, @332, @301, @334, @390, @330, @320]),
                          
                          ]);

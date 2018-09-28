@@ -40,6 +40,9 @@
 		272D80B31F91EC9E008A2D20 /* ShowManyChartViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 272D80B21F91EC9E008A2D20 /* ShowManyChartViewVC.m */; };
 		27746B1F1F3B0224009354A7 /* DrawChartWithAAOptionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27746B1E1F3B0224009354A7 /* DrawChartWithAAOptionsVC.m */; };
 		278989BB204F8DBA003940CC /* ChartListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 278989BA204F8DBA003940CC /* ChartListVC.m */; };
+		2790B1CB215DFF6300C7BE61 /* CCChartType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2790B1CA215DFF6300C7BE61 /* CCChartType.m */; };
+		2790B1CE215E061200C7BE61 /* CCAnimationEasingType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2790B1CD215E061200C7BE61 /* CCAnimationEasingType.m */; };
+		2790B1D1215E0B3D00C7BE61 /* CCChartSymbolType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2790B1D0215E0B3D00C7BE61 /* CCChartSymbolType.m */; };
 		27E38C651F0E47BA00FB52E1 /* ChartAnimationTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E38C641F0E47BA00FB52E1 /* ChartAnimationTypeVC.m */; };
 		27F0CA7921018998004BD904 /* AADateUTCTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F0CA7821018998004BD904 /* AADateUTCTool.m */; };
 		27F5AD9C20A740910086CD33 /* MixedChartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F5AD9B20A740910086CD33 /* MixedChartVC.m */; };
@@ -149,6 +152,12 @@
 		27746B1E1F3B0224009354A7 /* DrawChartWithAAOptionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawChartWithAAOptionsVC.m; sourceTree = "<group>"; };
 		278989B9204F8DBA003940CC /* ChartListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartListVC.h; sourceTree = "<group>"; };
 		278989BA204F8DBA003940CC /* ChartListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartListVC.m; sourceTree = "<group>"; };
+		2790B1C9215DFF6300C7BE61 /* CCChartType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCChartType.h; sourceTree = "<group>"; };
+		2790B1CA215DFF6300C7BE61 /* CCChartType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCChartType.m; sourceTree = "<group>"; };
+		2790B1CC215E061200C7BE61 /* CCAnimationEasingType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCAnimationEasingType.h; sourceTree = "<group>"; };
+		2790B1CD215E061200C7BE61 /* CCAnimationEasingType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCAnimationEasingType.m; sourceTree = "<group>"; };
+		2790B1CF215E0B3D00C7BE61 /* CCChartSymbolType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCChartSymbolType.h; sourceTree = "<group>"; };
+		2790B1D0215E0B3D00C7BE61 /* CCChartSymbolType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCChartSymbolType.m; sourceTree = "<group>"; };
 		27E38C631F0E47BA00FB52E1 /* ChartAnimationTypeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartAnimationTypeVC.h; sourceTree = "<group>"; };
 		27E38C641F0E47BA00FB52E1 /* ChartAnimationTypeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartAnimationTypeVC.m; sourceTree = "<group>"; };
 		27F0CA7721018998004BD904 /* AADateUTCTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AADateUTCTool.h; sourceTree = "<group>"; };
@@ -234,6 +243,12 @@
 		1E66D1BD210AF4EC007EAB8C /* AAOptionsModel */ = {
 			isa = PBXGroup;
 			children = (
+				2790B1C9215DFF6300C7BE61 /* CCChartType.h */,
+				2790B1CA215DFF6300C7BE61 /* CCChartType.m */,
+				2790B1CF215E0B3D00C7BE61 /* CCChartSymbolType.h */,
+				2790B1D0215E0B3D00C7BE61 /* CCChartSymbolType.m */,
+				2790B1CC215E061200C7BE61 /* CCAnimationEasingType.h */,
+				2790B1CD215E061200C7BE61 /* CCAnimationEasingType.m */,
 				4477169C21564E7200782FE8 /* CCChartModel.h */,
 				4477169B21564E7200782FE8 /* CCChartModel.m */,
 				4477169A21564E7200782FE8 /* CCItemStyle.h */,
@@ -614,7 +629,9 @@
 				7172A3DB1E763EA6000D5B99 /* AppDelegate.m in Sources */,
 				27E38C651F0E47BA00FB52E1 /* ChartAnimationTypeVC.m in Sources */,
 				1E66D20B210AF4ED007EAB8C /* AABar.m in Sources */,
+				2790B1CE215E061200C7BE61 /* CCAnimationEasingType.m in Sources */,
 				1E66D1FD210AF4ED007EAB8C /* AALabels.m in Sources */,
+				2790B1D1215E0B3D00C7BE61 /* CCChartSymbolType.m in Sources */,
 				7172A3D81E763EA6000D5B99 /* main.m in Sources */,
 				1E66D1FE210AF4ED007EAB8C /* AASeries.m in Sources */,
 				645E59551E8403710039A0A1 /* SpecialChartVC.m in Sources */,
@@ -622,6 +639,7 @@
 				1E66D209210AF4ED007EAB8C /* AAOptions3d.m in Sources */,
 				447716A621564E7300782FE8 /* CCSeriesElement.m in Sources */,
 				713F543D1E7B71C000D506C7 /* FirstViewController.m in Sources */,
+				2790B1CB215DFF6300C7BE61 /* CCChartType.m in Sources */,
 				1E66D20D210AF4ED007EAB8C /* AAArea.m in Sources */,
 				447716A321564E7300782FE8 /* CCTitle.m in Sources */,
 				1E66D210210AF4ED007EAB8C /* AAMarker.m in Sources */,

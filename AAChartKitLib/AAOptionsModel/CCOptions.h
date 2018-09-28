@@ -26,9 +26,6 @@ CCPropStatementAndPropSetFuncStatement(strong, CCOptions, NSDictionary *, radius
 CCPropStatementAndPropSetFuncStatement(strong, CCOptions, NSDictionary *, polar);
 CCPropStatementAndPropSetFuncStatement(strong, CCOptions, NSDictionary *, radar);
 
-
-
-
 @end
 
 NS_ASSUME_NONNULL_END

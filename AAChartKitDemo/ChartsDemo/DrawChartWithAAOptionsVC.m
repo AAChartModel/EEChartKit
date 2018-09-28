@@ -92,19 +92,19 @@
     NSDictionary *polar = @{};
     NSArray *series = @[
                         CCSeriesElement.new
-                        .typeSet(CCChartTypeBar)
+                        .typeSet(CCChartType.bar)
                         .dataSet(@[@1,@2,@3,@4])
                         .coordinateSystemSet(@"polar")
                         .nameSet(@"A")
                         .stackSet(@"a"),
                         CCSeriesElement.new
-                        .typeSet(CCChartTypeBar)
+                        .typeSet(CCChartType.bar)
                         .dataSet(@[@2,@4,@6,@8])
                         .coordinateSystemSet(@"polar")
                         .nameSet(@"B")
                         .stackSet(@"a"),
                         CCSeriesElement.new
-                        .typeSet(CCChartTypeBar)
+                        .typeSet(CCChartType.bar)
                         .dataSet(@[@1,@2,@3,@4])
                         .coordinateSystemSet(@"polar")
                         .nameSet(@"C")
@@ -134,19 +134,19 @@
     NSDictionary *polar = @{};
     NSArray *series = @[
                         CCSeriesElement.new
-                        .typeSet(CCChartTypeBar)
+                        .typeSet(CCChartType.bar)
                         .dataSet(@[@1,@2,@3,@4])
                         .coordinateSystemSet(@"polar")
                         .nameSet(@"A")
                         .stackSet(@"a"),
                         CCSeriesElement.new
-                        .typeSet(CCChartTypeBar)
+                        .typeSet(CCChartType.bar)
                         .dataSet(@[@2,@4,@6,@8])
                         .coordinateSystemSet(@"polar")
                         .nameSet(@"B")
                         .stackSet(@"a"),
                         CCSeriesElement.new
-                        .typeSet(CCChartTypeBar)
+                        .typeSet(CCChartType.bar)
                         .dataSet(@[@1,@2,@3,@4])
                         .coordinateSystemSet(@"polar")
                         .nameSet(@"C")
@@ -176,19 +176,19 @@
 //    NSDictionary *polar = @{};
 //    NSArray *series = @[
 //                        CCSeriesElement.new
-//                        .typeSet(CCChartTypeBar)
+//                        .typeSet(CCChartType.bar)
 //                        .dataSet(@[@1,@2,@3,@4])
 //                        .coordinateSystemSet(@"polar")
 //                        .nameSet(@"A")
 //                        .stackSet(@"a"),
 //                        CCSeriesElement.new
-//                        .typeSet(CCChartTypeBar)
+//                        .typeSet(CCChartType.bar)
 //                        .dataSet(@[@2,@4,@6,@8])
 //                        .coordinateSystemSet(@"polar")
 //                        .nameSet(@"B")
 //                        .stackSet(@"a"),
 //                        CCSeriesElement.new
-//                        .typeSet(CCChartTypeBar)
+//                        .typeSet(CCChartType.bar)
 //                        .dataSet(@[@1,@2,@3,@4])
 //                        .coordinateSystemSet(@"polar")
 //                        .nameSet(@"C")

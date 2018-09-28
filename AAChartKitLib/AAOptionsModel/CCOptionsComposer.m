@@ -111,7 +111,7 @@
     
     CCSeriesElement *seriesElement = chartModel.series[0];
     NSString *chartType = seriesElement.type;
-    if (![chartType isEqualToString:CCChartTypePie] && ![chartType isEqualToString:CCChartTypeRadar]) {
+    if (![chartType isEqualToString:CCChartType.pie] && ![chartType isEqualToString:CCChartType.radar]) {
             options.xAxis = xAxis; //为雷达图的时候,设置了 xAxis和 YAxis 就有问题, echart报错
             options.yAxis = yAxis;
     }
@@ -134,45 +134,5 @@
     return options;
 }
 
-
-
-+ (NSString *)configureTheChartAnimationEasingWithEasingType:(CCAnimationEasingType)animationEasing {
- 
-    NSArray *animationEasingTypesArr = @[
-                                         @"Linear ",
-                                         @"Swing",
-                                         @"EaseInQuad",
-                                         @"EaseOutQuad",
-                                         @"EaseInOutQuad",
-                                         @"EaseInCubic",
-                                         @"EaseOutCubic",
-                                         @"EaseInOutCubic",
-                                         @"EaseInQuart",
-                                         @"EaseOutQuart",
-                                         @"EaseInOutQuart",
-                                         @"EaseInQuint",
-                                         @"EaseOutQuint",
-                                         @"EaseInOutQuint",
-                                         @"EaseInExpo",
-                                         @"EaseOutExpo",
-                                         @"EaseInOutExpo",
-                                         @"EaseInSine",
-                                         @"EaseOutSine",
-                                         @"EaseInOutSine",
-                                         @"EaseInCirc",
-                                         @"EaseOutCirc",
-                                         @"EaseInOutCirc",
-                                         @"EaseInElastic",
-                                         @"EaseOutElastic",
-                                         @"EaseInOutElastic",
-                                         @"EaseInBack",
-                                         @"EaseOutBack",
-                                         @"EaseInOutBack",
-                                         @"EaseInBounce",
-                                         @"EaseOutBounce",
-                                         @"EaseInOutBounce",];
-    NSString *EasingTypeStr = animationEasingTypesArr[animationEasing];
-    return EasingTypeStr;
-}
 
 @end

@@ -102,14 +102,14 @@
     .seriesSet(@[
                  CCSeriesElement.new
                  .nameSet(@"邮件营销")
-                 .typeSet(CCChartTypeBar)
+                 .typeSet(CCChartType.bar)
                  .animationEasingSet(@"bounceOut")
                  .stackSet(@"总量")
                  .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
                  
                  CCSeriesElement.new
                  .nameSet(@"联盟广告")
-                 .typeSet(CCChartTypeBar)
+                 .typeSet(CCChartType.bar)
                  .animationEasingSet(@"bounceOut")
                  .stackSet(@"总量")
                  .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
@@ -294,14 +294,14 @@
     NSArray *seriesArr =  @[
                             CCSeriesElement.new
                             .nameSet(@"邮件营销")
-                            .typeSet(CCChartTypeBar)
+                            .typeSet(CCChartType.bar)
                             .animationEasingSet(chartAnimationType)
                             .stackSet(@"总量")
                             .dataSet(@[@(arc4random()%1000),@(arc4random()%1000),@(arc4random()%1000),@(arc4random()%1000),@(arc4random()%1000),@(arc4random()%1000),@(arc4random()%1000),]),
                             
                             CCSeriesElement.new
                             .nameSet(@"联盟广告")
-                            .typeSet(CCChartTypeBar)
+                            .typeSet(CCChartType.bar)
                             .animationEasingSet(chartAnimationType)
                             .stackSet(@"总量")
                             .dataSet((@[@(arc4random()%1000),@(arc4random()%1000),@(arc4random()%1000),@(arc4random()%1000),@(arc4random()%1000),@(arc4random()%1000),@(arc4random()%1000),])),
@@ -313,34 +313,37 @@
 - (NSArray *)animationTypeArr {
     if (!_animationTypeArr) {
         _animationTypeArr = @[
-                              @"linear",
-                              @"quadraticIn",
-                              @"quadraticOut",
-                              @"quadraticInOut",
-                              @"cubicIn",
-                              @"cubicOut",
-                              @"cubicInOut",
-                              @"quarticIn",
-                              @"quarticOut",
-                              @"quarticInOut",
-                              @"quinticIn",
-                              @"quinticOut",
-                              @"quinticInOut",
-                              @"sinusoidalIn",
-                              @"sinusoidalOut",
-                              @"sinusoidalInOut",
-                              @"exponentialIn",
-                              @"exponentialOut",
-                              @"exponentialInOut",
-                              @"circularIn",
-                              @"circularOut",
-                              @"circularInOut",
-                              @"elasticIn",
-                              @"elasticOut",
-                              @"elasticInOut",
-                              @"backIn",
-                              @"backOut",
-                              @"backInOut", ];
+                              CCAnimationEasingType.linear,
+                              CCAnimationEasingType.quadraticIn,
+                              CCAnimationEasingType.quadraticOut,
+                              CCAnimationEasingType.quadraticInOut,
+                              CCAnimationEasingType.cubicIn,
+                              CCAnimationEasingType.cubicOut,
+                              CCAnimationEasingType.cubicInOut,
+                              CCAnimationEasingType.quarticIn,
+                              CCAnimationEasingType.quarticOut,
+                              CCAnimationEasingType.quarticInOut,
+                              CCAnimationEasingType.quinticIn,
+                              CCAnimationEasingType.quinticOut,
+                              CCAnimationEasingType.quinticInOut,
+                              CCAnimationEasingType.sinusoidalIn,
+                              CCAnimationEasingType.sinusoidalOut,
+                              CCAnimationEasingType.sinusoidalInOut,
+                              CCAnimationEasingType.exponentialIn,
+                              CCAnimationEasingType.exponentialOut,
+                              CCAnimationEasingType.exponentialInOut,
+                              CCAnimationEasingType.circularIn,
+                              CCAnimationEasingType.circularOut,
+                              CCAnimationEasingType.circularInOut,
+                              CCAnimationEasingType.elasticIn,
+                              CCAnimationEasingType.elasticOut,
+                              CCAnimationEasingType.elasticInOut,
+                              CCAnimationEasingType.backIn,
+                              CCAnimationEasingType.backOut,
+                              CCAnimationEasingType.backInOut,
+                              CCAnimationEasingType.bounceIn,
+                              CCAnimationEasingType.bounceOut,
+                              CCAnimationEasingType.bounceInOut];
     }
     return _animationTypeArr;
 }

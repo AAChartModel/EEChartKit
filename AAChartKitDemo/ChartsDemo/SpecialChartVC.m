@@ -185,12 +185,12 @@
         .seriesSet(@[
                      CCSeriesElement.new
                      .nameSet(@"邮件营销")
-                     .typeSet(CCChartTypeBar)
+                     .typeSet(CCChartType.bar)
                      .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
                      
                      CCSeriesElement.new
                      .nameSet(@"联盟广告")
-                     .typeSet(CCChartTypeBar)
+                     .typeSet(CCChartType.bar)
                      .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
                      ]);
         
@@ -205,7 +205,7 @@
         .seriesSet(@[
                      CCSeriesElement.new
                      .nameSet(@"邮件营销")
-                     .typeSet(CCChartTypeLine)
+                     .typeSet(CCChartType.line)
                      .smoothSet(YES)
                      .lineStyleSet(@{@"type":@"solid"})
                      .stackSet(@"总量")
@@ -213,7 +213,7 @@
                      
                      CCSeriesElement.new
                      .nameSet(@"联盟广告")
-                     .typeSet(CCChartTypeLine)
+                     .typeSet(CCChartType.line)
                      .smoothSet(YES)
                      .lineStyleSet(@{@"type":@"dashed"})
                      .stackSet(@"总量")
@@ -221,7 +221,7 @@
                      
                      CCSeriesElement.new
                      .nameSet(@"视频广告")
-                     .typeSet(CCChartTypeLine)
+                     .typeSet(CCChartType.line)
                      .smoothSet(YES)
                      .lineStyleSet(@{@"type":@"dotted"})
                      .stackSet(@"总量")
@@ -240,7 +240,7 @@
         .seriesSet(@[
                      CCSeriesElement.new
                      .nameSet(@"2020")
-                     .typeSet(CCChartTypeBar)
+                     .typeSet(CCChartType.bar)
                      .dataSet(@[@2.6, @5.9, @9.0, @26.4, @28.7, @70.7, @175.6, @182.2, @48.7, @18.8, @6.0, @2.3])
                      .markPointSet(@{
                                      @"data" :@[
@@ -271,31 +271,31 @@
         .seriesSet(@[
                      CCSeriesElement.new
                      .nameSet(@"邮件营销")
-                     .typeSet(CCChartTypeLine)
+                     .typeSet(CCChartType.line)
                      .areaStyleSet(@{})
                      .smoothSet(YES)
                      .dataSet(@[@0, @(-7.5), @(-1.0), @3.7, @0, @(-3), @8, @0,@(-3.6), @4, @(-2), @0]),
                      CCSeriesElement.new
                      .nameSet(@"联盟广告")
-                     .typeSet(CCChartTypeLine)
+                     .typeSet(CCChartType.line)
                      .areaStyleSet(@{})
                      .smoothSet(YES)
                      .dataSet(@[@0, @(-2.2), @2, @(-2.2), @0, @(-1.5), @0, @2.4, @(-1), @3, @(-1), @0]),
                      CCSeriesElement.new
                      .nameSet(@"视频广告")
-                     .typeSet(CCChartTypeLine)
+                     .typeSet(CCChartType.line)
                      .areaStyleSet(@{})
                      .smoothSet(YES)
                      .dataSet(@[@0, @2.3, @0, @1.2, @(-1), @3, @0, @(-3.3), @0, @2, @(-0.3), @0]),
                      CCSeriesElement.new
                      .nameSet(@"直接访问")
-                     .typeSet(CCChartTypeLine)
+                     .typeSet(CCChartType.line)
                      .areaStyleSet(@{})
                      .smoothSet(YES)
                      .dataSet(@[@0, @10, @0.13,@2,@0, @2, @0, @3.7, @0, @1, @(-3), @0]),
                      CCSeriesElement.new
                      .nameSet(@"搜索引擎")
-                     .typeSet(CCChartTypeLine)
+                     .typeSet(CCChartType.line)
                      .areaStyleSet(@{})
                      .smoothSet(YES)
                      .dataSet(@[@0, @(-4.5), @(-0.9), @5.5, @(-1.9), @1.3, @(-2.8), @0, @(-1.7), @0, @3, @0, ]),
@@ -312,7 +312,7 @@
         .seriesSet(@[
                      CCSeriesElement.new
                      .nameSet(@"访问来源")
-                     .typeSet(CCChartTypePie)
+                     .typeSet(CCChartType.pie)
                      .radiusSet(@"55%")
                      .dataSet(@[@{@"value":@310, @"name":@"邮件营销"},
                                 @{@"value":@274, @"name":@"联盟广告"},
@@ -334,7 +334,7 @@
         .seriesSet(@[
                      CCSeriesElement.new
                      .nameSet(@"访问来源")
-                     .typeSet(CCChartTypePie)
+                     .typeSet(CCChartType.pie)
                      .radiusSet((id)@[@0,@"30%"])
                      .labelSet(@{@"normal":@{@"position":@"inner"}})
                      .dataSet(@[
@@ -344,7 +344,7 @@
                                 ]),
                      CCSeriesElement.new
                      .nameSet(@"访问来源")
-                     .typeSet(CCChartTypePie)
+                     .typeSet(CCChartType.pie)
                      .radiusSet((id)@[@"40%",@"55%"])
                      .dataSet(@[
                                 @{@"value":@335, @"name":@"直达"},
@@ -370,7 +370,7 @@
         .seriesSet(@[
                      CCSeriesElement.new
                      .nameSet(@"Male")
-                     .typeSet(CCChartTypeScatter)
+                     .typeSet(CCChartType.scatter)
                      .dataSet(@[
                                 @[@161.2, @51.6], @[@167.5, @59.0], @[@159.5, @49.2], @[@157.0, @63.0], @[@155.8, @53.6],
                                 @[@170.0, @59.0], @[@159.1, @47.6], @[@166.0, @69.8], @[@176.2, @66.8], @[@160.2, @75.2],
@@ -427,7 +427,7 @@
                                 ]),
                      CCSeriesElement.new
                      .nameSet(@"Female")
-                     .typeSet(CCChartTypeScatter)
+                     .typeSet(CCChartType.scatter)
                      .dataSet(@[
                                 @[@174.0, @65.6], @[@175.3, @71.8], @[@193.5, @80.7], @[@186.5, @72.6], @[@187.2, @78.8],
                                 @[@181.5, @74.8], @[@184.0, @86.4], @[@184.5, @78.4], @[@175.0, @62.0], @[@184.0, @81.6],
@@ -494,7 +494,7 @@
         .seriesSet(@[
                      CCSeriesElement.new
                      .nameSet(@"访问来源")
-                     .typeSet(CCChartTypePie)
+                     .typeSet(CCChartType.pie)
                      .radiusSet((id)@[@"40%",@"55%"])
                      .dataSet(@[@{@"value":@310, @"name":@"邮件营销"},
                                 @{@"value":@274, @"name":@"联盟广告"},
@@ -522,7 +522,7 @@
         .seriesSet(@[
                      CCSeriesElement.new
                      .nameSet(@"预算 vs 开销（Budget vs spending）")
-                     .typeSet(CCChartTypeRadar)
+                     .typeSet(CCChartType.radar)
                      .areaStyleSet(@{})
                      .dataSet(@[
                                 @{
@@ -555,7 +555,7 @@
         .seriesSet(@[
                      CCSeriesElement.new
                      .nameSet(@"北京")
-                     .typeSet(CCChartTypeRadar)
+                     .typeSet(CCChartType.radar)
                      .symbolSet(@"none")
                      .itemStyleSet(@{@"normal": @{@"color": @"#F9713C"}})
                      .areaStyleSet(@{@"normal": @{@"opacity": @0.1}})
@@ -607,19 +607,19 @@
         .seriesSet(@[
                      CCSeriesElement.new
                      .nameSet(@"邮件营销")
-                     .typeSet(CCChartTypeLine)
+                     .typeSet(CCChartType.line)
                      .stepSet(@"left")//折线连接点靠左边👈
                      .dataSet(@[@120, @132, @101, @134, @90, @230, @210]),
                      
                      CCSeriesElement.new
                      .nameSet(@"联盟广告")
-                     .typeSet(CCChartTypeLine)
+                     .typeSet(CCChartType.line)
                      .stepSet(@"middle")//折线连接点居中
                      .dataSet(@[@220, @182, @191, @234, @290, @330, @310]),
                      
                      CCSeriesElement.new
                      .nameSet(@"视频广告")
-                     .typeSet(CCChartTypeLine)
+                     .typeSet(CCChartType.line)
                      .stepSet(@"right")//折线连接点靠右👉
                      .dataSet(@[@450, @432, @401, @454, @590, @530, @510]),
            
@@ -637,7 +637,7 @@
         .seriesSet(@[
                      CCSeriesElement.new
                      .nameSet(@"邮件营销")
-                     .typeSet(CCChartTypeLine)
+                     .typeSet(CCChartType.line)
                      .areaStyleSet(@{})
                      .stackSet(@"总量")
                      .stepSet(@"left")//折线连接点靠左边👈
@@ -645,7 +645,7 @@
                      
                      CCSeriesElement.new
                      .nameSet(@"联盟广告")
-                     .typeSet(CCChartTypeLine)
+                     .typeSet(CCChartType.line)
                      .areaStyleSet(@{})
                      .stackSet(@"总量")
                      .stepSet(@"left")//折线连接点靠左边👈
@@ -653,7 +653,7 @@
                      
                      CCSeriesElement.new
                      .nameSet(@"视频广告")
-                     .typeSet(CCChartTypeLine)
+                     .typeSet(CCChartType.line)
                      .areaStyleSet(@{})
                      .stackSet(@"总量")
                      .stepSet(@"left")//折线连接点靠左边👈
@@ -670,7 +670,7 @@
         .seriesSet(@[
                      CCSeriesElement.new
                      .nameSet(@"访问来源")
-                     .typeSet(CCChartTypePie)
+                     .typeSet(CCChartType.pie)
                      .radiusSet(@"55%")
                      .centerSet(@[@"50%", @"50%"])
                      .dataSet(@[@{@"value":@310, @"name":@"邮件营销"},
@@ -726,7 +726,7 @@
         .seriesSet(@[
                      CCSeriesElement.new
                      .nameSet(@"北京")
-                     .typeSet(CCChartTypeRadar)
+                     .typeSet(CCChartType.radar)
                      .symbolSet(@"none")
                      .itemStyleSet(@{@"normal": @{@"color": @"#F9713C"}})
                      .areaStyleSet(@{@"normal": @{@"opacity": @0.1}})
@@ -765,7 +765,7 @@
                                 ]),
                      CCSeriesElement.new
                      .nameSet(@"上海")
-                     .typeSet(CCChartTypeRadar)
+                     .typeSet(CCChartType.radar)
                      .symbolSet(@"none")
                      .itemStyleSet(@{@"normal": @{@"color": @"#B3E4A1"}})
                      .areaStyleSet(@{@"normal": @{@"opacity": @0.1}})
@@ -804,7 +804,7 @@
                                 ]),
                      CCSeriesElement.new
                      .nameSet(@"广州")
-                     .typeSet(CCChartTypeRadar)
+                     .typeSet(CCChartType.radar)
                      .symbolSet(@"none")
                      .itemStyleSet(@{@"normal": @{@"color": @"rgb(238,197,102)"}})
                      .areaStyleSet(@{@"normal": @{@"opacity": @0.1}})
@@ -860,7 +860,7 @@
         .seriesSet(@[
                      CCSeriesElement.new
                      .nameSet(@"漏斗图")
-                     .typeSet(CCChartTypeFunnel)
+                     .typeSet(CCChartType.funnel)
                      .dataSet(@[@{@"value":@310, @"name":@"邮件营销"},
                                 @{@"value":@274, @"name":@"联盟广告"},
                                 @{@"value":@235, @"name":@"视频广告"},
