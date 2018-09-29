@@ -145,6 +145,35 @@
 - (CCChartModel *)configureTheChartModel:(NSString *)chartType {
     if ([chartType isEqualToString:@"colorfulColumnChart"]) {
         
+       CCChartModel *ccChartModel = CCChartModel.new
+        .titleTextSet(@"世界人口总量")
+        .titleSubtextSet(@"数据来自于网络")
+        .tooltipTriggerSet(@"axis")
+        .legendDataSet(@[@"利润", @"支出", @"收入"])
+        .xAxisTypeSet(@"value")
+        .yAxisTypeSet(@"category")
+        .yAxisDataSet(@[@"周一", @"周二", @"周三", @"周四", @"周五", @"周六", @"周日"])
+        .seriesSet(@[
+                     CCSeriesElement.new
+                     .nameSet(@"利润")
+                     .typeSet(CCChartType.bar)
+                     .dataSet(@[@200, @170, @240, @244, @200, @220, @210]),
+                     
+                     CCSeriesElement.new
+                     .nameSet(@"收入")
+                     .typeSet(CCChartType.bar)
+                     .stackSet(@"总量")
+                     .dataSet(@[@320, @302, @341, @374, @390, @450, @420]),
+                     
+                     CCSeriesElement.new
+                     .nameSet(@"支出")
+                     .typeSet(CCChartType.bar)
+                     .stackSet(@"总量")
+                     .dataSet(@[@(-120), @(-132), @(-101), @(-134), @(-190), @(-230), @(-210)]),
+                     ]);
+        
+        return ccChartModel;
+        
     } else if ([chartType isEqualToString:@"gradientColorBar"]) {
         NSDictionary *gradientColorDic1 =
         @{

@@ -31,7 +31,7 @@
 }
 
 + (NSString *)radar {
-    return @"raddar";
+    return @"radar";
 }
 
 + (NSString *)tree {

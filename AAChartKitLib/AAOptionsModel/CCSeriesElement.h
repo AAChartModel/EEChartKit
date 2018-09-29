@@ -21,6 +21,7 @@ CCPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, NSString *, stac
 CCPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSDictionary *, lineStyle);
 CCPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSDictionary *, areaStyle);
 CCPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSDictionary *, itemStyle);
+CCPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSNumber *, barGap);
 CCPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSArray *, data);
 CCPropStatementAndPropSetFuncStatement(copy,   CCSeriesElement, NSString *, coordinateSystem);
 CCPropStatementAndPropSetFuncStatement(strong, CCSeriesElement, NSDictionary *, label);

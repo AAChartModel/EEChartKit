@@ -20,6 +20,7 @@ CCPropSetFuncImplementation(CCSeriesElement, NSString *, stack);
 CCPropSetFuncImplementation(CCSeriesElement, NSDictionary *, lineStyle);
 CCPropSetFuncImplementation(CCSeriesElement, NSDictionary *, areaStyle);
 CCPropSetFuncImplementation(CCSeriesElement, NSDictionary *, itemStyle);
+CCPropSetFuncImplementation(CCSeriesElement, NSNumber *, barGap);
 CCPropSetFuncImplementation(CCSeriesElement, NSArray *, data);
 CCPropSetFuncImplementation(CCSeriesElement, NSString *, coordinateSystem);
 CCPropSetFuncImplementation(CCSeriesElement, NSDictionary *, label);

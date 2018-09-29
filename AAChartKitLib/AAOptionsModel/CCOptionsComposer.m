@@ -65,6 +65,7 @@
                            @"type" : chartModel.xAxisType ? chartModel.xAxisType:@"",
 //                           @"boundaryGap" : @false,
                            @"data" : chartModel.xAxisData ? chartModel.xAxisData:@"",
+                           @"position": chartModel.xAxisPosition ? chartModel.xAxisPosition:@"",
 //                           @"scale":@true
                            }
                        ];

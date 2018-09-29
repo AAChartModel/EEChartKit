@@ -18,6 +18,10 @@
 //        .yAxisTypeSet(@"value")
         _xAxisType = @"category";
         _yAxisType = @"value";
+        _tooltipTrigger = @"axis";
+//        .tooltipTriggerSet(@"axis")
+//        .xAxisTypeSet(@"category")
+//        .yAxisTypeSet(@"value")
     }
     return self;
 }
@@ -30,9 +34,10 @@ CCPropSetFuncImplementation(CCChartModel, NSString *, tooltipTrigger);
 CCPropSetFuncImplementation(CCChartModel, NSString *, tooltipFormatter);
 CCPropSetFuncImplementation(CCChartModel, NSArray  *, legendData);
 CCPropSetFuncImplementation(CCChartModel, NSString *, legendSelectedMode);
-CCPropSetFuncImplementation(CCChartModel, NSString *, xAxisType)
+CCPropSetFuncImplementation(CCChartModel, NSString *, xAxisType);
+CCPropSetFuncImplementation(CCChartModel, NSString *, xAxisPosition);
 CCPropSetFuncImplementation(CCChartModel, NSArray  *, xAxisData);
-CCPropSetFuncImplementation(CCChartModel, NSString *, yAxisType)
+CCPropSetFuncImplementation(CCChartModel, NSString *, yAxisType);
 CCPropSetFuncImplementation(CCChartModel, NSArray  *, yAxisData);
 CCPropSetFuncImplementation(CCChartModel, NSArray <CCSeriesElement *>*, series);
 CCPropSetFuncImplementation(CCChartModel, NSArray  *, radarIndicator);

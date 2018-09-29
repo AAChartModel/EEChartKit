@@ -23,6 +23,7 @@ CCPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, tooltip
 CCPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, legendData);
 CCPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, legendSelectedMode);
 CCPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, xAxisType);
+CCPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, xAxisPosition);
 CCPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, xAxisData);
 CCPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, yAxisType);
 CCPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, yAxisData);
