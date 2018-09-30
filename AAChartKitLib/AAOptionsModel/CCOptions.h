@@ -23,6 +23,7 @@ CCPropStatementAndPropSetFuncStatement(strong, CCOptions, NSArray *, dataZoom);
 CCPropStatementAndPropSetFuncStatement(strong, CCOptions, NSArray *, series);
 CCPropStatementAndPropSetFuncStatement(strong, CCOptions, NSDictionary *, angleAxis);
 CCPropStatementAndPropSetFuncStatement(strong, CCOptions, NSDictionary *, radiusAxis);
+CCPropStatementAndPropSetFuncStatement(strong, CCOptions, NSDictionary *, singleAxis);
 CCPropStatementAndPropSetFuncStatement(strong, CCOptions, NSDictionary *, polar);
 CCPropStatementAndPropSetFuncStatement(strong, CCOptions, NSDictionary *, radar);
 

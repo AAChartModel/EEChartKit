@@ -108,7 +108,6 @@
         .tooltipTriggerSet(@"axis")
         .xAxisTypeSet(@"value")
         .xAxisPositionSet(@"top")
-        .xAxisDataSet(@[@"2018", @"2019", @"2020", @"2021", @"2022",])
         .yAxisTypeSet(@"category")
         .yAxisDataSet(@[@"一月", @"二月", @"三月", @"四月", @"五月", @"六月", @"七月", @"八月", @"九月", @"十月", @"十一月", @"十二月"])
         .colorSet(@[@"#003366",@"#006699",@"#4cabce",@"#e5323e",])
