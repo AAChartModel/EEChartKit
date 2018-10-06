@@ -10,8 +10,8 @@
 
 @implementation CCChartSymbolType
 
-+ (NSString *)cirrle {
-    return @"cirrle";
++ (NSString *)circle {
+    return @"circle";
 }
 
 + (NSString *)rect {

@@ -363,7 +363,57 @@
         return ccChartModel;
         
     } else if ([chartType isEqualToString:@"negativeColorMixed"]) {
-     
+        NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"LesMiserables" ofType:@"json"];
+        NSData *data = [NSData dataWithContentsOfFile:jsonPath];
+        NSError *error = nil;
+        id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+        NSLog(@"\n%@", [error localizedDescription]);
+        
+        NSMutableArray *categories = [NSMutableArray array];
+        for (int i = 0; i < 9; i++) {
+            NSString *name = [NSString stringWithFormat:@"类目%d",i];
+            [categories addObject:@{@"name":name}];
+        }
+        NSDictionary *graph = (NSDictionary *)result;
+        NSArray *nodes = graph[@"nodes"];
+        NSArray *links = graph[@"links"];
+
+        
+        CCChartModel *ccChartModel = CCChartModel.new
+        .titleTextSet(@"Les Miserables")
+        .colorSet(@[@"#003366",@"#006699",@"#4cabce",@"#e5323e",])
+        .seriesSet(@[
+                     CCSeriesElement.new
+                     .nameSet(@"Les Miserables")
+                     .typeSet(CCChartType.bar)
+                     .dataSet(nodes)
+                     .linksSet(@[links])
+                     .categoriesSet(@[categories])
+                     .focusNodeAdjacencySet(YES)
+                     .itemStyleSet(@{
+                                     @"normal": @{
+                                             @"borderColor": @"#fff",
+                                             @"borderWidth": @1,
+                                             @"shadowBlur": @10,
+                                             @"shadowColor": @"rgba(0, 0, 0, 0.3)"
+                                             }
+                                     })
+                     .lineStyleSet(@{
+                                     @"color": @"source",
+                                     @"curveness": @0.3
+                                     })
+                     .emphasisSet(@{
+                                    @"lineStyle": @{
+                                            @"width": @10
+                                            }
+                                    })
+                     
+                     ,
+                     ])
+        
+        ;
+        
+        return ccChartModel;
     } else if ([chartType isEqualToString:@"scatterMixedLine"]) {
         
     } else if ([chartType isEqualToString:@"negativeColorMixedBubble"]) {

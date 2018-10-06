@@ -36,7 +36,7 @@
 
 @interface SecondViewController ()<AAChartViewDidFinishLoadDelegate>
 
-@property (nonatomic, strong) AAChartModel *aaChartModel;
+@property (nonatomic, strong) CCChartModel *ccChartModel;
 @property (nonatomic, strong) AAChartView  *aaChartView;
 
 @end
@@ -103,9 +103,8 @@
     
 //
 
-    [self configureTheStyleForDifferentTypeChart];//为不同类型图表设置样式
-
    CCChartModel *ccChartModel = [self configrueTheChartModel];
+    self.ccChartModel = ccChartModel;
     
     [self.aaChartView aa_drawChartWithChartModel:ccChartModel];
 }
@@ -141,8 +140,6 @@
             .titleTextSet(@"堆叠区域图")
             .tooltipTriggerSet(@"axis")
             .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
-            .xAxisTypeSet(@"category")
-            .yAxisTypeSet(@"value")
             .xAxisDataSet(@[@"一月", @"二月", @"三月", @"四月", @"五月", @"六月", @"七月", @"八月", @"九月", @"十月", @"十一月", @"十二月"])
             .seriesSet(@[
                          CCSeriesElement.new
@@ -173,8 +170,6 @@
             ccChartModel = CCChartModel.new
             .titleTextSet(@"堆叠区域图")
             .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
-            .xAxisTypeSet(@"category")
-            .yAxisTypeSet(@"value")
             .xAxisDataSet(@[@"一月", @"二月", @"三月", @"四月", @"五月", @"六月", @"七月", @"八月", @"九月", @"十月", @"十一月", @"十二月"])
             .seriesSet(@[
                          CCSeriesElement.new
@@ -210,15 +205,13 @@
             ccChartModel = CCChartModel.new
             .titleTextSet(@"堆叠区域图")
             .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
-            .xAxisTypeSet(@"category")
-            .yAxisTypeSet(@"value")
             .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日",@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日",@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
             .seriesSet(@[
                          CCSeriesElement.new
                          .nameSet(@"邮件营销")
                          .typeSet(CCChartType.line)
                          .areaStyleSet(@{})
-                         .stackSet(@"总量")
+                         .stackSet((id)(@1))
                          .smoothSet(YES)
                          .dataSet(@[@0.45, @0.43, @0.50, @0.55, @0.58, @0.62, @0.83, @0.39, @0.56, @0.67, @0.50, @0.34, @0.50, @0.67, @0.58, @0.29, @0.46, @0.23, @0.47, @0.46, @0.38, @0.56, @0.48, @0.36]),
                          
@@ -226,7 +219,7 @@
                          .nameSet(@"联盟广告")
                          .typeSet(CCChartType.line)
                          .areaStyleSet(@{})
-                         .stackSet(@"总量")
+                         .stackSet((id)(@1))
                          .smoothSet(YES)
                          .dataSet(@[@0.38, @0.31, @0.32, @0.32, @0.64, @0.66, @0.86, @0.47, @0.52, @0.75, @0.52, @0.56, @0.54, @0.60, @0.46, @0.63, @0.54, @0.51, @0.58, @0.64, @0.60, @0.45, @0.36, @0.67]),
                          
@@ -234,7 +227,7 @@
                          .nameSet(@"视频广告")
                          .typeSet(CCChartType.line)
                          .areaStyleSet(@{})
-                         .stackSet(@"总量")
+                         .stackSet((id)(@1))
                          .smoothSet(YES)
                          .dataSet(@[@0.46, @0.32, @0.53, @0.58, @0.86, @0.68, @0.85, @0.73, @0.69, @0.71, @0.91, @0.74, @0.60, @0.50, @0.39, @0.67, @0.55, @0.49, @0.65, @0.45, @0.64, @0.47, @0.63, @0.64]),
                          
@@ -242,7 +235,7 @@
                          .nameSet(@"直接访问")
                          .typeSet(CCChartType.line)
                          .areaStyleSet(@{})
-                         .stackSet(@"总量")
+                         .stackSet((id)(@1))
                          .smoothSet(YES)
                          .dataSet(@[@0.60, @0.51, @0.52, @0.53, @0.64, @0.84, @0.65, @0.68, @0.63, @0.47, @0.72, @0.60, @0.65, @0.74, @0.66, @0.65, @0.71, @0.59, @0.65, @0.77, @0.52, @0.53, @0.58, @0.53]),
                          
@@ -255,8 +248,6 @@
             ccChartModel = CCChartModel.new
             .titleTextSet(@"堆叠区域图")
             .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",])
-            .xAxisTypeSet(@"category")
-            .yAxisTypeSet(@"value")
             .xAxisDataSet(@[@"一月", @"二月", @"三月", @"四月", @"五月", @"六月", @"七月", @"八月", @"九月", @"十月", @"十一月", @"十二月"])
             .seriesSet(@[
                          CCSeriesElement.new
@@ -288,8 +279,6 @@
             ccChartModel = CCChartModel.new
             .titleTextSet(@"堆叠区域图")
             .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
-            .xAxisTypeSet(@"category")
-            .yAxisTypeSet(@"value")
             .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
             .seriesSet(@[
                          CCSeriesElement.new
@@ -321,8 +310,6 @@
             ccChartModel = CCChartModel.new
             .titleTextSet(@"堆叠区域图")
             .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
-            .xAxisTypeSet(@"category")
-            .yAxisTypeSet(@"value")
             .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日",@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日",@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
             .seriesSet(@[
                          CCSeriesElement.new
@@ -355,12 +342,9 @@
             break;
             
         case 7: {
-            
           ccChartModel = CCChartModel.new
             .titleTextSet(@"堆叠区域图")
             .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",])
-            .xAxisTypeSet(@"category")
-            .yAxisTypeSet(@"value")
             .xAxisDataSet(@[@"一月", @"二月", @"三月", @"四月", @"五月", @"六月", @"七月", @"八月", @"九月", @"十月", @"十一月", @"十二月"])
             .seriesSet(@[
                          CCSeriesElement.new
@@ -389,8 +373,6 @@
            ccChartModel = CCChartModel.new
             .titleTextSet(@"堆叠区域图")
             .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
-            .xAxisTypeSet(@"category")
-            .yAxisTypeSet(@"value")
             .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
             .seriesSet(@[
                          CCSeriesElement.new
@@ -429,91 +411,6 @@
 }
 
 
-- (void)configureTheStyleForDifferentTypeChart {
-    if (self.chartType == SecondeViewControllerChartTypeColumn
-        || self.chartType == SecondeViewControllerChartTypeBar) {
-        _aaChartModel.categories = @[@"Java", @"Swift", @"Python", @"Ruby", @"PHP", @"Go", @"C", @"C#", @"C++", @"Perl", @"R", @"MATLAB", @"SQL"];//设置 X 轴坐标文字内容
-        _aaChartModel.animationType = AAChartAnimationBounce;//图形的渲染动画为弹性动画
-        _aaChartModel.yAxisTitle = @"";
-        _aaChartModel.animationDuration = @1200;//图形渲染动画时长为1200毫秒
-     
-       // _aaChartModel.xAxisTickInterval = @3;//设置 X轴坐标点的间隔数,默认是1(手机端的屏幕较为狭窄, 如果X轴坐标点过多,文字过于密集的时候可以设置此属性值,用户的密集恐惧症将得到有效治疗😝)
-    } else if (self.chartType == SecondeViewControllerChartTypeArea
-               || self.chartType == SecondeViewControllerChartTypeAreaspline) {
-        _aaChartModel.symbolStyle = AAChartSymbolStyleTypeInnerBlank;//设置折线连接点样式为:内部白色
-        _aaChartModel.gradientColorEnabled = true;//启用渐变色
-        _aaChartModel.animationType = AAChartAnimationEaseOutQuart;//图形的渲染动画为 EaseOutQuart 动画
-        _aaChartModel.xAxisCrosshairWidth = @0.9;//Zero width to disable crosshair by default
-        _aaChartModel.xAxisCrosshairColor = @"#FFE4C4";//(浓汤)乳脂,番茄色准星线
-        _aaChartModel.xAxisCrosshairDashStyleType = AALineDashSyleTypeLongDashDot;
-        if (self.chartType == SecondeViewControllerChartTypeAreaspline) {
-            _aaChartModel.series =@[
-                                    AAObject(AASeriesElement)
-                                    .nameSet(@"2017")
-                                    .fillOpacitySet(@0.3)
-                                    .dataSet(@[@2.73, @21.3, @41.6, @17.2, @19.9, @1.60, @2.10, @2.54, @2.78, @3.62, @4.41, @4.09, @3.83, @4.47, @4.20, @3.94, @3.80, @3.58, @3.19, @4.30, @3.69, @3.52, @3.02, @3.30]),
-                                    AAObject(AASeriesElement)
-                                    .nameSet(@"2018")
-                                    .dataSet(@[@1.51, @28.7, @0.94, @1.44, @18.6, @1.63, @1.56, @1.91, @2.45, @3.87, @3.24, @4.90, @4.61, @4.10, @4.17, @3.85, @4.17, @3.46, @3.46, @3.55, @3.50, @4.13, @2.58, @2.28]),
-                                    AAObject(AASeriesElement)
-                                    .nameSet(@"2019")
-                                    .dataSet(@[@1.33, @4.68, @1.31, @1.10, @13.9, @1.10, @1.16, @1.67, @2.64, @2.86, @3.00, @3.21, @4.14, @4.07, @3.68, @3.11, @3.41, @3.25, @3.32, @3.07, @3.92, @3.05, @2.18, @3.24]),
-                                    AAObject(AASeriesElement)
-                                    .nameSet(@"2020")
-                                    .dataSet(@[@3.23, @3.15, @2.90, @1.81, @2.11, @2.43, @5.59, @3.09, @4.09, @6.14, @5.33, @6.05, @5.71, @6.22, @6.56, @4.75, @5.27, @6.02, @5.22, @5.77, @6.19, @5.68, @4.33, @5.48]),
-                                    ];
-        }
-    } else if (self.chartType == SecondeViewControllerChartTypeLine
-               || self.chartType == SecondeViewControllerChartTypeSpline) {
-        _aaChartModel.symbolStyle = AAChartSymbolStyleTypeBorderBlank;//设置折线连接点样式为:边缘白色
-        _aaChartModel.xAxisCrosshairWidth = @1;//Zero width to disable crosshair by default
-        _aaChartModel.xAxisCrosshairColor = @"#778899";//浅石板灰准星线
-        _aaChartModel.xAxisCrosshairDashStyleType = AALineDashSyleTypeLongDashDotDot;
-        if (self.chartType == SecondeViewControllerChartTypeSpline) {
-            _aaChartModel.markerRadius = @8;
-            _aaChartModel.series = @[
-                                     AAObject(AASeriesElement)
-                                     .nameSet(@"2017")
-                                     .lineWidthSet(@5)
-                                     .dataSet(@[@50, @320, @230, @370, @230, @400,]),
-                                     AAObject(AASeriesElement)
-                                     .nameSet(@"2018")
-                                     .lineWidthSet(@5)
-                                     .dataSet(@[@80, @390, @210, @340, @240, @350,]),
-                                     AAObject(AASeriesElement)
-                                     .nameSet(@"2019")
-                                     .lineWidthSet(@5)
-                                     .dataSet(@[@100, @370, @180, @280, @260, @300,]),
-                                     AAObject(AASeriesElement)
-                                     .nameSet(@"2020")
-                                     .lineWidthSet(@5)
-                                     .dataSet(@[@130, @350, @160, @310, @250, @268,]),
-                                     ];        }
-        
-    } else if (self.chartType == SecondeViewControllerChartTypeStepLine
-               || self.chartType == SecondeViewControllerChartTypeStepArea) {
-        _aaChartModel.yAxisVisible = false;
-        _aaChartModel.symbolStyle = (self.chartType == SecondeViewControllerChartTypeStepLine) ? AAChartSymbolStyleTypeBorderBlank : nil ;
-        _aaChartModel.gradientColorEnabled = (self.chartType == SecondeViewControllerChartTypeStepArea) ? true : false ;
-        _aaChartModel.series = @[
-                                 AAObject(AASeriesElement)
-                                 .nameSet(@"Berlin")
-                                 .dataSet(@[@149.9, @171.5, @106.4, @129.2, @144.0, @176.0, @135.6, @188.5, @276.4, @214.1, @95.6, @54.4])
-                                 .stepSet(@(true))//设置折线样式为直方折线,连接点位置默认靠左👈
-                                 ,
-                                 AAObject(AASeriesElement)
-                                 .nameSet(@"New York")
-                                 .dataSet(@[@83.6, @78.8, @188.5, @93.4, @106.0, @84.5, @105.0, @104.3, @131.2, @153.5, @226.6, @192.3])
-                                 .stepSet(@(true))//设置折线样式为直方折线,连接点位置默认靠左👈
-                                 ,
-                                 AAObject(AASeriesElement)
-                                 .nameSet(@"Tokyo")
-                                 .dataSet(@[@48.9, @38.8, @19.3, @41.4, @47.0, @28.3, @59.0, @69.6, @52.4, @65.2, @53.3, @72.2])
-                                 .stepSet(@(true))//设置折线样式为直方折线,连接点位置默认靠左👈
-                                 ,
-                                 ];
-    }
-}
 
 #pragma mark -- AAChartView delegate
 - (void)AAChartViewDidFinishLoad {
@@ -540,11 +437,14 @@
         segmentedArray = @[@[@"No stacking",
                              @"Normal stacking",
                              @"Percent stacking"],
-                           @[@"Circle",
-                             @"Square",
-                             @"Diamond",
-                             @"Triangle",
-                             @"Triangle-down"]
+                           @[CCChartSymbolType.circle,
+                             CCChartSymbolType.rect,
+                             CCChartSymbolType.roundRect,
+                             CCChartSymbolType.triangle,
+                             CCChartSymbolType.diamond,
+//                             CCChartSymbolType.pin,
+//                             CCChartSymbolType.arrow
+                             ]
                            ];
         typeLabelNameArr = @[@"Stacking type selection",
                              @"Chart symbol type selection"];
@@ -577,23 +477,39 @@
             NSArray *stackingArr = @[AAChartStackingTypeFalse,
                                      AAChartStackingTypeNormal,
                                      AAChartStackingTypePercent];
-            self.aaChartModel.stacking = stackingArr[segmentedControl.selectedSegmentIndex];
+//            self.aaChartModel.stacking = stackingArr[segmentedControl.selectedSegmentIndex];
         }
             break;
             
         case 1: {
             
             if (self.chartType == 0 || self.chartType == 1 ) {
-                NSArray *borderRadiusArr = @[ @0, @10, @100 ];
-                self.aaChartModel.borderRadius = borderRadiusArr[segmentedControl.selectedSegmentIndex];
+                NSArray *borderRadiusArr = @[ @0, @4, @100 ];
+//                barBorderRadius
+                NSNumber *barBorderRadius = borderRadiusArr[segmentedControl.selectedSegmentIndex];;
+                NSDictionary *itemStyle = @{@"barBorderRadius":barBorderRadius};
+                NSArray *seriesArr = self.ccChartModel.series;
+                [seriesArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    CCSeriesElement *seriesElement = obj;
+                    seriesElement.itemStyle = itemStyle;
+                }];
+//                self.aaChartModel.borderRadius = borderRadiusArr[segmentedControl.selectedSegmentIndex];
             } else {
                 
-                NSArray *symbolArr = @[AAChartSymbolTypeCircle,
-                                       AAChartSymbolTypeSquare,
-                                       AAChartSymbolTypeDiamond,
-                                       AAChartSymbolTypeTriangle,
-                                       AAChartSymbolTypeTriangle_down];
-                self.aaChartModel.symbol = symbolArr[segmentedControl.selectedSegmentIndex];
+                NSArray *symbolArr = @[CCChartSymbolType.circle,
+                                       CCChartSymbolType.rect,
+                                       CCChartSymbolType.roundRect,
+                                       CCChartSymbolType.triangle,
+                                       CCChartSymbolType.diamond,
+//                                       CCChartSymbolType.pin,
+//                                       CCChartSymbolType.arrow
+                                       ];
+                NSArray *seriesArr = self.ccChartModel.series;
+                [seriesArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    CCSeriesElement *seriesElement = obj;
+                    seriesElement.symbol = symbolArr[segmentedControl.selectedSegmentIndex];
+                }];
+//                self.aaChartModel.symbol = symbolArr[segmentedControl.selectedSegmentIndex];
             }
         }
             break;
@@ -607,7 +523,7 @@
 
 - (void)refreshTheChartView {
     //    self.aaChartModel.colorsTheme = [self configureTheRandomColorArray];//random colors theme, Just for fun!!!
-    [self.aaChartView aa_refreshChartWithChartModel:self.aaChartModel];
+    [self.aaChartView aa_refreshChartWithChartModel:self.ccChartModel];
 }
 
 - (void)setUpTheSwitchs {
@@ -655,23 +571,66 @@
 
 - (void)switchViewClicked:(UISwitch *)switchView {
     switch (switchView.tag) {
-        case 0:
-            self.aaChartModel.xAxisReversed = switchView.on;
+        case 0: {
+            NSArray *seriesArr = self.ccChartModel.series;
+            [seriesArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                CCSeriesElement *seriesElement = obj;
+                seriesElement.stack = switchView.on ? (id)@{} : nil;
+            }];
+        }
             break;
-        case 1:
-            self.aaChartModel.yAxisReversed = switchView.on;
+        case 1: {
+            if (switchView.on) {
+                NSString *xAxisType = self.ccChartModel.xAxisType;
+                NSString *yAxisType = self.ccChartModel.yAxisType;
+                NSArray *xAxisData = self.ccChartModel.xAxisData;
+                self.ccChartModel.xAxisType = yAxisType;
+                self.ccChartModel.yAxisType = xAxisType;
+                self.ccChartModel.yAxisData = xAxisData;
+                self.ccChartModel.xAxisData = nil;
+            } else {
+                NSString *yAxisType = self.ccChartModel.yAxisType;
+                NSString *xAxisType = self.ccChartModel.xAxisType;
+                NSArray *yAxisData = self.ccChartModel.yAxisData;
+                self.ccChartModel.yAxisType = xAxisType;
+                self.ccChartModel.xAxisType = yAxisType;
+                self.ccChartModel.xAxisData = yAxisData;
+                self.ccChartModel.yAxisData = nil;
+            }
+
+        }
+//            self.aaChartModel.yAxisReversed = switchView.on;
             break;
-        case 2:
-            self.aaChartModel.inverted = switchView.on;
+        case 2: 
+            self.ccChartModel.polar = switchView.on ? @{} : nil;
             break;
-        case 3:
-            self.aaChartModel.polar = switchView.on;
+        case 3: {
+//            self.ccChartModel.polar = switchView.on ? @{} : nil;
+//            NSArray *seriesArr = self.ccChartModel.series;
+//            [seriesArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//                CCSeriesElement *seriesElement = obj;
+//                seriesElement.coordinateSystem = switchView.on ? @"polar" : nil;
+//            }];
+        }
+//            self.aaChartModel.polar = switchView.on;
             break;
-        case 4:
-            self.aaChartModel.dataLabelEnabled = switchView.on;
+        case 4: {
+            NSArray *seriesArr = self.ccChartModel.series;
+            [seriesArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                CCSeriesElement *seriesElement = obj;
+                seriesElement.label = switchView.on ? @{@"show":@YES} : nil;
+            }];
+        }
+//            self.aaChartModel.dataLabelEnabled = switchView.on;
             break;
-        case 5:
-            self.aaChartModel.markerRadius = switchView.on ? @0 : @5;
+        case 5: {
+            NSArray *seriesArr = self.ccChartModel.series;
+            [seriesArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                CCSeriesElement *seriesElement = obj;
+                seriesElement.symbolSize = switchView.on ? @0 : @13;
+            }];
+        }
+//            self.aaChartModel.markerRadius = switchView.on ? @0 : @5;
             break;
         default:
             break;

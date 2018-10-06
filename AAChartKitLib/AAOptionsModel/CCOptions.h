@@ -4,7 +4,10 @@
 //
 //  Created by iOS-FN on 2018/9/21.
 //  Copyright © 2018年 Danny boy. All rights reserved.
-//
+// NSDictionary *angleAxis = @{};
+//NSDictionary *radiusAxis = @{@"type": @"category",
+//                             @"data": chartModel.xAxisData,
+//                             @"z": @10};
 
 #import <Foundation/Foundation.h>
 

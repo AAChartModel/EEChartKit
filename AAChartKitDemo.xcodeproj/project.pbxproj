@@ -38,6 +38,7 @@
 		1E66D217210AF4ED007EAB8C /* AAOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E66D1F7210AF4EC007EAB8C /* AAOptions.m */; };
 		1E66D218210AF4ED007EAB8C /* AASeriesElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E66D1F8210AF4EC007EAB8C /* AASeriesElement.m */; };
 		272D80B31F91EC9E008A2D20 /* ShowManyChartViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 272D80B21F91EC9E008A2D20 /* ShowManyChartViewVC.m */; };
+		2746961521609C7C00F0A9C9 /* LesMiserables.json in Resources */ = {isa = PBXBuildFile; fileRef = 2746961421609C7C00F0A9C9 /* LesMiserables.json */; };
 		27746B1F1F3B0224009354A7 /* DrawChartWithAAOptionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27746B1E1F3B0224009354A7 /* DrawChartWithAAOptionsVC.m */; };
 		278989BB204F8DBA003940CC /* ChartListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 278989BA204F8DBA003940CC /* ChartListVC.m */; };
 		2790B1CB215DFF6300C7BE61 /* CCChartType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2790B1CA215DFF6300C7BE61 /* CCChartType.m */; };
@@ -148,6 +149,7 @@
 		1E66D1FA210AF4EC007EAB8C /* AAChartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAChartModel.h; sourceTree = "<group>"; };
 		272D80B11F91EC9E008A2D20 /* ShowManyChartViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowManyChartViewVC.h; sourceTree = "<group>"; };
 		272D80B21F91EC9E008A2D20 /* ShowManyChartViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowManyChartViewVC.m; sourceTree = "<group>"; };
+		2746961421609C7C00F0A9C9 /* LesMiserables.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LesMiserables.json; sourceTree = "<group>"; };
 		27746B1D1F3B0224009354A7 /* DrawChartWithAAOptionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawChartWithAAOptionsVC.h; sourceTree = "<group>"; };
 		27746B1E1F3B0224009354A7 /* DrawChartWithAAOptionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawChartWithAAOptionsVC.m; sourceTree = "<group>"; };
 		278989B9204F8DBA003940CC /* ChartListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartListVC.h; sourceTree = "<group>"; };
@@ -287,6 +289,14 @@
 			path = AAChartConfiger;
 			sourceTree = "<group>";
 		};
+		2746961321609C5800F0A9C9 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				2746961421609C7C00F0A9C9 /* LesMiserables.json */,
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
 		27F0CA7A21018C86004BD904 /* AATools */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +398,7 @@
 		713F54341E7B71C000D506C7 /* ChartsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2746961321609C5800F0A9C9 /* DataSource */,
 				27F0CA7B21018CC7004BD904 /* MainContent */,
 				27F5AD9D20A8159E0086CD33 /* AdditionalContent */,
 				27F0CA7A21018C86004BD904 /* AATools */,
@@ -566,6 +577,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E66D1FB210AF4ED007EAB8C /* AAJSFiles.bundle in Resources */,
+				2746961521609C7C00F0A9C9 /* LesMiserables.json in Resources */,
 				7172A3E61E763EA6000D5B99 /* LaunchScreen.storyboard in Resources */,
 				7172A3E31E763EA6000D5B99 /* Assets.xcassets in Resources */,
 				7172A3E11E763EA6000D5B99 /* Main.storyboard in Resources */,

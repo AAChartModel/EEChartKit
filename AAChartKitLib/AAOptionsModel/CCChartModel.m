@@ -41,5 +41,6 @@ CCPropSetFuncImplementation(CCChartModel, NSString *, yAxisType);
 CCPropSetFuncImplementation(CCChartModel, NSArray  *, yAxisData);
 CCPropSetFuncImplementation(CCChartModel, NSArray <CCSeriesElement *>*, series);
 CCPropSetFuncImplementation(CCChartModel, NSArray  *, radarIndicator);
+CCPropSetFuncImplementation(CCChartModel, NSDictionary *, polar)
 
 @end

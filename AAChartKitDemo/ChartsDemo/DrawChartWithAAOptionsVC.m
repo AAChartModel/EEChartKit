@@ -60,8 +60,8 @@
     switch (self.selectedIndex) {
         case 0: return [self configureTheAAOptionsOfAreaChart];
         case 1: return [self configureTheAAOptionsOfPieChart];
-        case 2: return [self adjustPieChartTitleAndDataLabelFontStyle];
-        case 3: return [self configureTheAAOptionsOfSpecialNestedColumnChart];
+        case 2: return [self configureTheAAOptionsOfPolarChart];
+        case 3: return [self adjustPieChartTitleAndDataLabelFontStyle];
         case 4: return [self configureThePolygonPolarChart];
         case 5: return [self configureTheNoGapColunmChart];
         case 6: return [self configureCustomStyleTooltipChart];
@@ -80,14 +80,11 @@
 }
 
 - (CCOptions *)configureTheAAOptionsOfAreaChart {
-    NSDictionary *title = @{
-                            @"text": @"极坐标系下的堆叠柱状图",
-                            };
-    NSDictionary *angleAxis = @{
-                                @"type": @"category",
+    
+    NSDictionary *title = @{@"text": @"极坐标系下的堆叠柱状图",};
+    NSDictionary *angleAxis = @{@"type": @"category",
                                 @"data": @[@"周一",@"周二",@"周三",@"周四",],
-                                @"z": @10
-                                };
+                                @"z": @10};
     NSDictionary *radiusAxis = @{};
     NSDictionary *polar = @{};
     NSArray *series = @[
@@ -122,17 +119,14 @@
 }
 
 - (CCOptions *)configureTheAAOptionsOfPieChart {
-    NSDictionary *title = @{
-                            @"text": @"极坐标系下的堆叠柱状图",
-                            };
     
+    NSDictionary *title = @{@"text": @"极坐标系下的堆叠柱状图",};
     NSDictionary *angleAxis = @{};
-    NSDictionary *radiusAxis = @{
-                                 @"type": @"category",
-                                 @"data": @[@"周一",@"周二",@"周三",@"周四",],
-                                 @"z": @10
-                                 };
+    NSDictionary *radiusAxis = @{@"type": @"category",
+                                 @"data": @[@"Java", @"Swift", @"Python", @"Ruby", ],
+                                 @"z": @10};
     NSDictionary *polar = @{};
+    
     NSArray *series = @[
                         CCSeriesElement.new
                         .typeSet(CCChartType.bar)
@@ -164,19 +158,41 @@
     return options;
 }
 
+- (CCOptions *)configureTheAAOptionsOfPolarChart {
+    
+    NSDictionary *title = @{@"text": @"极坐标系下的堆叠柱状图",};
+    NSDictionary *angleAxis = @{};
+    NSDictionary *radiusAxis = @{@"type": @"category",
+                                 @"data": @[@"Java", @"Swift", @"Python", @"Ruby", @"PHP", @"Go", @"C", @"C#", @"C++", @"Perl", @"R", @"MATLAB", @"SQL"],
+                                 @"z": @10};
+    NSDictionary *polar = @{};
+    
+    NSArray *seriesArr = @[
+                           CCSeriesElement.new
+                           .nameSet(@"邮件营销")
+                           .typeSet(CCChartType.bar)
+                           .coordinateSystemSet(@"polar")
+                           .dataSet(@[@7.0, @6.9, @9.5, @14.5, @18.2, @21.5, @25.2, @26.5, @23.3, @18.3, @13.9, @9.6]),
+                           
+                           
+                           ];
+    
+    CCOptions *options = CCOptions.new;
+    options.title = title;
+    options.angleAxis = angleAxis;
+    options.radiusAxis = radiusAxis;
+    options.polar = polar;
+    options.series = seriesArr;
+    options.color = @[@"#8A2BE2",@"#fe117c",@"#ffc069",@"#06caf4",@"#7dffc0",];
+    return options;
+}
+
+
 - (AAOptions *)adjustPieChartTitleAndDataLabelFontStyle {
     
-    
-    NSDictionary *title = @{
-                            @"text": CCChartType.themeRiver,
-                            };
-    NSDictionary *tooltip = @{
-                              @"trigger":@"axis"
-                              };
-
-    NSDictionary *singleAxis = @{
-                                @"type": @"time",
-                                };
+    NSDictionary *title = @{@"text": CCChartType.themeRiver,};
+    NSDictionary *tooltip = @{@"trigger": @"axis"};
+    NSDictionary *singleAxis = @{@"type": @"time",};
     NSArray *series = @[
                         CCSeriesElement.new
                         .typeSet(CCChartType.themeRiver)
@@ -232,46 +248,6 @@
     options.series = series;
     options.color = @[@"#8A2BE2",@"#fe117c",@"#ffc069",@"#06caf4",@"#7dffc0",@"#FFDAB9"];
     return options;
-//    NSDictionary *title = @{
-//                            @"text": @"基础雷达图",
-//                            };
-//    NSDictionary *angleAxis = @{
-//                                @"type": @"category",
-//                                @"data": @[@"周一",@"周二",@"周三",@"周四",],
-//                                @"z": @10
-//                                };
-//    NSDictionary *radiusAxis = @{};
-//    NSDictionary *polar = @{};
-//    NSArray *series = @[
-//                        CCSeriesElement.new
-//                        .typeSet(CCChartType.bar)
-//                        .dataSet(@[@1,@2,@3,@4])
-//                        .coordinateSystemSet(@"polar")
-//                        .nameSet(@"A")
-//                        .stackSet(@"a"),
-//                        CCSeriesElement.new
-//                        .typeSet(CCChartType.bar)
-//                        .dataSet(@[@2,@4,@6,@8])
-//                        .coordinateSystemSet(@"polar")
-//                        .nameSet(@"B")
-//                        .stackSet(@"a"),
-//                        CCSeriesElement.new
-//                        .typeSet(CCChartType.bar)
-//                        .dataSet(@[@1,@2,@3,@4])
-//                        .coordinateSystemSet(@"polar")
-//                        .nameSet(@"C")
-//                        .stackSet(@"a"),
-//                        ];
-//
-//    CCOptions *options = CCOptions.new;
-//    options.title = title;
-//    options.angleAxis = angleAxis;
-//    options.radiusAxis = radiusAxis;
-//    options.polar = polar;
-//    options.series = series;
-//    options.color = @[@"#8A2BE2",@"#fe117c",@"#ffc069",@"#06caf4",@"#7dffc0",];
-//    return options;
-    return nil;
 }
 
 - (AAOptions *)configureTheAAOptionsOfSpecialNestedColumnChart {

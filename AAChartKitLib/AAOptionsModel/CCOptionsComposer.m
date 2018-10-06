@@ -102,6 +102,7 @@
     [legendDic setValue:chartModel.legendData forKey:@"data"];
     
 
+
     
     CCOptions *options = CCOptions.new;
     options.title = title;
@@ -131,6 +132,21 @@
     if (radar.allKeys.count != 0) {
         options.radar = radar;
     }
+    
+//    if (chartModel.polar) {
+//        options.polar = chartModel.polar;
+//        NSDictionary *angleAxis = @{};
+//        NSDictionary *radiusAxis = @{@"type": @"category",
+//                                     @"data": chartModel.xAxisData?chartModel.xAxisData:chartModel.yAxisData,
+//                                     @"z": @10};
+//        options.angleAxis = angleAxis;
+//        options.radiusAxis = radiusAxis;
+//
+//        options.xAxis = (id)nil;
+//        options.yAxis = (id)nil;
+//        options.legend = nil;
+//        options.tooltip = nil;
+//    }
     
     return options;
 }

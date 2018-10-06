@@ -29,5 +29,6 @@ CCPropStatementAndPropSetFuncStatement(copy,   CCChartModel, NSString *, yAxisTy
 CCPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, yAxisData);
 CCPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray <CCSeriesElement *>*, series);
 CCPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSArray  *, radarIndicator);
+CCPropStatementAndPropSetFuncStatement(strong, CCChartModel, NSDictionary *, polar)
 
 @end

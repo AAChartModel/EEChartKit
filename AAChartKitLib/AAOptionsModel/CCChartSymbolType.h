@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CCChartSymbolType : NSObject
 
-+ (NSString *)cirrle;
++ (NSString *)circle;
 + (NSString *)rect;
 + (NSString *)roundRect;
 + (NSString *)triangle;
