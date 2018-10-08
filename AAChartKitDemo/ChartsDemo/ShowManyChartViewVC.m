@@ -57,35 +57,35 @@
     aaChartView.scrollEnabled = NO;
     [self.view addSubview:aaChartView];
 
-    AAChartModel *aaChartModel= AAObject(AAChartModel)
-    .chartTypeSet(AAChartTypeColumn)
-    .titleSet(@"X轴文字垂直显示")
-    .subtitleSet(@"")
-    .categoriesSet(@[@"孤<br>岛<br>危<br>机",
-                     @"使<br>命<br>召<br>唤",
-                     @"荣<br>誉<br>勋<br>章",
-                     @"狙<br>击<br>精<br>英",
-                     @"神<br>秘<br>海<br>域",
-                     @"最<br>后<br>生<br>还<br>者",
-                     @"巫<br>师<br>3<br>狂<br>猎",
-                     @"对<br>马<br>之<br>魂",
-                     @"蝙<br>蝠<br>侠<br>之<br>阿<br>甘<br>骑<br>士",
-                     @"地<br>狱<br>边<br>境",
-                     @"闪<br>客",
-                     @"忍<br>者<br>之<br>印"])
-    .yAxisTitleSet(@"")
-    .tooltipEnabledSet(false)
-    .borderRadiusSet(@3)
+   CCChartModel *ccChartModel = CCChartModel.new
+    .titleTextSet(@"堆叠区域图")
+    .tooltipTriggerSet(@"axis")
+    .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
+    .xAxisDataSet(@[@"一月", @"二月", @"三月", @"四月", @"五月", @"六月", @"七月", @"八月", @"九月", @"十月", @"十一月", @"十二月"])
     .seriesSet(@[
-                 AAObject(AASeriesElement)
-                 .nameSet(@"2017")
-                 .dataSet(@[@45,@88,@49,@43,@65,@56,@47,@28,@49,@44,@89,@55])
-                 .allowPointSelectSet(YES)
-                 ,
-                 ]
-               );
+                 CCSeriesElement.new
+                 .nameSet(@"邮件营销")
+                 .typeSet(CCChartType.bar)
+                 .dataSet(@[@7.0, @6.9, @9.5, @14.5, @18.2, @21.5, @25.2, @26.5, @23.3, @18.3, @13.9, @9.6]),
+                 
+                 CCSeriesElement.new
+                 .nameSet(@"联盟广告")
+                 .typeSet(CCChartType.bar)
+                 .dataSet(@[@0.2, @0.8, @5.7, @11.3, @17.0, @22.0, @24.8, @24.1, @20.1, @14.1, @8.6, @2.5]),
+                 
+                 CCSeriesElement.new
+                 .nameSet(@"视频广告")
+                 .typeSet(CCChartType.bar)
+                 .dataSet(@[@0.1, @0.6, @3.5, @8.4, @13.5, @17.0, @18.6, @17.9, @14.3, @9.0, @3.9, @1.0]),
+                 
+                 CCSeriesElement.new
+                 .nameSet(@"直接访问")
+                 .typeSet(CCChartType.bar)
+                 .dataSet(@[@3.9, @4.2, @5.7, @8.5, @11.9, @15.2, @17.0, @16.6, @14.2, @10.3, @6.6, @4.8]),
+                 
+                 ]);
         
-    [aaChartView aa_drawChartWithChartModel:aaChartModel];
+    [aaChartView aa_drawChartWithChartModel:ccChartModel];
     
 }
 
@@ -98,27 +98,46 @@
     aaChartView2.scrollEnabled = NO;
     [self.view addSubview:aaChartView2];
     
-    AAChartModel *aaChartModel2= AAObject(AAChartModel)
-    .chartTypeSet(AAChartTypeLine)
-    .titleSet(@"")
-    .subtitleSet(@"")
-    .categoriesSet(@[@"Java",@"Swift",@"Python",@"Ruby", @"PHP",@"Go",@"C",@"C#",@"C++",@"Perl",@"R",@"MATLAB",@"SQL"])
-    .yAxisTitleSet(@"")
-    .symbolStyleSet(AAChartSymbolStyleTypeBorderBlank)
-    .markerRadiusSet(@6)
-    .xAxisCrosshairWidthSet(@1.5)
-    .xAxisCrosshairColorSet(@"#ff0000")
-    .xAxisCrosshairDashStyleTypeSet(AALineDashSyleTypeDashDot)
-    .yAxisCrosshairWidthSet(@1.5)
-    .yAxisCrosshairColorSet(@"#ff0000")
-    .yAxisCrosshairDashStyleTypeSet(AALineDashSyleTypeLongDashDot)
-    .seriesSet(@[
-                 AAObject(AASeriesElement)
-                 .nameSet(@"2018")
-                 .dataSet(@[@31,@22,@33,@54,@35,@36,@27,@38,@39,@54,@41,@29]),
-                 ]
-               );
-    [aaChartView2 aa_drawChartWithChartModel:aaChartModel2];
+      CCChartModel *ccChartModel = CCChartModel.new
+        .titleTextSet(@"堆叠区域图")
+        .legendDataSet(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",])
+        .xAxisDataSet(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日",@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日",@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"])
+        .seriesSet(@[
+                     CCSeriesElement.new
+                     .nameSet(@"邮件营销")
+                     .typeSet(CCChartType.line)
+                     .areaStyleSet(@{})
+                     .stackSet((id)(@1))
+                     .smoothSet(YES)
+                     .dataSet(@[@0.45, @0.43, @0.50, @0.55, @0.58, @0.62, @0.83, @0.39, @0.56, @0.67, @0.50, @0.34, @0.50, @0.67, @0.58, @0.29, @0.46, @0.23, @0.47, @0.46, @0.38, @0.56, @0.48, @0.36]),
+                     
+                     CCSeriesElement.new
+                     .nameSet(@"联盟广告")
+                     .typeSet(CCChartType.line)
+                     .areaStyleSet(@{})
+                     .stackSet((id)(@1))
+                     .smoothSet(YES)
+                     .dataSet(@[@0.38, @0.31, @0.32, @0.32, @0.64, @0.66, @0.86, @0.47, @0.52, @0.75, @0.52, @0.56, @0.54, @0.60, @0.46, @0.63, @0.54, @0.51, @0.58, @0.64, @0.60, @0.45, @0.36, @0.67]),
+                     
+                     CCSeriesElement.new
+                     .nameSet(@"视频广告")
+                     .typeSet(CCChartType.line)
+                     .areaStyleSet(@{})
+                     .stackSet((id)(@1))
+                     .smoothSet(YES)
+                     .dataSet(@[@0.46, @0.32, @0.53, @0.58, @0.86, @0.68, @0.85, @0.73, @0.69, @0.71, @0.91, @0.74, @0.60, @0.50, @0.39, @0.67, @0.55, @0.49, @0.65, @0.45, @0.64, @0.47, @0.63, @0.64]),
+                     
+                     CCSeriesElement.new
+                     .nameSet(@"直接访问")
+                     .typeSet(CCChartType.line)
+                     .areaStyleSet(@{})
+                     .stackSet((id)(@1))
+                     .smoothSet(YES)
+                     .dataSet(@[@0.60, @0.51, @0.52, @0.53, @0.64, @0.84, @0.65, @0.68, @0.63, @0.47, @0.72, @0.60, @0.65, @0.74, @0.66, @0.65, @0.71, @0.59, @0.65, @0.77, @0.52, @0.53, @0.58, @0.53]),
+                     
+                     ]);
+    
+    [aaChartView2 aa_drawChartWithChartModel:ccChartModel];        
 }
 
 

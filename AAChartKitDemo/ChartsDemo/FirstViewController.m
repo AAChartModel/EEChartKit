@@ -330,10 +330,10 @@
                                @"Disable Animation ---禁用动画效果",
                                @"Custom Legend Item Style---自定义图例样式"
                                ],
-//                             /*同时显示多个 AAChartView*/
-//                              @[@"同时显示多个 AAChartView",
-//                                @"UITableView上显示多个 AAChartView"
-//                                ],
+                             /*同时显示多个 AAChartView*/
+                              @[@"同时显示多个 AAChartView",
+                                @"UITableView上显示多个 AAChartView"
+                                ],
 //                             /*可向下钻取类型图表*/
 //                             @[@"Drilldown column chart--向下钻取的柱状图"
 //                               ],
