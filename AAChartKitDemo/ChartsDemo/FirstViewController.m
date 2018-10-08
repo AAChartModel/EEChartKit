@@ -132,6 +132,7 @@
             /*基础类型图表*/
             SecondViewController *vc = [[SecondViewController alloc]init];
             vc.chartType = indexPath.row;
+            vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
@@ -140,6 +141,7 @@
             /*特殊类型图表*/
             SpecialChartVC *vc = [[SpecialChartVC alloc]init];
             vc.chartType = indexPath.row;
+            vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
@@ -147,6 +149,7 @@
             /*图表数据动态刷新*/
             MixedChartVC *vc = [[MixedChartVC alloc]init];
             vc.chartTypeIndex = indexPath.row;
+            vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController  pushViewController:vc animated:YES];
         }
             break;
@@ -156,6 +159,7 @@
             /*图表数据动态刷新*/
             OnlyRefreshChartDataVC *vc = [[OnlyRefreshChartDataVC alloc]init];
             vc.chartType = indexPath.row;
+            vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController  pushViewController:vc animated:YES];
         }
             break;
@@ -164,6 +168,7 @@
             /*JQuery动画样式类型演示*/
             ChartAnimationTypeVC *vc = [[ChartAnimationTypeVC alloc]init];
             vc.chartType = indexPath.row;
+            vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
@@ -172,6 +177,7 @@
             /*通过AAOptions实例对象来绘制图形*/
             DrawChartWithAAOptionsVC *vc = [[DrawChartWithAAOptionsVC alloc]init];
             vc.selectedIndex = indexPath.row;
+            vc.hidesBottomBarWhenPushed = YES;
             vc.navigationItemTitle = self.chartTypeNameArr[indexPath.section][indexPath.row];
             [self.navigationController pushViewController:vc animated:YES];
         }
@@ -181,9 +187,11 @@
             /*同时显示多个 AAChartView*/
             if (indexPath.row == 0) {
                 ShowManyChartViewVC *vc = [[ShowManyChartViewVC alloc]init];
+                vc.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:vc animated:YES];
             } else {
                 ChartListVC *listVC = [[ChartListVC alloc]init];
+                listVC.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:listVC animated:YES];
             }
 
@@ -193,6 +201,7 @@
         case 7: {
             /*可向下钻取类型图表*/
             DrilldownChartVC *vc = [[DrilldownChartVC alloc]init];
+            vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
